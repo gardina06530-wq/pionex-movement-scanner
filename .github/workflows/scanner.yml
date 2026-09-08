@@ -1,3 +1,4 @@
+
 name: Pionex Scanner
 
 on:
@@ -6,23 +7,19 @@ on:
     - cron: "*/5 * * * *"
 
 jobs:
+
   scan:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Télécharger le code
+
+      - name: Télécharger le scanner
         uses: actions/checkout@v4
 
-      - name: Installer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Installer les dépendances
-   run: python -m pip install requests
-
-       - name: Lancer le scanner
+      - name: Lancer le scanner
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TEST_MODE: "1"
         run: python scanner.py
