@@ -22,17 +22,39 @@ def pionex(path, params=None):
     return data["data"]
 
 
-def telegram(message):
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    requests.post(
-        url,
-        json={
-            "chat_id": CHAT_ID,
-            "text": message,
-        },
-        timeout=20,
+def send_telegram(message):
+    url = (
+        "https://api.telegram.org/bot"
+        + TELEGRAM_TOKEN
+        + "/sendMessage"
     )
 
+    payload = urllib.parse.urlencode({
+        "chat_id": CHAT_ID,
+        "text": message
+    }).encode()
+
+    request = urllib.request.Request(
+        url,
+        data=payload,
+        method="POST"
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            result = response.read().decode()
+            print("TELEGRAM REPONSE :", result)
+
+            if '"ok":true' not in result:
+                raise RuntimeError(
+                    "Telegram a refusé le message : " + result
+                )
+
+            print("TELEGRAM : message envoyé avec succès")
+
+    except Exception as error:
+        print("TELEGRAM ERREUR :", error)
+        raise
 
 def ema(values, period):
     if len(values) < period:
