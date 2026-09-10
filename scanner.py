@@ -55,7 +55,7 @@ def send_telegram(message):
     except Exception as error:
         print("TELEGRAM ERREUR :", error)
         raise
-
+        
 def ema(values, period):
     if len(values) < period:
         return None
