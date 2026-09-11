@@ -1,28 +1,82 @@
 import os
-import requests
-import statistics
-from datetime import datetime, timezone
-
-PIONEX = "https://api.pionex.com"
-TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
-CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
-
-MIN_VOLUME_USDT = 100000
-MIN_SCORE = 8
+import json
+import time
+import urllib.parse
+import urllib.request
+from statistics import mean
 
 
-def pionex(path, params=None):
-    r = requests.get(PIONEX + path, params=params, timeout=20)
-    r.raise_for_status()
-    data = r.json()
+# ============================================================
+# CONFIGURATION
+# ============================================================
+
+API = "https://api.pionex.com"
+
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+
+# Nombre maximum de marchés analysés en profondeur
+DEEP_SCAN_COUNT = 80
+
+# Score minimum pour déclencher une vraie alerte
+SIGNAL_SCORE = 7
+
+# Volume 24h minimum en USDT
+MIN_24H_VOLUME = 50000
+
+
+# ============================================================
+# PIONEX API
+# ============================================================
+
+def get_json(path, params=None):
+
+    if params:
+        path += "?" + urllib.parse.urlencode(params)
+
+    url = API + path
+
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Pionex-Movement-Scanner/2.0"
+        }
+    )
+
+    with urllib.request.urlopen(request, timeout=20) as response:
+
+        data = json.loads(
+            response.read().decode()
+        )
 
     if not data.get("result"):
-        raise RuntimeError(data)
+        raise RuntimeError(
+            "Erreur API Pionex : " + str(data)
+        )
 
     return data["data"]
 
 
+# ============================================================
+# TELEGRAM
+# ============================================================
+
 def send_telegram(message):
+
+    print("================================")
+    print("TEST ENVOI TELEGRAM")
+    print("================================")
+
+    if not TELEGRAM_TOKEN:
+        raise RuntimeError(
+            "TELEGRAM_TOKEN est absent."
+        )
+
+    if not CHAT_ID:
+        raise RuntimeError(
+            "TELEGRAM_CHAT_ID est absent."
+        )
+
     url = (
         "https://api.telegram.org/bot"
         + TELEGRAM_TOKEN
@@ -41,222 +95,226 @@ def send_telegram(message):
     )
 
     try:
-        with urllib.request.urlopen(request, timeout=20) as response:
+
+        with urllib.request.urlopen(
+            request,
+            timeout=20
+        ) as response:
+
             result = response.read().decode()
-            print("TELEGRAM REPONSE :", result)
 
-            if '"ok":true' not in result:
-                raise RuntimeError(
-                    "Telegram a refusé le message : " + result
-                )
+        print("REPONSE TELEGRAM :")
+        print(result)
 
-            print("TELEGRAM : message envoyé avec succès")
+        if '"ok":true' not in result:
+
+            raise RuntimeError(
+                "Telegram a refuse le message : "
+                + result
+            )
+
+        print("TELEGRAM : MESSAGE ENVOYE AVEC SUCCES")
 
     except Exception as error:
-        print("TELEGRAM ERREUR :", error)
-        raise 
 
+        print(
+            "TELEGRAM ERREUR :",
+            str(error)
+        )
+
+        raise
+
+
+# ============================================================
+# EMA
+# ============================================================
 
 def ema(values, period):
+
     if len(values) < period:
         return None
 
-    k = 2 / (period + 1)
-    result = sum(values[:period]) / period
+    result = mean(
+        values[:period]
+    )
 
-    for price in values[period:]:
-        result = price * k + result * (1 - k)
+    multiplier = 2 / (period + 1)
+
+    for value in values[period:]:
+
+        result = (
+            (value - result)
+            * multiplier
+            + result
+        )
 
     return result
 
 
-def rsi(values, period=14):
-    if len(values) <= period:
+# ============================================================
+# RSI
+# ============================================================
+
+def calculate_rsi(values, period=14):
+
+    if len(values) < period + 1:
         return 50
 
     gains = []
     losses = []
 
     for i in range(1, len(values)):
-        change = values[i] - values[i - 1]
 
-        gains.append(max(change, 0))
-        losses.append(max(-change, 0))
+        change = (
+            values[i]
+            - values[i - 1]
+        )
 
-    avg_gain = sum(gains[-period:]) / period
-    avg_loss = sum(losses[-period:]) / period
+        gains.append(
+            max(change, 0)
+        )
+
+        losses.append(
+            max(-change, 0)
+        )
+
+    avg_gain = mean(
+        gains[-period:]
+    )
+
+    avg_loss = mean(
+        losses[-period:]
+    )
 
     if avg_loss == 0:
         return 100
 
     rs = avg_gain / avg_loss
-    return 100 - (100 / (1 + rs))
 
+    return 100 - (
+        100 / (1 + rs)
+    )
+
+
+# ============================================================
+# ANALYSE D'UNE PAIRE
+# ============================================================
 
 def analyse(symbol):
-    candles = pionex(
+
+    data = get_json(
         "/api/v1/market/klines",
         {
             "symbol": symbol,
             "interval": "5M",
-            "limit": 100,
-        },
-    )["klines"]
+            "limit": 100
+        }
+    )
 
-    closes = [float(x["close"]) for x in candles]
-    highs = [float(x["high"]) for x in candles]
-    lows = [float(x["low"]) for x in candles]
-    volumes = [float(x["volume"]) for x in candles]
+    candles = data["klines"]
 
-    if len(closes) < 60:
+    if len(candles) < 60:
         return None
+
+    closes = [
+        float(x["close"])
+        for x in candles
+    ]
+
+    highs = [
+        float(x["high"])
+        for x in candles
+    ]
+
+    lows = [
+        float(x["low"])
+        for x in candles
+    ]
+
+    volumes = [
+        float(x["volume"])
+        for x in candles
+    ]
 
     price = closes[-1]
 
-    ema20 = ema(closes, 20)
-    ema50 = ema(closes, 50)
-    current_rsi = rsi(closes)
+    # --------------------------------------------------------
+    # INDICATEURS
+    # --------------------------------------------------------
 
-    recent_high = max(highs[-21:-1])
+    ema20 = ema(
+        closes,
+        20
+    )
 
-    avg_volume = statistics.mean(volumes[-21:-1])
-    current_volume = volumes[-1]
+    ema50 = ema(
+        closes,
+        50
+    )
 
-    volume_ratio = current_volume / avg_volume if avg_volume else 0
+    rsi = calculate_rsi(
+        closes
+    )
 
-    score_long = 0
-    score_short = 0
+    average_volume = mean(
+        volumes[-21:]
+    )
 
-    # Volume anormal
-    if volume_ratio >= 2:
-        score_long += 2
-        score_short += 2
-
-    # EMA
-    if ema20 and ema50:
-        if ema20 > ema50:
-            score_long += 1
-        elif ema20 < ema50:
-            score_short += 1
-
-    # RSI
-    if 55 <= current_rsi <= 70:
-        score_long += 1
-
-    if 30 <= current_rsi <= 45:
-        score_short += 1
-
-    # Breakout
-    if price > recent_high:
-        score_long += 2
-
-    recent_low = min(lows[-21:-1])
-
-    if price < recent_low:
-        score_short += 2
-
-    # Momentum 5 dernières bougies
-    momentum = (price / closes[-6] - 1) * 100
-
-    if momentum > 1:
-        score_long += 1
-
-    if momentum < -1:
-        score_short += 1
-
-    score = max(score_long, score_short)
-
-    if score < MIN_SCORE:
+    if average_volume <= 0:
         return None
 
-    direction = "🟢 LONG" if score_long >= score_short else "🔴 SHORT"
-
-    return {
-        "symbol": symbol,
-        "price": price,
-        "score": score,
-        "direction": direction,
-        "volume_ratio": volume_ratio,
-        "rsi": current_rsi,
-        "momentum": momentum,
-    }
-
-
-def main():
-
-    symbols_data = pionex(
-        "/api/v1/common/symbols",
-        {"type": "SPOT"},
+    volume_ratio = (
+        volumes[-1]
+        / average_volume
     )
 
-    symbols = [
-        x["symbol"]
-        for x in symbols_data["symbols"]
-        if x.get("enable") and x["symbol"].endswith("_USDT")
-    ]
-
-    tickers = pionex(
-        "/api/v1/market/tickers",
-        {"type": "SPOT"},
-    )["tickers"]
-
-    volume_map = {
-        x["symbol"]: float(x.get("amount", 0))
-        for x in tickers
-    }
-
-    # On garde uniquement les marchés suffisamment liquides
-    symbols = [
-        s for s in symbols
-        if volume_map.get(s, 0) >= MIN_VOLUME_USDT
-    ]
-
-    signals = []
-
-    for symbol in symbols:
-
-        try:
-            result = analyse(symbol)
-
-            if result:
-                signals.append(result)
-
-        except Exception as e:
-            print(f"Erreur {symbol}: {e}")
-
-    signals.sort(
-        key=lambda x: x["score"],
-        reverse=True
+    # Résistance / support des 20 dernières bougies
+    resistance = max(
+        highs[-21:-1]
     )
 
-    if not signals:
-        print("Aucun signal fort.")
-        return
-        if os.environ.get("TEST_MODE") == "1":
-        send_telegram(
-            "🤖 PIONEX SCANNER\n\n"
-            "✅ Connexion réussie.\n"
-            "Aucun signal fort actuellement."
-        )
-    now = datetime.now(timezone.utc).strftime(
-        "%Y-%m-%d %H:%M UTC"
+    support = min(
+        lows[-21:-1]
     )
 
-    message = f"🚨 PIONEX SCANNER\n{now}\n\n"
+    # Momentum sur environ 30 minutes
+    momentum = (
+        (price / closes[-7])
+        - 1
+    ) * 100
 
-    for s in signals[:5]:
+    # Volatilité moyenne
+    ranges = []
 
-        message += (
-            f"{s['direction']} {s['symbol']}\n"
-            f"Score : {s['score']}/12\n"
-            f"Prix : {s['price']:.8g}\n"
-            f"Volume : x{s['volume_ratio']:.2f}\n"
-            f"RSI : {s['rsi']:.1f}\n"
-            f"Momentum : {s['momentum']:.2f}%\n\n"
-        )
+    for i in range(-20, 0):
 
-    telegram(message)
+        if closes[i] != 0:
 
+            ranges.append(
+                (
+                    (highs[i] - lows[i])
+                    / closes[i]
+                ) * 100
+            )
 
-if __name__ == "__main__":
-    main()
+    volatility = mean(
+        ranges
+    )
+
+    # --------------------------------------------------------
+    # SCORE
+    # --------------------------------------------------------
+
+    long_score = 0
+    short_score = 0
+
+    reasons_long = []
+    reasons_short = []
+
+    # VOLUME
+    if volume_ratio >= 2:
+
+        long_score += 2
+        short_score += 2
+
+       
