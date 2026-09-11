@@ -317,4 +317,431 @@ def analyse(symbol):
         long_score += 2
         short_score += 2
 
-       
+        reasons_long.append(
+            "volume x%.1f"
+            % volume_ratio
+        )
+
+        reasons_short.append(
+            "volume x%.1f"
+            % volume_ratio
+        )
+
+    elif volume_ratio >= 1.5:
+
+        long_score += 1
+        short_score += 1
+
+    # TENDANCE EMA
+    if ema20 and ema50:
+
+        if ema20 > ema50:
+
+            long_score += 2
+
+            reasons_long.append(
+                "EMA20 > EMA50"
+            )
+
+        elif ema20 < ema50:
+
+            short_score += 2
+
+            reasons_short.append(
+                "EMA20 < EMA50"
+            )
+
+    # RSI
+    if 55 <= rsi <= 70:
+
+        long_score += 1
+
+        reasons_long.append(
+            "RSI favorable"
+        )
+
+    elif 30 <= rsi <= 45:
+
+        short_score += 1
+
+        reasons_short.append(
+            "RSI favorable"
+        )
+
+    # BREAKOUT
+    if price > resistance:
+
+        long_score += 2
+
+        reasons_long.append(
+            "BREAKOUT resistance"
+        )
+
+    # BREAKDOWN
+    if price < support:
+
+        short_score += 2
+
+        reasons_short.append(
+            "BREAKDOWN support"
+        )
+
+    # MOMENTUM
+    if momentum >= 1:
+
+        long_score += 2
+
+        reasons_long.append(
+            "momentum +%.2f%%"
+            % momentum
+        )
+
+    elif momentum <= -1:
+
+        short_score += 2
+
+        reasons_short.append(
+            "momentum %.2f%%"
+            % momentum
+        )
+
+    # VOLATILITE
+    if volatility >= 1:
+
+        if long_score > short_score:
+
+            long_score += 1
+
+            reasons_long.append(
+                "volatilite elevee"
+            )
+
+        elif short_score > long_score:
+
+            short_score += 1
+
+            reasons_short.append(
+                "volatilite elevee"
+            )
+
+    # --------------------------------------------------------
+    # DIRECTION
+    # --------------------------------------------------------
+
+    if long_score > short_score:
+
+        direction = "LONG"
+
+        score = long_score
+
+        reasons = reasons_long
+
+    elif short_score > long_score:
+
+        direction = "SHORT"
+
+        score = short_score
+
+        reasons = reasons_short
+
+    else:
+
+        return None
+
+    # Score insuffisant
+    if score < SIGNAL_SCORE:
+        return None
+
+    return {
+        "symbol": symbol,
+        "price": price,
+        "score": score,
+        "direction": direction,
+        "rsi": rsi,
+        "volume_ratio": volume_ratio,
+        "momentum": momentum,
+        "volatility": volatility,
+        "reasons": reasons
+    }
+
+
+# ============================================================
+# PROGRAMME PRINCIPAL
+# ============================================================
+
+def main():
+
+    print("================================")
+    print("PIONEX MOVEMENT SCANNER")
+    print("================================")
+
+    # --------------------------------------------------------
+    # TEST TELEGRAM
+    # --------------------------------------------------------
+
+    if os.environ.get("TEST_MODE") == "1":
+
+        print(
+            "TEST_MODE active : test Telegram..."
+        )
+
+        send_telegram(
+            "🤖 PIONEX SCANNER\n\n"
+            "✅ Connexion réussie.\n"
+            "Le scanner fonctionne correctement."
+        )
+
+    # --------------------------------------------------------
+    # RECUPERATION DES PAIRES
+    # --------------------------------------------------------
+
+    symbols_data = get_json(
+        "/api/v1/common/symbols",
+        {
+            "type": "SPOT"
+        }
+    )
+
+    symbols = symbols_data["symbols"]
+
+    usdt_symbols = [
+
+        s["symbol"]
+
+        for s in symbols
+
+        if (
+            s.get("enable")
+            and s.get("quoteCurrency")
+            == "USDT"
+        )
+    ]
+
+    print(
+        "Paires USDT trouvées :",
+        len(usdt_symbols)
+    )
+
+    # --------------------------------------------------------
+    # TICKERS
+    # --------------------------------------------------------
+
+    ticker_data = get_json(
+        "/api/v1/market/tickers",
+        {
+            "type": "SPOT"
+        }
+    )
+
+    tickers = ticker_data["tickers"]
+
+    markets = []
+
+    for ticker in tickers:
+
+        symbol = ticker["symbol"]
+
+        if symbol not in usdt_symbols:
+            continue
+
+        try:
+
+            amount = float(
+                ticker.get(
+                    "amount",
+                    0
+                )
+            )
+
+            price = float(
+                ticker.get(
+                    "close",
+                    0
+                )
+            )
+
+        except Exception:
+
+            continue
+
+        if amount < MIN_24H_VOLUME:
+            continue
+
+        markets.append({
+
+            "symbol": symbol,
+
+            "volume": amount,
+
+            "price": price
+
+        })
+
+    # --------------------------------------------------------
+    # TRI PAR LIQUIDITE
+    # --------------------------------------------------------
+
+    markets.sort(
+        key=lambda x: x["volume"],
+        reverse=True
+    )
+
+    print(
+        "Marchés liquides :",
+        len(markets)
+    )
+
+    candidates = markets[
+        :DEEP_SCAN_COUNT
+    ]
+
+    print(
+        "Analyse technique :",
+        len(candidates)
+    )
+
+    # --------------------------------------------------------
+    # ANALYSE
+    # --------------------------------------------------------
+
+    signals = []
+
+    for market in candidates:
+
+        symbol = market["symbol"]
+
+        try:
+
+            result = analyse(
+                symbol
+            )
+
+            if result:
+
+                result[
+                    "volume24h"
+                ] = market["volume"]
+
+                signals.append(
+                    result
+                )
+
+                print(
+                    "SIGNAL :",
+                    symbol,
+                    result["direction"],
+                    result["score"]
+                )
+
+        except Exception as error:
+
+            print(
+                "Erreur",
+                symbol,
+                str(error)
+            )
+
+        time.sleep(0.15)
+
+    # --------------------------------------------------------
+    # TRI DES SIGNAUX
+    # --------------------------------------------------------
+
+    signals.sort(
+        key=lambda x: x["score"],
+        reverse=True
+    )
+
+    # --------------------------------------------------------
+    # AUCUN SIGNAL
+    # --------------------------------------------------------
+
+    if not signals:
+
+        print(
+            "Aucun signal fort."
+        )
+
+        return
+
+    # --------------------------------------------------------
+    # MESSAGE TELEGRAM
+    # --------------------------------------------------------
+
+    message = (
+        "🚨 PIONEX MOVEMENT SCANNER\n\n"
+    )
+
+    for signal in signals[:5]:
+
+        emoji = (
+            "🟢"
+            if signal["direction"]
+            == "LONG"
+            else "🔴"
+        )
+
+        message += (
+
+            "━━━━━━━━━━━━━━\n"
+
+            f"{emoji} "
+            f"{signal['direction']} "
+            f"{signal['symbol']}\n"
+
+            f"Score : "
+            f"{signal['score']}/10\n"
+
+            f"Prix : "
+            f"{signal['price']:.8g}\n"
+
+            f"Volume : "
+            f"x{signal['volume_ratio']:.2f}\n"
+
+            f"RSI : "
+            f"{signal['rsi']:.1f}\n"
+
+            f"Momentum : "
+            f"{signal['momentum']:+.2f}%\n"
+
+            f"Volatilité : "
+            f"{signal['volatility']:.2f}%\n"
+
+            "Signes : "
+            + ", ".join(
+                signal["reasons"]
+            )
+
+            + "\n"
+        )
+
+    message += (
+
+        "\n⚠️ Signal algorithmique uniquement.\n"
+        "Aucun ordre automatique."
+
+    )
+
+    send_telegram(
+        message
+    )
+
+
+# ============================================================
+# DEMARRAGE
+# ============================================================
+
+if __name__ == "__main__":
+
+    try:
+
+        main()
+
+    except Exception as error:
+
+        print(
+            "ERREUR GENERALE :",
+            str(error)
+        )
+
+        raise
