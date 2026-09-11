@@ -237,7 +237,10 @@ def analyse(symbol):
     ]
 
     price = closes[-1]
-
+       
+    if not signals:
+        print("Aucun signal fort.")
+        return
     # --------------------------------------------------------
     # INDICATEURS
     # --------------------------------------------------------
