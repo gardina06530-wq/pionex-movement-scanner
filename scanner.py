@@ -232,7 +232,12 @@ def main():
     if not signals:
         print("Aucun signal fort.")
         return
-
+        if os.environ.get("TEST_MODE") == "1":
+        send_telegram(
+            "🤖 PIONEX SCANNER\n\n"
+            "✅ Connexion réussie.\n"
+            "Aucun signal fort actuellement."
+        )
     now = datetime.now(timezone.utc).strftime(
         "%Y-%m-%d %H:%M UTC"
     )
