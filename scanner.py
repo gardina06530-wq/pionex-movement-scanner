@@ -58,10 +58,10 @@ def get_json(path, params=None):
             response.read().decode()
         )
 
-    if not data.get("result"):
-        raise RuntimeError(
-            "Erreur API Pionex : " + str(data)
-        )
+    if not isinstance(data, dict) or data.get("result") != True:
+    raise RuntimeError(
+        f"Erreur API Pionex: {data}"
+    )
 
     return data["data"]
 
