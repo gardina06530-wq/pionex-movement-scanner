@@ -1,8 +1,8 @@
 {
-  "balance": 825.7385512200982,
-  "realized_pnl": -174.2614487799019,
+  "balance": 816.7898294750003,
+  "realized_pnl": -183.21017052499988,
   "wins": 0,
-  "losses": 19,
+  "losses": 20,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -174,6 +174,15 @@
       "pnl": -8.340793446667698,
       "reason": "STOP LOSS",
       "time": 1789411899
+    },
+    {
+      "symbol": "BEAMX_USDT",
+      "direction": "SHORT",
+      "entry": 0.00167,
+      "exit": 0.0016950499999999998,
+      "pnl": -8.948721745097966,
+      "reason": "STOP LOSS",
+      "time": 1789417495
     }
   ],
   "positions": {
@@ -188,17 +197,6 @@
       "quality": "A+",
       "opened_at": 1789389913
     },
-    "BEAMX_USDT": {
-      "symbol": "BEAMX_USDT",
-      "direction": "SHORT",
-      "entry": 0.00167,
-      "stop": 0.0016950499999999998,
-      "target": 0.0016199,
-      "size": 357234.40100191813,
-      "score": 11,
-      "quality": "A+",
-      "opened_at": 1789401591
-    },
     "GRT_USDT": {
       "symbol": "GRT_USDT",
       "direction": "LONG",
@@ -209,6 +207,17 @@
       "score": 10,
       "quality": "A+",
       "opened_at": 1789411945
+    },
+    "MTL_USDT": {
+      "symbol": "MTL_USDT",
+      "direction": "LONG",
+      "entry": 0.324,
+      "stop": 0.31914,
+      "target": 0.33372,
+      "size": 1680.6375092078197,
+      "score": 13,
+      "quality": "A+",
+      "opened_at": 1789417544
     }
   },
   "last_alerted": {
@@ -365,24 +374,24 @@
       "key": "LONG_10"
     },
     "STRAX_USDT": {
-      "time": 1789412807,
-      "key": "LONG_8"
+      "time": 1789417544,
+      "key": "LONG_9"
     },
     "FLUX_USDT": {
       "time": 1789406647,
       "key": "LONG_9"
     },
     "BAT_USDT": {
-      "time": 1789399824,
-      "key": "LONG_9"
+      "time": 1789417544,
+      "key": "SHORT_11"
     },
     "ZEN_USDT": {
       "time": 1789402793,
       "key": "SHORT_10"
     },
     "MTL_USDT": {
-      "time": 1789408497,
-      "key": "LONG_8"
+      "time": 1789417544,
+      "key": "LONG_13"
     },
     "FLOKI_USDT": {
       "time": 1789409536,
@@ -413,8 +422,8 @@
       "key": "LONG_9"
     },
     "AUCTION_USDT": {
-      "time": 1789410826,
-      "key": "LONG_8"
+      "time": 1789417544,
+      "key": "SHORT_9"
     },
     "PYTH_USDT": {
       "time": 1789404828,
@@ -457,8 +466,8 @@
       "key": "SHORT_8"
     },
     "WAXP_USDT": {
-      "time": 1789415577,
-      "key": "LONG_11"
+      "time": 1789417544,
+      "key": "LONG_9"
     },
     "CRCLX_USDT": {
       "time": 1789407621,
@@ -553,8 +562,8 @@
       "key": "SHORT_8"
     },
     "XTZ_USDT": {
-      "time": 1789410826,
-      "key": "LONG_8"
+      "time": 1789417544,
+      "key": "LONG_11"
     },
     "BONK_USDT": {
       "time": 1789413864,
@@ -569,8 +578,8 @@
       "key": "SHORT_8"
     },
     "TRX_USDT": {
-      "time": 1789396506,
-      "key": "SHORT_8"
+      "time": 1789417544,
+      "key": "SHORT_9"
     },
     "MANA_USDT": {
       "time": 1789409536,
@@ -609,8 +618,8 @@
       "key": "SHORT_8"
     },
     "GLM_USDT": {
-      "time": 1789411945,
-      "key": "SHORT_10"
+      "time": 1789417544,
+      "key": "SHORT_9"
     },
     "GMT_USDT": {
       "time": 1789407621,
@@ -697,8 +706,8 @@
       "key": "LONG_8"
     },
     "ARPA_USDT": {
-      "time": 1789409536,
-      "key": "LONG_8"
+      "time": 1789417544,
+      "key": "LONG_9"
     },
     "LSK_USDT": {
       "time": 1789410826,
@@ -741,8 +750,8 @@
       "key": "LONG_8"
     },
     "DCR_USDT": {
-      "time": 1789403784,
-      "key": "SHORT_9"
+      "time": 1789417544,
+      "key": "LONG_8"
     },
     "AGLD_USDT": {
       "time": 1789403784,
@@ -789,8 +798,8 @@
       "key": "LONG_9"
     },
     "COTI_USDT": {
-      "time": 1789407621,
-      "key": "SHORT_9"
+      "time": 1789417544,
+      "key": "SHORT_10"
     },
     "PAXG_USDT": {
       "time": 1789410826,
@@ -813,7 +822,7 @@
       "key": "LONG_8"
     },
     "AR_USDT": {
-      "time": 1789409536,
+      "time": 1789417544,
       "key": "LONG_9"
     },
     "LUNA_USDT": {
