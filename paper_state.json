@@ -217,8 +217,8 @@
       "key": "LONG_8"
     },
     "CSPR_USDT": {
-      "time": 1789405660,
-      "key": "LONG_9"
+      "time": 1789414824,
+      "key": "SHORT_9"
     },
     "PROM_USDT": {
       "time": 1789409536,
@@ -261,7 +261,7 @@
       "key": "LONG_9"
     },
     "NVDAX_USDT": {
-      "time": 1789388646,
+      "time": 1789414824,
       "key": "LONG_9"
     },
     "METIS_USDT": {
@@ -321,8 +321,8 @@
       "key": "LONG_8"
     },
     "QTUM_USDT": {
-      "time": 1789404828,
-      "key": "LONG_9"
+      "time": 1789414824,
+      "key": "LONG_8"
     },
     "WIN_USDT": {
       "time": 1789408497,
@@ -333,8 +333,8 @@
       "key": "LONG_8"
     },
     "DUSK_USDT": {
-      "time": 1789406647,
-      "key": "LONG_8"
+      "time": 1789414824,
+      "key": "LONG_9"
     },
     "MBL_USDT": {
       "time": 1789410826,
@@ -437,8 +437,8 @@
       "key": "LONG_9"
     },
     "NACHA_USDT": {
-      "time": 1789407621,
-      "key": "SHORT_9"
+      "time": 1789414824,
+      "key": "SHORT_10"
     },
     "EGLD_USDT": {
       "time": 1789410826,
@@ -457,8 +457,8 @@
       "key": "SHORT_8"
     },
     "WAXP_USDT": {
-      "time": 1789401591,
-      "key": "SHORT_8"
+      "time": 1789414824,
+      "key": "LONG_10"
     },
     "CRCLX_USDT": {
       "time": 1789407621,
@@ -653,8 +653,8 @@
       "key": "LONG_10"
     },
     "NEXO_USDT": {
-      "time": 1789399824,
-      "key": "LONG_9"
+      "time": 1789414824,
+      "key": "LONG_8"
     },
     "CVX_USDT": {
       "time": 1789413864,
@@ -837,8 +837,8 @@
       "key": "LONG_8"
     },
     "OG_USDT": {
-      "time": 1789411945,
-      "key": "LONG_8"
+      "time": 1789414824,
+      "key": "LONG_9"
     },
     "SEI_USDT": {
       "time": 1789409536,
@@ -863,6 +863,10 @@
     "ENS_USDT": {
       "time": 1789413864,
       "key": "SHORT_9"
+    },
+    "THETA_USDT": {
+      "time": 1789414824,
+      "key": "LONG_8"
     }
   }
 }
