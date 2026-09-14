@@ -1,8 +1,8 @@
 {
-  "balance": 980.1,
-  "realized_pnl": -19.89999999999997,
+  "balance": 970.2990000000001,
+  "realized_pnl": -29.700999999999937,
   "wins": 0,
-  "losses": 2,
+  "losses": 3,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -21,6 +21,15 @@
       "pnl": -9.900000000000013,
       "reason": "STOP LOSS",
       "time": 1789392204
+    },
+    {
+      "symbol": "MTL_USDT",
+      "direction": "LONG",
+      "entry": 0.402,
+      "exit": 0.39597000000000004,
+      "pnl": -9.800999999999966,
+      "reason": "STOP LOSS",
+      "time": 1789393282
     }
   ],
   "positions": {
@@ -35,16 +44,16 @@
       "quality": "A+",
       "opened_at": 1789389913
     },
-    "MTL_USDT": {
-      "symbol": "MTL_USDT",
-      "direction": "LONG",
-      "entry": 0.402,
-      "stop": 0.39597000000000004,
-      "target": 0.41406000000000004,
-      "size": 1625.3731343283582,
-      "score": 12,
+    "ZIL_USDT": {
+      "symbol": "ZIL_USDT",
+      "direction": "SHORT",
+      "entry": 0.002911,
+      "stop": 0.0029546649999999995,
+      "target": 0.00282367,
+      "size": 222214.35932669192,
+      "score": 11,
       "quality": "A+",
-      "opened_at": 1789392249
+      "opened_at": 1789393313
     }
   },
   "last_alerted": {
@@ -217,12 +226,12 @@
       "key": "SHORT_9"
     },
     "MTL_USDT": {
-      "time": 1789392249,
-      "key": "LONG_12"
+      "time": 1789393313,
+      "key": "LONG_10"
     },
     "FLOKI_USDT": {
-      "time": 1789390934,
-      "key": "SHORT_8"
+      "time": 1789393313,
+      "key": "SHORT_9"
     },
     "DASH_USDT": {
       "time": 1789390934,
@@ -279,6 +288,34 @@
     "EGLD_USDT": {
       "time": 1789392249,
       "key": "LONG_8"
+    },
+    "ZIL_USDT": {
+      "time": 1789393313,
+      "key": "SHORT_11"
+    },
+    "EDU_USDT": {
+      "time": 1789393313,
+      "key": "SHORT_10"
+    },
+    "AEVO_USDT": {
+      "time": 1789393313,
+      "key": "SHORT_9"
+    },
+    "WAXP_USDT": {
+      "time": 1789393313,
+      "key": "SHORT_9"
+    },
+    "CRCLX_USDT": {
+      "time": 1789393313,
+      "key": "SHORT_9"
+    },
+    "ORDI_USDT": {
+      "time": 1789393313,
+      "key": "LONG_8"
+    },
+    "POWR_USDT": {
+      "time": 1789393313,
+      "key": "SHORT_8"
     }
   }
 }
