@@ -1,8 +1,8 @@
 {
-  "balance": 980.1,
-  "realized_pnl": -19.89999999999995,
+  "balance": 970.299,
+  "realized_pnl": -29.700999999999958,
   "wins": 0,
-  "losses": 2,
+  "losses": 3,
   "trades": [
     {
       "symbol": "LSK_USDT",
@@ -21,6 +21,15 @@
       "pnl": -9.899999999999967,
       "reason": "STOP LOSS",
       "time": 1789368817
+    },
+    {
+      "symbol": "NACHA_USDT",
+      "direction": "LONG",
+      "entry": 0.140649,
+      "exit": 0.138539265,
+      "pnl": -9.801000000000007,
+      "reason": "STOP LOSS",
+      "time": 1789369815
     }
   ],
   "positions": {
@@ -42,14 +51,14 @@
       "size": 10548.523206751055,
       "opened_at": 1789364322
     },
-    "NACHA_USDT": {
-      "symbol": "NACHA_USDT",
-      "direction": "LONG",
-      "entry": 0.140649,
-      "stop": 0.138539265,
-      "target": 0.14486847,
-      "size": 4645.607149713116,
-      "opened_at": 1789368861
+    "DEXE_USDT": {
+      "symbol": "DEXE_USDT",
+      "direction": "SHORT",
+      "entry": 1.802,
+      "stop": 1.82903,
+      "target": 1.74794,
+      "size": 358.97114317425087,
+      "opened_at": 1789369847
     }
   }
 }
