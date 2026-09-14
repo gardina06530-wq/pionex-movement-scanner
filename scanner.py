@@ -70,12 +70,10 @@ def get_json(path, params=None):
 # TELEGRAM
 # =========================
 
-def send_telegram(message):
-
+    def send_telegram(message):
     if not TELEGRAM_TOKEN:
-        raise RuntimeError(
-            "TELEGRAM_TOKEN absent."
-        )
+        raise RuntimeError("TELEGRAM_TOKEN absent.")
+
 
     if not CHAT_ID:
         raise RuntimeError(
