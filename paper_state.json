@@ -1,8 +1,8 @@
 {
-  "balance": 922.7446944279203,
-  "realized_pnl": -77.25530557207979,
+  "balance": 913.5172474836411,
+  "realized_pnl": -86.48275251635903,
   "wins": 0,
-  "losses": 8,
+  "losses": 9,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -75,6 +75,15 @@
       "pnl": -9.320653479069913,
       "reason": "STOP LOSS",
       "time": 1789399777
+    },
+    {
+      "symbol": "PUNDIX_USDT",
+      "direction": "LONG",
+      "entry": 0.1262,
+      "exit": 0.124307,
+      "pnl": -9.227446944279231,
+      "reason": "STOP LOSS",
+      "time": 1789400874
     }
   ],
   "positions": {
@@ -100,16 +109,16 @@
       "quality": "A+",
       "opened_at": 1789395455
     },
-    "PUNDIX_USDT": {
-      "symbol": "PUNDIX_USDT",
+    "POWR_USDT": {
+      "symbol": "POWR_USDT",
       "direction": "LONG",
-      "entry": 0.1262,
-      "stop": 0.124307,
-      "target": 0.12998600000000002,
-      "size": 4874.509743412152,
-      "score": 13,
-      "quality": "A+",
-      "opened_at": 1789399824
+      "entry": 0.0674,
+      "stop": 0.066389,
+      "target": 0.069422,
+      "size": 9035.778906860942,
+      "score": 12,
+      "quality": "A",
+      "opened_at": 1789400918
     }
   },
   "last_alerted": {
@@ -282,8 +291,8 @@
       "key": "SHORT_9"
     },
     "MTL_USDT": {
-      "time": 1789393313,
-      "key": "LONG_10"
+      "time": 1789400918,
+      "key": "LONG_9"
     },
     "FLOKI_USDT": {
       "time": 1789393313,
@@ -370,8 +379,8 @@
       "key": "LONG_8"
     },
     "POWR_USDT": {
-      "time": 1789397597,
-      "key": "SHORT_11"
+      "time": 1789400918,
+      "key": "LONG_12"
     },
     "PEPE_USDT": {
       "time": 1789394160,
@@ -458,8 +467,8 @@
       "key": "LONG_8"
     },
     "BONK_USDT": {
-      "time": 1789395455,
-      "key": "LONG_8"
+      "time": 1789400918,
+      "key": "SHORT_8"
     },
     "IOTX_USDT": {
       "time": 1789397597,
@@ -542,8 +551,8 @@
       "key": "LONG_12"
     },
     "CVC_USDT": {
-      "time": 1789399824,
-      "key": "LONG_12"
+      "time": 1789400918,
+      "key": "LONG_8"
     },
     "BCH_USDT": {
       "time": 1789399824,
@@ -564,6 +573,18 @@
     "ZEC_USDT": {
       "time": 1789399824,
       "key": "SHORT_8"
+    },
+    "ACM_USDT": {
+      "time": 1789400918,
+      "key": "LONG_10"
+    },
+    "LPT_USDT": {
+      "time": 1789400918,
+      "key": "LONG_8"
+    },
+    "ALICE_USDT": {
+      "time": 1789400918,
+      "key": "LONG_8"
     }
   }
 }
