@@ -4,6 +4,127 @@
   "wins": 0,
   "losses": 0,
   "trades": [],
-  "positions": {},
-  "last_alerted": {}
+  "positions": {
+    "RAY_USDT": {
+      "symbol": "RAY_USDT",
+      "direction": "LONG",
+      "entry": 1.452,
+      "stop": 1.43022,
+      "target": 1.49556,
+      "size": 459.13682277318645,
+      "score": 11,
+      "quality": "A+",
+      "opened_at": 1789388646
+    }
+  },
+  "last_alerted": {
+    "RAY_USDT": {
+      "time": 1789388646,
+      "key": "LONG_11"
+    },
+    "CSPR_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_11"
+    },
+    "PROM_USDT": {
+      "time": 1789388646,
+      "key": "LONG_10"
+    },
+    "PUNDIX_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_10"
+    },
+    "RVN_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_10"
+    },
+    "CHZ_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_10"
+    },
+    "FIL_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_10"
+    },
+    "ONT_USDT": {
+      "time": 1789388646,
+      "key": "LONG_10"
+    },
+    "USOX_USDT": {
+      "time": 1789388646,
+      "key": "LONG_9"
+    },
+    "TRB_USDT": {
+      "time": 1789388646,
+      "key": "LONG_9"
+    },
+    "GRT_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_9"
+    },
+    "ARKM_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_9"
+    },
+    "NVDAX_USDT": {
+      "time": 1789388646,
+      "key": "LONG_9"
+    },
+    "METIS_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_9"
+    },
+    "DOGE_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_9"
+    },
+    "PENDLE_USDT": {
+      "time": 1789388646,
+      "key": "LONG_9"
+    },
+    "INJ_USDT": {
+      "time": 1789388646,
+      "key": "LONG_9"
+    },
+    "COMP_USDT": {
+      "time": 1789388646,
+      "key": "LONG_8"
+    },
+    "CYBER_USDT": {
+      "time": 1789388646,
+      "key": "LONG_8"
+    },
+    "USDC_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_8"
+    },
+    "SUSHI_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_8"
+    },
+    "ENA_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_8"
+    },
+    "ADA_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_8"
+    },
+    "LINK_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_8"
+    },
+    "IQ_USDT": {
+      "time": 1789388646,
+      "key": "LONG_8"
+    },
+    "BICO_USDT": {
+      "time": 1789388646,
+      "key": "SHORT_8"
+    },
+    "CHR_USDT": {
+      "time": 1789388646,
+      "key": "LONG_8"
+    }
+  }
 }
