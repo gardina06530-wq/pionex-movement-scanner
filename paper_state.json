@@ -1,8 +1,8 @@
 {
-  "balance": 808.6219311802502,
-  "realized_pnl": -191.37806881974993,
+  "balance": 800.5357118684477,
+  "realized_pnl": -199.46428813155242,
   "wins": 0,
-  "losses": 21,
+  "losses": 22,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -192,6 +192,15 @@
       "pnl": -8.167898294750056,
       "reason": "STOP LOSS",
       "time": 1789422997
+    },
+    {
+      "symbol": "LRC_USDT",
+      "direction": "SHORT",
+      "entry": 0.00857,
+      "exit": 0.00869855,
+      "pnl": -8.086219311802493,
+      "reason": "STOP LOSS",
+      "time": 1789424128
     }
   ],
   "positions": {
@@ -217,16 +226,16 @@
       "quality": "A+",
       "opened_at": 1789411945
     },
-    "LRC_USDT": {
-      "symbol": "LRC_USDT",
-      "direction": "SHORT",
-      "entry": 0.00857,
-      "stop": 0.00869855,
-      "target": 0.0083129,
-      "size": 62903.300753033865,
+    "DUSK_USDT": {
+      "symbol": "DUSK_USDT",
+      "direction": "LONG",
+      "entry": 0.0731,
+      "stop": 0.0720035,
+      "target": 0.075293,
+      "size": 7300.827285621958,
       "score": 11,
       "quality": "A+",
-      "opened_at": 1789423044
+      "opened_at": 1789424171
     }
   },
   "last_alerted": {
@@ -235,8 +244,8 @@
       "key": "LONG_8"
     },
     "CSPR_USDT": {
-      "time": 1789414824,
-      "key": "SHORT_9"
+      "time": 1789424171,
+      "key": "SHORT_10"
     },
     "PROM_USDT": {
       "time": 1789409536,
@@ -351,8 +360,8 @@
       "key": "LONG_8"
     },
     "DUSK_USDT": {
-      "time": 1789414824,
-      "key": "LONG_9"
+      "time": 1789424171,
+      "key": "LONG_11"
     },
     "MBL_USDT": {
       "time": 1789410826,
@@ -423,8 +432,8 @@
       "key": "LONG_9"
     },
     "SAGA_USDT": {
-      "time": 1789423044,
-      "key": "SHORT_9"
+      "time": 1789424171,
+      "key": "LONG_9"
     },
     "AVA_USDT": {
       "time": 1789411945,
@@ -455,8 +464,8 @@
       "key": "SHORT_8"
     },
     "NACHA_USDT": {
-      "time": 1789415577,
-      "key": "SHORT_11"
+      "time": 1789424171,
+      "key": "LONG_8"
     },
     "EGLD_USDT": {
       "time": 1789422265,
@@ -475,8 +484,8 @@
       "key": "LONG_8"
     },
     "WAXP_USDT": {
-      "time": 1789418483,
-      "key": "SHORT_9"
+      "time": 1789424171,
+      "key": "SHORT_8"
     },
     "CRCLX_USDT": {
       "time": 1789407621,
@@ -487,8 +496,8 @@
       "key": "SHORT_10"
     },
     "POWR_USDT": {
-      "time": 1789410826,
-      "key": "LONG_12"
+      "time": 1789424171,
+      "key": "LONG_11"
     },
     "PEPE_USDT": {
       "time": 1789412807,
@@ -559,7 +568,7 @@
       "key": "LONG_8"
     },
     "QKC_USDT": {
-      "time": 1789418483,
+      "time": 1789424171,
       "key": "LONG_11"
     },
     "ASR_USDT": {
@@ -579,7 +588,7 @@
       "key": "SHORT_8"
     },
     "IOTX_USDT": {
-      "time": 1789421272,
+      "time": 1789424171,
       "key": "LONG_9"
     },
     "AVAX_USDT": {
@@ -631,8 +640,8 @@
       "key": "SHORT_9"
     },
     "GMT_USDT": {
-      "time": 1789407621,
-      "key": "SHORT_9"
+      "time": 1789424171,
+      "key": "LONG_10"
     },
     "JASMY_USDT": {
       "time": 1789423044,
@@ -651,8 +660,8 @@
       "key": "SHORT_11"
     },
     "STX_USDT": {
-      "time": 1789399824,
-      "key": "SHORT_9"
+      "time": 1789424171,
+      "key": "SHORT_8"
     },
     "RARE_USDT": {
       "time": 1789419305,
@@ -671,8 +680,8 @@
       "key": "SHORT_8"
     },
     "NEXO_USDT": {
-      "time": 1789414824,
-      "key": "LONG_8"
+      "time": 1789424171,
+      "key": "LONG_11"
     },
     "CVX_USDT": {
       "time": 1789423044,
@@ -759,7 +768,7 @@
       "key": "LONG_8"
     },
     "DCR_USDT": {
-      "time": 1789417544,
+      "time": 1789424171,
       "key": "LONG_8"
     },
     "AGLD_USDT": {
