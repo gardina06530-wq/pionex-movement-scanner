@@ -1,9 +1,19 @@
 {
-  "balance": 1000.0,
-  "realized_pnl": 0.0,
+  "balance": 990.0,
+  "realized_pnl": -9.999999999999982,
   "wins": 0,
-  "losses": 0,
-  "trades": [],
+  "losses": 1,
+  "trades": [
+    {
+      "symbol": "LSK_USDT",
+      "direction": "LONG",
+      "entry": 1.0057,
+      "exit": 0.9906145000000001,
+      "pnl": -9.999999999999982,
+      "reason": "STOP LOSS",
+      "time": 1789366116
+    }
+  ],
   "positions": {
     "RVN_USDT": {
       "symbol": "RVN_USDT",
@@ -23,14 +33,14 @@
       "size": 10548.523206751055,
       "opened_at": 1789364322
     },
-    "LSK_USDT": {
-      "symbol": "LSK_USDT",
+    "STX_USDT": {
+      "symbol": "STX_USDT",
       "direction": "LONG",
-      "entry": 1.0057,
-      "stop": 0.9906145000000001,
-      "target": 1.035871,
-      "size": 662.8882039044115,
-      "opened_at": 1789365169
+      "entry": 0.2701,
+      "stop": 0.2660485,
+      "target": 0.27820300000000003,
+      "size": 2443.5394298408,
+      "opened_at": 1789366157
     }
   }
 }
