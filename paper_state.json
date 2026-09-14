@@ -349,12 +349,12 @@
       "key": "SHORT_8"
     },
     "AUDIO_USDT": {
-      "time": 1789412807,
-      "key": "LONG_9"
+      "time": 1789415577,
+      "key": "SHORT_8"
     },
     "METAX_USDT": {
-      "time": 1789411945,
-      "key": "SHORT_9"
+      "time": 1789415577,
+      "key": "LONG_8"
     },
     "IMX_USDT": {
       "time": 1789398598,
@@ -437,8 +437,8 @@
       "key": "LONG_9"
     },
     "NACHA_USDT": {
-      "time": 1789414824,
-      "key": "SHORT_10"
+      "time": 1789415577,
+      "key": "SHORT_11"
     },
     "EGLD_USDT": {
       "time": 1789410826,
@@ -457,8 +457,8 @@
       "key": "SHORT_8"
     },
     "WAXP_USDT": {
-      "time": 1789414824,
-      "key": "LONG_10"
+      "time": 1789415577,
+      "key": "LONG_11"
     },
     "CRCLX_USDT": {
       "time": 1789407621,
@@ -509,8 +509,8 @@
       "key": "SHORT_10"
     },
     "ALGO_USDT": {
-      "time": 1789395455,
-      "key": "LONG_9"
+      "time": 1789415577,
+      "key": "SHORT_8"
     },
     "IO_USDT": {
       "time": 1789412807,
@@ -867,6 +867,14 @@
     "THETA_USDT": {
       "time": 1789414824,
       "key": "LONG_8"
+    },
+    "DIA_USDT": {
+      "time": 1789415577,
+      "key": "LONG_9"
+    },
+    "ACE_USDT": {
+      "time": 1789415577,
+      "key": "SHORT_8"
     }
   }
 }
