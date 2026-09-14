@@ -59,7 +59,9 @@ def get_json(path, params=None):
         )
 
     if not data.get("result"):
-        raise RuntimeError("Erreur API Pionex : " + str(data))
+        raise RuntimeError(
+            "Erreur API Pionex : " + str(data)
+        )
 
     return data["data"]
 
@@ -68,10 +70,12 @@ def get_json(path, params=None):
 # TELEGRAM
 # =========================
 
-    def send_telegram(message):
-    if not TELEGRAM_TOKEN:
-        raise RuntimeError("TELEGRAM_TOKEN absent.")
+def send_telegram(message):
 
+    if not TELEGRAM_TOKEN:
+        raise RuntimeError(
+            "TELEGRAM_TOKEN absent."
+        )
 
     if not CHAT_ID:
         raise RuntimeError(
