@@ -1,8 +1,8 @@
 {
-  "balance": 990.0,
-  "realized_pnl": -9.99999999999996,
+  "balance": 980.1,
+  "realized_pnl": -19.89999999999997,
   "wins": 0,
-  "losses": 1,
+  "losses": 2,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -12,6 +12,15 @@
       "pnl": -9.99999999999996,
       "reason": "STOP LOSS",
       "time": 1789389868
+    },
+    {
+      "symbol": "STRAX_USDT",
+      "direction": "LONG",
+      "entry": 0.01174,
+      "exit": 0.0115639,
+      "pnl": -9.900000000000013,
+      "reason": "STOP LOSS",
+      "time": 1789392204
     }
   ],
   "positions": {
@@ -26,16 +35,16 @@
       "quality": "A+",
       "opened_at": 1789389913
     },
-    "STRAX_USDT": {
-      "symbol": "STRAX_USDT",
+    "MTL_USDT": {
+      "symbol": "MTL_USDT",
       "direction": "LONG",
-      "entry": 0.01174,
-      "stop": 0.0115639,
-      "target": 0.0120922,
-      "size": 56218.05792163544,
-      "score": 11,
+      "entry": 0.402,
+      "stop": 0.39597000000000004,
+      "target": 0.41406000000000004,
+      "size": 1625.3731343283582,
+      "score": 12,
       "quality": "A+",
-      "opened_at": 1789390934
+      "opened_at": 1789392249
     }
   },
   "last_alerted": {
@@ -152,8 +161,8 @@
       "key": "SHORT_10"
     },
     "WIN_USDT": {
-      "time": 1789389913,
-      "key": "SHORT_9"
+      "time": 1789392249,
+      "key": "SHORT_8"
     },
     "NEO_USDT": {
       "time": 1789389913,
@@ -208,8 +217,8 @@
       "key": "SHORT_9"
     },
     "MTL_USDT": {
-      "time": 1789390934,
-      "key": "LONG_9"
+      "time": 1789392249,
+      "key": "LONG_12"
     },
     "FLOKI_USDT": {
       "time": 1789390934,
@@ -233,6 +242,42 @@
     },
     "SAGA_USDT": {
       "time": 1789390934,
+      "key": "LONG_8"
+    },
+    "AVA_USDT": {
+      "time": 1789392249,
+      "key": "LONG_11"
+    },
+    "AUCTION_USDT": {
+      "time": 1789392249,
+      "key": "LONG_10"
+    },
+    "PYTH_USDT": {
+      "time": 1789392249,
+      "key": "LONG_9"
+    },
+    "LDO_USDT": {
+      "time": 1789392249,
+      "key": "SHORT_9"
+    },
+    "UNI_USDT": {
+      "time": 1789392249,
+      "key": "LONG_8"
+    },
+    "BEAMX_USDT": {
+      "time": 1789392249,
+      "key": "SHORT_8"
+    },
+    "XVG_USDT": {
+      "time": 1789392249,
+      "key": "SHORT_8"
+    },
+    "NACHA_USDT": {
+      "time": 1789392249,
+      "key": "SHORT_8"
+    },
+    "EGLD_USDT": {
+      "time": 1789392249,
       "key": "LONG_8"
     }
   }
