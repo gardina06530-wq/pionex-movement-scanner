@@ -1,8 +1,8 @@
 {
-  "balance": 970.2990000000001,
-  "realized_pnl": -29.700999999999937,
+  "balance": 960.5960100000002,
+  "realized_pnl": -39.40398999999985,
   "wins": 0,
-  "losses": 3,
+  "losses": 4,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -30,6 +30,15 @@
       "pnl": -9.800999999999966,
       "reason": "STOP LOSS",
       "time": 1789393282
+    },
+    {
+      "symbol": "ZIL_USDT",
+      "direction": "SHORT",
+      "entry": 0.002911,
+      "exit": 0.0029546649999999995,
+      "pnl": -9.702989999999911,
+      "reason": "STOP LOSS",
+      "time": 1789394122
     }
   ],
   "positions": {
@@ -44,16 +53,16 @@
       "quality": "A+",
       "opened_at": 1789389913
     },
-    "ZIL_USDT": {
-      "symbol": "ZIL_USDT",
+    "BAT_USDT": {
+      "symbol": "BAT_USDT",
       "direction": "SHORT",
-      "entry": 0.002911,
-      "stop": 0.0029546649999999995,
-      "target": 0.00282367,
-      "size": 222214.35932669192,
+      "entry": 0.0765,
+      "stop": 0.0776475,
+      "target": 0.074205,
+      "size": 8371.207058823533,
       "score": 11,
       "quality": "A+",
-      "opened_at": 1789393313
+      "opened_at": 1789394160
     }
   },
   "last_alerted": {
@@ -218,8 +227,8 @@
       "key": "LONG_10"
     },
     "BAT_USDT": {
-      "time": 1789390934,
-      "key": "LONG_10"
+      "time": 1789394160,
+      "key": "SHORT_11"
     },
     "ZEN_USDT": {
       "time": 1789390934,
@@ -246,8 +255,8 @@
       "key": "SHORT_8"
     },
     "BLUR_USDT": {
-      "time": 1789390934,
-      "key": "SHORT_8"
+      "time": 1789394160,
+      "key": "LONG_9"
     },
     "SAGA_USDT": {
       "time": 1789390934,
@@ -286,7 +295,7 @@
       "key": "SHORT_8"
     },
     "EGLD_USDT": {
-      "time": 1789392249,
+      "time": 1789394160,
       "key": "LONG_8"
     },
     "ZIL_USDT": {
@@ -315,6 +324,26 @@
     },
     "POWR_USDT": {
       "time": 1789393313,
+      "key": "SHORT_8"
+    },
+    "PEPE_USDT": {
+      "time": 1789394160,
+      "key": "LONG_9"
+    },
+    "BOME_USDT": {
+      "time": 1789394160,
+      "key": "SHORT_8"
+    },
+    "VTHO_USDT": {
+      "time": 1789394160,
+      "key": "LONG_8"
+    },
+    "KAS_USDT": {
+      "time": 1789394160,
+      "key": "LONG_8"
+    },
+    "POLYX_USDT": {
+      "time": 1789394160,
       "key": "SHORT_8"
     }
   }
