@@ -1,20 +1,30 @@
 {
-  "balance": 1000.0,
-  "realized_pnl": 0.0,
+  "balance": 990.0,
+  "realized_pnl": -9.99999999999996,
   "wins": 0,
-  "losses": 0,
-  "trades": [],
-  "positions": {
-    "RAY_USDT": {
+  "losses": 1,
+  "trades": [
+    {
       "symbol": "RAY_USDT",
       "direction": "LONG",
       "entry": 1.452,
-      "stop": 1.43022,
-      "target": 1.49556,
-      "size": 459.13682277318645,
-      "score": 11,
+      "exit": 1.43022,
+      "pnl": -9.99999999999996,
+      "reason": "STOP LOSS",
+      "time": 1789389868
+    }
+  ],
+  "positions": {
+    "QTUM_USDT": {
+      "symbol": "QTUM_USDT",
+      "direction": "SHORT",
+      "entry": 0.953,
+      "stop": 0.9672949999999999,
+      "target": 0.92441,
+      "size": 692.5498426023086,
+      "score": 10,
       "quality": "A+",
-      "opened_at": 1789388646
+      "opened_at": 1789389913
     }
   },
   "last_alerted": {
@@ -47,8 +57,8 @@
       "key": "SHORT_10"
     },
     "ONT_USDT": {
-      "time": 1789388646,
-      "key": "LONG_10"
+      "time": 1789389913,
+      "key": "LONG_9"
     },
     "USOX_USDT": {
       "time": 1789388646,
@@ -125,6 +135,50 @@
     "CHR_USDT": {
       "time": 1789388646,
       "key": "LONG_8"
+    },
+    "QTUM_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_10"
+    },
+    "WIN_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_9"
+    },
+    "NEO_USDT": {
+      "time": 1789389913,
+      "key": "LONG_9"
+    },
+    "DUSK_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_9"
+    },
+    "MBL_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_9"
+    },
+    "CKB_USDT": {
+      "time": 1789389913,
+      "key": "LONG_8"
+    },
+    "ETC_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_8"
+    },
+    "AUDIO_USDT": {
+      "time": 1789389913,
+      "key": "LONG_8"
+    },
+    "METAX_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_8"
+    },
+    "IMX_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_8"
+    },
+    "DYM_USDT": {
+      "time": 1789389913,
+      "key": "SHORT_8"
     }
   }
 }
