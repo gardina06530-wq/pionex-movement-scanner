@@ -213,7 +213,7 @@
   },
   "last_alerted": {
     "RAY_USDT": {
-      "time": 1789405660,
+      "time": 1789416489,
       "key": "LONG_8"
     },
     "CSPR_USDT": {
@@ -321,11 +321,11 @@
       "key": "LONG_8"
     },
     "QTUM_USDT": {
-      "time": 1789414824,
-      "key": "LONG_8"
+      "time": 1789416489,
+      "key": "LONG_9"
     },
     "WIN_USDT": {
-      "time": 1789408497,
+      "time": 1789416489,
       "key": "LONG_8"
     },
     "NEO_USDT": {
@@ -493,8 +493,8 @@
       "key": "LONG_12"
     },
     "OSMO_USDT": {
-      "time": 1789399824,
-      "key": "LONG_8"
+      "time": 1789416489,
+      "key": "SHORT_8"
     },
     "FTT_USDT": {
       "time": 1789409536,
@@ -545,7 +545,7 @@
       "key": "LONG_9"
     },
     "ASR_USDT": {
-      "time": 1789408497,
+      "time": 1789416489,
       "key": "SHORT_8"
     },
     "TKO_USDT": {
@@ -565,8 +565,8 @@
       "key": "LONG_9"
     },
     "AVAX_USDT": {
-      "time": 1789396506,
-      "key": "LONG_9"
+      "time": 1789416489,
+      "key": "SHORT_8"
     },
     "TRX_USDT": {
       "time": 1789396506,
@@ -685,8 +685,8 @@
       "key": "LONG_8"
     },
     "PORTO_USDT": {
-      "time": 1789407621,
-      "key": "LONG_8"
+      "time": 1789416489,
+      "key": "LONG_10"
     },
     "ARB_USDT": {
       "time": 1789403784,
