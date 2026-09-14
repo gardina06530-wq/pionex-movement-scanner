@@ -4,5 +4,15 @@
   "wins": 0,
   "losses": 0,
   "trades": [],
-  "positions": {}
+  "positions": {
+    "RVN_USDT": {
+      "symbol": "RVN_USDT",
+      "direction": "LONG",
+      "entry": 0.00228,
+      "stop": 0.0022458,
+      "target": 0.0023484,
+      "size": 292397.6608187135,
+      "opened_at": 1789363381
+    }
+  }
 }
