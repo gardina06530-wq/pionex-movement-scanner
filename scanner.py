@@ -10,25 +10,18 @@ API = "https://api.pionex.com"
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-# =========================
-# CONFIGURATION V2
-# =========================
-
 DEEP_SCAN_COUNT = 200
 SIGNAL_SCORE = 5
 MIN_24H_VOLUME = 50000
 
-# Paper trading
-PAPER_MODE = True
 PAPER_START_BALANCE = 1000.0
 PAPER_RISK_PER_TRADE = 0.01
 PAPER_STOP_LOSS = 0.015
 PAPER_TAKE_PROFIT = 0.03
+MAX_OPEN_POSITIONS = 3
 
+STATE_FILE = "paper_state.json"
 
-# =========================
-# API
-# =========================
 
 def get_json(path, params=None):
     if params:
@@ -36,7 +29,7 @@ def get_json(path, params=None):
 
     request = urllib.request.Request(
         API + path,
-        headers={"User-Agent": "Pionex-Movement-Scanner/4.0"}
+        headers={"User-Agent": "Pionex-Movement-Scanner/5.0"}
     )
 
     with urllib.request.urlopen(request, timeout=20) as response:
@@ -48,16 +41,12 @@ def get_json(path, params=None):
     return data["data"]
 
 
-# =========================
-# TELEGRAM
-# =========================
-
 def send_telegram(message):
     if not TELEGRAM_TOKEN:
-        raise RuntimeError("TELEGRAM_TOKEN est absent.")
+        raise RuntimeError("TELEGRAM_TOKEN absent.")
 
     if not CHAT_ID:
-        raise RuntimeError("TELEGRAM_CHAT_ID est absent.")
+        raise RuntimeError("TELEGRAM_CHAT_ID absent.")
 
     url = "https://api.telegram.org/bot" + TELEGRAM_TOKEN + "/sendMessage"
 
@@ -75,15 +64,50 @@ def send_telegram(message):
     with urllib.request.urlopen(request, timeout=20) as response:
         result = response.read().decode()
 
-    print("TELEGRAM :", result)
-
     if '"ok":true' not in result:
         raise RuntimeError("Telegram a refuse le message : " + result)
 
 
-# =========================
-# INDICATEURS
-# =========================
+def default_state():
+    return {
+        "balance": PAPER_START_BALANCE,
+        "realized_pnl": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "trades": [],
+        "positions": {}
+    }
+
+
+def load_state():
+    if not os.path.exists(STATE_FILE):
+        return default_state()
+
+    try:
+        with open(STATE_FILE, "r", encoding="utf-8") as f:
+            state = json.load(f)
+
+        base = default_state()
+        base.update(state)
+        return base
+
+    except Exception:
+        return default_state()
+
+
+def save_state(state):
+    temp = STATE_FILE + ".tmp"
+
+    with open(temp, "w", encoding="utf-8") as f:
+        json.dump(
+            state,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    os.replace(temp, STATE_FILE)
+
 
 def ema(values, period):
     if len(values) < period:
@@ -107,6 +131,7 @@ def calculate_rsi(values, period=14):
 
     for i in range(1, len(values)):
         change = values[i] - values[i - 1]
+
         gains.append(max(change, 0))
         losses.append(max(-change, 0))
 
@@ -117,17 +142,19 @@ def calculate_rsi(values, period=14):
         return 100
 
     rs = avg_gain / avg_loss
+
     return 100 - (100 / (1 + rs))
 
 
-# =========================
-# ANALYSE
-# =========================
-
 def analyse(symbol):
+
     data = get_json(
         "/api/v1/market/klines",
-        {"symbol": symbol, "interval": "5M", "limit": 100}
+        {
+            "symbol": symbol,
+            "interval": "5M",
+            "limit": 100
+        }
     )
 
     candles = data["klines"]
@@ -144,9 +171,9 @@ def analyse(symbol):
 
     ema20 = ema(closes, 20)
     ema50 = ema(closes, 50)
+
     rsi = calculate_rsi(closes)
 
-    # Volume récent vs moyenne précédente
     previous_volumes = volumes[-21:-1]
     average_volume = mean(previous_volumes)
 
@@ -155,77 +182,95 @@ def analyse(symbol):
 
     volume_ratio = volumes[-1] / average_volume
 
-    # Accélération du volume
     recent_avg = mean(volumes[-3:])
     older_avg = mean(volumes[-20:-3])
+
     volume_acceleration = (
-        recent_avg / older_avg if older_avg > 0 else 1
+        recent_avg / older_avg
+        if older_avg > 0
+        else 1
     )
 
     resistance = max(highs[-21:-1])
     support = min(lows[-21:-1])
 
-    momentum_30m = ((price / closes[-7]) - 1) * 100
-    momentum_60m = ((price / closes[-13]) - 1) * 100
+    momentum_30m = (
+        (price / closes[-7]) - 1
+    ) * 100
+
+    momentum_60m = (
+        (price / closes[-13]) - 1
+    ) * 100
 
     ranges = []
+
     for i in range(-20, 0):
         if closes[i] != 0:
-            ranges.append(((highs[i] - lows[i]) / closes[i]) * 100)
+            ranges.append(
+                ((highs[i] - lows[i]) / closes[i]) * 100
+            )
 
     volatility = mean(ranges) if ranges else 0
 
-    # Compression : volatilité actuelle faible par rapport à la période
     short_ranges = ranges[-5:]
     long_ranges = ranges[:-5]
 
-    compression = False
-    if long_ranges:
-        compression = mean(short_ranges) < mean(long_ranges) * 0.75
+    compression = (
+        bool(long_ranges)
+        and mean(short_ranges) < mean(long_ranges) * 0.75
+    )
 
     long_score = 0
     short_score = 0
+
     reasons_long = []
     reasons_short = []
 
-    # VOLUME
     if volume_ratio >= 2:
         long_score += 2
         short_score += 2
-        reasons_long.append("volume x%.1f" % volume_ratio)
-        reasons_short.append("volume x%.1f" % volume_ratio)
+
+        reasons_long.append(
+            "volume x%.1f" % volume_ratio
+        )
+
+        reasons_short.append(
+            "volume x%.1f" % volume_ratio
+        )
+
     elif volume_ratio >= 1.4:
         long_score += 1
         short_score += 1
 
-    # ACCELERATION VOLUME
     if volume_acceleration >= 1.5:
         long_score += 1
         short_score += 1
-        reasons_long.append("acceleration volume")
-        reasons_short.append("acceleration volume")
 
-    # EMA
+        reasons_long.append("volume en acceleration")
+        reasons_short.append("volume en acceleration")
+
     if ema20 and ema50:
+
         if ema20 > ema50:
             long_score += 2
-            reasons_long.append("tendance haussiere")
+            reasons_long.append("EMA haussiere")
+
         elif ema20 < ema50:
             short_score += 2
-            reasons_short.append("tendance baissiere")
+            reasons_short.append("EMA baissiere")
 
-    # RSI
     if 52 <= rsi <= 70:
         long_score += 1
         reasons_long.append("RSI haussier")
+
     elif 30 <= rsi <= 48:
         short_score += 1
         reasons_short.append("RSI baissier")
 
-    # BREAKOUT / APPROCHE
     if price > resistance:
         long_score += 2
         reasons_long.append("BREAKOUT")
+
     elif price >= resistance * 0.995:
         long_score += 1
         reasons_long.append("proche resistance")
@@ -233,14 +278,16 @@ def analyse(symbol):
     if price < support:
         short_score += 2
         reasons_short.append("BREAKDOWN")
+
     elif price <= support * 1.005:
         short_score += 1
         reasons_short.append("proche support")
 
-    # MOMENTUM
     if momentum_30m >= 0.6:
         long_score += 1
-        reasons_long.append("momentum +%.2f%%" % momentum_30m)
+        reasons_long.append(
+            "momentum +%.2f%%" % momentum_30m
+        )
 
     if momentum_60m >= 1.0:
         long_score += 1
@@ -248,26 +295,30 @@ def analyse(symbol):
 
     if momentum_30m <= -0.6:
         short_score += 1
-        reasons_short.append("momentum %.2f%%" % momentum_30m)
+        reasons_short.append(
+            "momentum %.2f%%" % momentum_30m
+        )
 
     if momentum_60m <= -1.0:
         short_score += 1
         reasons_short.append("impulsion 1h")
 
-    # COMPRESSION
     if compression:
+
         if long_score >= short_score:
             long_score += 1
             reasons_long.append("compression")
+
         if short_score >= long_score:
             short_score += 1
             reasons_short.append("compression")
 
-    # VOLATILITE
     if volatility >= 0.8:
+
         if long_score > short_score:
             long_score += 1
             reasons_long.append("volatilite")
+
         elif short_score > long_score:
             short_score += 1
             reasons_short.append("volatilite")
@@ -276,10 +327,12 @@ def analyse(symbol):
         direction = "LONG"
         score = long_score
         reasons = reasons_long
+
     elif short_score > long_score:
         direction = "SHORT"
         score = short_score
         reasons = reasons_short
+
     else:
         return None
 
@@ -297,52 +350,259 @@ def analyse(symbol):
         "momentum": momentum_30m,
         "momentum_60m": momentum_60m,
         "volatility": volatility,
-        "reasons": reasons,
+        "reasons": reasons
     }
 
 
-# =========================
-# PAPER TRADING
-# =========================
+def open_position(state, signal):
 
-def paper_trade(signal):
+    symbol = signal["symbol"]
+
+    if symbol in state["positions"]:
+        return None
+
+    if len(state["positions"]) >= MAX_OPEN_POSITIONS:
+        return None
+
     entry = signal["price"]
 
+    risk_money = (
+        state["balance"] *
+        PAPER_RISK_PER_TRADE
+    )
+
+    position_size = (
+        risk_money /
+        (entry * PAPER_STOP_LOSS)
+    )
+
     if signal["direction"] == "LONG":
+
         stop = entry * (1 - PAPER_STOP_LOSS)
         target = entry * (1 + PAPER_TAKE_PROFIT)
+
     else:
+
         stop = entry * (1 + PAPER_STOP_LOSS)
         target = entry * (1 - PAPER_TAKE_PROFIT)
 
-    risk_money = PAPER_START_BALANCE * PAPER_RISK_PER_TRADE
-    position_size = risk_money / (entry * PAPER_STOP_LOSS)
-
-    return {
-        "symbol": signal["symbol"],
+    position = {
+        "symbol": symbol,
         "direction": signal["direction"],
         "entry": entry,
         "stop": stop,
         "target": target,
-        "position_size": position_size,
+        "size": position_size,
+        "opened_at": int(time.time())
     }
 
+    state["positions"][symbol] = position
 
-# =========================
-# MAIN
-# =========================
+    return position
+
+
+def update_positions(state, prices):
+
+    closed = []
+
+    for symbol, position in list(
+        state["positions"].items()
+    ):
+
+        price = prices.get(symbol)
+
+        if price is None:
+            continue
+
+        direction = position["direction"]
+        entry = position["entry"]
+
+        if direction == "LONG":
+
+            pnl_pct = (
+                price / entry - 1
+            ) * 100
+
+            hit_stop = price <= position["stop"]
+            hit_target = price >= position["target"]
+
+        else:
+
+            pnl_pct = (
+                entry / price - 1
+            ) * 100
+
+            hit_stop = price >= position["stop"]
+            hit_target = price <= position["target"]
+
+        if not hit_stop and not hit_target:
+            continue
+
+        if hit_target:
+            exit_price = position["target"]
+            reason = "TAKE PROFIT"
+
+        else:
+            exit_price = position["stop"]
+            reason = "STOP LOSS"
+
+        if direction == "LONG":
+            pnl = (
+                exit_price - entry
+            ) * position["size"]
+
+        else:
+            pnl = (
+                entry - exit_price
+            ) * position["size"]
+
+        state["balance"] += pnl
+        state["realized_pnl"] += pnl
+
+        if pnl >= 0:
+            state["wins"] += 1
+        else:
+            state["losses"] += 1
+
+        state["trades"].append({
+            "symbol": symbol,
+            "direction": direction,
+            "entry": entry,
+            "exit": exit_price,
+            "pnl": pnl,
+            "reason": reason,
+            "time": int(time.time())
+        })
+
+        closed.append({
+            "symbol": symbol,
+            "direction": direction,
+            "pnl": pnl,
+            "pnl_pct": pnl_pct,
+            "reason": reason
+        })
+
+        del state["positions"][symbol]
+
+    return closed
+
+
+def dashboard(state, signals, prices):
+
+    total = state["wins"] + state["losses"]
+
+    winrate = (
+        state["wins"] / total * 100
+        if total
+        else 0
+    )
+
+    unrealized = 0.0
+
+    message = (
+        "🤖 PIONEX BOT — TABLEAU DE BORD\n\n"
+        "💰 Capital paper : %.2f USDT\n"
+        "📈 P&L réalisé : %+0.2f USDT\n"
+        "🎯 Trades : %d | 🟢 %d | 🔴 %d\n"
+        "🏆 Winrate : %.1f%%\n"
+        "🔓 Positions : %d/%d\n\n"
+        "🔥 TOP 5 OPPORTUNITÉS\n"
+    ) % (
+        state["balance"],
+        state["realized_pnl"],
+        total,
+        state["wins"],
+        state["losses"],
+        winrate,
+        len(state["positions"]),
+        MAX_OPEN_POSITIONS
+    )
+
+    for signal in signals[:5]:
+
+        emoji = (
+            "🟢"
+            if signal["direction"] == "LONG"
+            else "🔴"
+        )
+
+        message += (
+            "\n%s %s %s — SCORE %d\n"
+            "Prix %.8g | RSI %.1f | Vol x%.1f\n"
+            "Momentum 30m %+0.2f%%\n"
+            % (
+                emoji,
+                signal["direction"],
+                signal["symbol"],
+                signal["score"],
+                signal["price"],
+                signal["rsi"],
+                signal["volume_ratio"],
+                signal["momentum"]
+            )
+        )
+
+    if state["positions"]:
+
+        message += "\n📌 POSITIONS PAPER\n"
+
+        for position in state["positions"].values():
+
+            price = prices.get(
+                position["symbol"],
+                position["entry"]
+            )
+
+            if position["direction"] == "LONG":
+
+                pnl_pct = (
+                    price / position["entry"] - 1
+                ) * 100
+
+                unrealized += (
+                    position["size"] *
+                    (price - position["entry"])
+                )
+
+            else:
+
+                pnl_pct = (
+                    position["entry"] / price - 1
+                ) * 100
+
+                unrealized += (
+                    position["size"] *
+                    (position["entry"] - price)
+                )
+
+            message += (
+                "%s %s | actuel %.8g | P&L %+.2f%%\n"
+                "Entrée %.8g | SL %.8g | TP %.8g\n"
+                % (
+                    position["direction"],
+                    position["symbol"],
+                    price,
+                    pnl_pct,
+                    position["entry"],
+                    position["stop"],
+                    position["target"]
+                )
+            )
+
+    message += (
+        "\n📊 P&L latent : %+0.2f USDT\n"
+        "\n🧪 MODE PAPER — aucun ordre réel.\n"
+        "⏱️ Prochain scan : ~5 min."
+    ) % unrealized
+
+    return message
+
 
 def main():
-    print("================================")
-    print("PIONEX MOVEMENT SCANNER V2")
-    print("================================")
 
-    if os.environ.get("TEST_MODE") == "1":
-        send_telegram(
-            "🤖 PIONEX SCANNER V2\n\n"
-            "✅ Connexion Telegram OK.\n"
-            "Scanner + paper trading prêts."
-        )
+    print("PIONEX MOVEMENT BOT V3")
+
+    state = load_state()
 
     symbols_data = get_json(
         "/api/v1/common/symbols",
@@ -352,10 +612,9 @@ def main():
     usdt_symbols = {
         s["symbol"]
         for s in symbols_data["symbols"]
-        if s.get("enable") and s.get("quoteCurrency") == "USDT"
+        if s.get("enable")
+        and s.get("quoteCurrency") == "USDT"
     }
-
-    print("Paires USDT :", len(usdt_symbols))
 
     ticker_data = get_json(
         "/api/v1/market/tickers",
@@ -363,105 +622,151 @@ def main():
     )
 
     markets = []
+    prices = {}
 
     for ticker in ticker_data["tickers"]:
+
         symbol = ticker["symbol"]
 
         if symbol not in usdt_symbols:
             continue
 
         try:
-            amount = float(ticker.get("amount", 0))
-            price = float(ticker.get("close", 0))
+            amount = float(
+                ticker.get("amount", 0)
+            )
+
+            price = float(
+                ticker.get("close", 0)
+            )
+
         except Exception:
             continue
 
-        if amount < MIN_24H_VOLUME or price <= 0:
+        if price <= 0:
             continue
 
-        markets.append({
-            "symbol": symbol,
-            "volume": amount,
-            "price": price,
-        })
+        prices[symbol] = price
 
-    markets.sort(key=lambda x: x["volume"], reverse=True)
+        if amount >= MIN_24H_VOLUME:
+            markets.append({
+                "symbol": symbol,
+                "volume": amount,
+                "price": price
+            })
 
-    candidates = markets[:DEEP_SCAN_COUNT]
-
-    print("Marchés analysés :", len(candidates))
+    closed = update_positions(
+        state,
+        prices
+    )
 
     signals = []
 
-    for market in candidates:
-        try:
-            result = analyse(market["symbol"])
-
-            if result:
-                result["volume24h"] = market["volume"]
-                signals.append(result)
-                print(
-                    "SIGNAL",
-                    result["symbol"],
-                    result["direction"],
-                    result["score"]
-                )
-
-        except Exception as error:
-            print("Erreur", market["symbol"], str(error))
-
-        time.sleep(0.12)
-
-    signals.sort(key=lambda x: x["score"], reverse=True)
-
-    if not signals:
-        # Même sans signal fort, on prévient que le scan fonctionne.
-        send_telegram(
-            "🔎 PIONEX SCANNER V2\n\n"
-            "Aucun signal au-dessus du seuil actuellement.\n"
-            "Scan effectué sur %d marchés." % len(candidates)
-        )
-        print("Aucun signal.")
-        return
-
-    message = "🚨 PIONEX MOVEMENT SCANNER V2\n\n"
-
-    for signal in signals[:5]:
-        emoji = "🟢" if signal["direction"] == "LONG" else "🔴"
-
-        message += (
-            "━━━━━━━━━━━━━━\n"
-            f"{emoji} {signal['direction']} {signal['symbol']}\n"
-            f"Score : {signal['score']}/10+\n"
-            f"Prix : {signal['price']:.8g}\n"
-            f"Volume : x{signal['volume_ratio']:.2f}\n"
-            f"Accélération volume : x{signal['volume_acceleration']:.2f}\n"
-            f"RSI : {signal['rsi']:.1f}\n"
-            f"Momentum 30m : {signal['momentum']:+.2f}%\n"
-            f"Momentum 1h : {signal['momentum_60m']:+.2f}%\n"
-            f"Volatilité : {signal['volatility']:.2f}%\n"
-            "Signes : " + ", ".join(signal["reasons"]) + "\n"
-        )
-
-        if PAPER_MODE:
-            trade = paper_trade(signal)
-            message += (
-                f"🧪 PAPER ENTRY : {trade['entry']:.8g}\n"
-                f"🛑 Stop : {trade['stop']:.8g}\n"
-                f"🎯 Target : {trade['target']:.8g}\n"
-            )
-
-    message += (
-        "\n🧪 PAPER TRADING UNIQUEMENT\n"
-        "⚠️ Aucun ordre réel n'est envoyé à Pionex."
+    markets.sort(
+        key=lambda x: x["volume"],
+        reverse=True
     )
 
-    send_telegram(message)
+    for market in markets[:DEEP_SCAN_COUNT]:
+
+        try:
+
+            result = analyse(
+                market["symbol"]
+            )
+
+            if result:
+                signals.append(result)
+
+        except Exception as error:
+
+            print(
+                "Erreur",
+                market["symbol"],
+                str(error)
+            )
+
+        time.sleep(0.10)
+
+    signals.sort(
+        key=lambda x: x["score"],
+        reverse=True
+    )
+
+    if (
+        signals
+        and len(state["positions"]) < MAX_OPEN_POSITIONS
+    ):
+
+        for signal in signals:
+
+            if signal["symbol"] not in state["positions"]:
+
+                position = open_position(
+                    state,
+                    signal
+                )
+
+                if position:
+                    print(
+                        "PAPER ENTRY",
+                        position
+                    )
+                    break
+
+    save_state(state)
+
+    if closed:
+
+        close_message = (
+            "📤 PAPER TRADE TERMINÉ\n\n"
+        )
+
+        for trade in closed:
+
+            emoji = (
+                "✅"
+                if trade["pnl"] >= 0
+                else "❌"
+            )
+
+            close_message += (
+                "%s %s %s\n"
+                "Résultat : %+0.2f USDT (%+.2f%%)\n"
+                "%s\n\n"
+                % (
+                    emoji,
+                    trade["direction"],
+                    trade["symbol"],
+                    trade["pnl"],
+                    trade["pnl_pct"],
+                    trade["reason"]
+                )
+            )
+
+        send_telegram(
+            close_message
+        )
+
+    send_telegram(
+        dashboard(
+            state,
+            signals,
+            prices
+        )
+    )
 
 
 if __name__ == "__main__":
+
     try:
         main()
+
     except Exception as error:
-        print("ERREUR GENERALE :", str(error))
+
+        print(
+            "ERREUR GENERALE :",
+            str(error)
+        )
+
         raise
