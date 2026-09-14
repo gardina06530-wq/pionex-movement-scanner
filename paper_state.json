@@ -1,64 +1,9 @@
 {
-  "balance": 970.299,
-  "realized_pnl": -29.700999999999958,
+  "balance": 1000.0,
+  "realized_pnl": 0.0,
   "wins": 0,
-  "losses": 3,
-  "trades": [
-    {
-      "symbol": "LSK_USDT",
-      "direction": "LONG",
-      "entry": 1.0057,
-      "exit": 0.9906145000000001,
-      "pnl": -9.999999999999982,
-      "reason": "STOP LOSS",
-      "time": 1789366116
-    },
-    {
-      "symbol": "STX_USDT",
-      "direction": "LONG",
-      "entry": 0.2701,
-      "exit": 0.2660485,
-      "pnl": -9.899999999999967,
-      "reason": "STOP LOSS",
-      "time": 1789368817
-    },
-    {
-      "symbol": "NACHA_USDT",
-      "direction": "LONG",
-      "entry": 0.140649,
-      "exit": 0.138539265,
-      "pnl": -9.801000000000007,
-      "reason": "STOP LOSS",
-      "time": 1789369815
-    }
-  ],
-  "positions": {
-    "RVN_USDT": {
-      "symbol": "RVN_USDT",
-      "direction": "LONG",
-      "entry": 0.00228,
-      "stop": 0.0022458,
-      "target": 0.0023484,
-      "size": 292397.6608187135,
-      "opened_at": 1789363381
-    },
-    "KAVA_USDT": {
-      "symbol": "KAVA_USDT",
-      "direction": "LONG",
-      "entry": 0.0632,
-      "stop": 0.062252,
-      "target": 0.06509600000000001,
-      "size": 10548.523206751055,
-      "opened_at": 1789364322
-    },
-    "DEXE_USDT": {
-      "symbol": "DEXE_USDT",
-      "direction": "SHORT",
-      "entry": 1.802,
-      "stop": 1.82903,
-      "target": 1.74794,
-      "size": 358.97114317425087,
-      "opened_at": 1789369847
-    }
-  }
+  "losses": 0,
+  "trades": [],
+  "positions": {},
+  "last_alerted": {}
 }
