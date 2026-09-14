@@ -25,6 +25,17 @@
       "score": 10,
       "quality": "A+",
       "opened_at": 1789389913
+    },
+    "STRAX_USDT": {
+      "symbol": "STRAX_USDT",
+      "direction": "LONG",
+      "entry": 0.01174,
+      "stop": 0.0115639,
+      "target": 0.0120922,
+      "size": 56218.05792163544,
+      "score": 11,
+      "quality": "A+",
+      "opened_at": 1789390934
     }
   },
   "last_alerted": {
@@ -69,8 +80,8 @@
       "key": "LONG_9"
     },
     "GRT_USDT": {
-      "time": 1789388646,
-      "key": "SHORT_9"
+      "time": 1789390934,
+      "key": "LONG_10"
     },
     "ARKM_USDT": {
       "time": 1789388646,
@@ -125,8 +136,8 @@
       "key": "SHORT_8"
     },
     "IQ_USDT": {
-      "time": 1789388646,
-      "key": "LONG_8"
+      "time": 1789390934,
+      "key": "SHORT_8"
     },
     "BICO_USDT": {
       "time": 1789388646,
@@ -153,8 +164,8 @@
       "key": "SHORT_9"
     },
     "MBL_USDT": {
-      "time": 1789389913,
-      "key": "SHORT_9"
+      "time": 1789390934,
+      "key": "SHORT_8"
     },
     "CKB_USDT": {
       "time": 1789389913,
@@ -179,6 +190,50 @@
     "DYM_USDT": {
       "time": 1789389913,
       "key": "SHORT_8"
+    },
+    "STRAX_USDT": {
+      "time": 1789390934,
+      "key": "LONG_11"
+    },
+    "FLUX_USDT": {
+      "time": 1789390934,
+      "key": "LONG_10"
+    },
+    "BAT_USDT": {
+      "time": 1789390934,
+      "key": "LONG_10"
+    },
+    "ZEN_USDT": {
+      "time": 1789390934,
+      "key": "SHORT_9"
+    },
+    "MTL_USDT": {
+      "time": 1789390934,
+      "key": "LONG_9"
+    },
+    "FLOKI_USDT": {
+      "time": 1789390934,
+      "key": "SHORT_8"
+    },
+    "DASH_USDT": {
+      "time": 1789390934,
+      "key": "LONG_8"
+    },
+    "SOL_USDT": {
+      "time": 1789390934,
+      "key": "SHORT_8"
+    },
+    "KAVA_USDT": {
+      "time": 1789390934,
+      "key": "SHORT_8"
+    },
+    "BLUR_USDT": {
+      "time": 1789390934,
+      "key": "SHORT_8"
+    },
+    "SAGA_USDT": {
+      "time": 1789390934,
+      "key": "LONG_8"
     }
   }
 }
