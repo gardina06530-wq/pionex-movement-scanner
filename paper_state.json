@@ -474,8 +474,8 @@
       "key": "SHORT_8"
     },
     "TRB_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_11"
+      "time": 1789514663,
+      "key": "SHORT_8"
     },
     "GRT_USDT": {
       "time": 1789513747,
@@ -578,8 +578,8 @@
       "key": "LONG_8"
     },
     "METAX_USDT": {
-      "time": 1789509365,
-      "key": "LONG_11"
+      "time": 1789514663,
+      "key": "LONG_9"
     },
     "IMX_USDT": {
       "time": 1789513747,
@@ -718,8 +718,8 @@
       "key": "LONG_9"
     },
     "OSMO_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789514663,
+      "key": "LONG_9"
     },
     "FTT_USDT": {
       "time": 1789511333,
@@ -730,16 +730,16 @@
       "key": "LONG_11"
     },
     "PHA_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_8"
+      "time": 1789514663,
+      "key": "LONG_8"
     },
     "ALGO_USDT": {
       "time": 1789508690,
       "key": "LONG_10"
     },
     "IO_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789514663,
+      "key": "LONG_9"
     },
     "BB_USDT": {
       "time": 1789500940,
@@ -818,8 +818,8 @@
       "key": "SHORT_8"
     },
     "CTSI_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789514663,
+      "key": "SHORT_8"
     },
     "RIF_USDT": {
       "time": 1789482401,
@@ -846,8 +846,8 @@
       "key": "LONG_8"
     },
     "OKB_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_8"
+      "time": 1789514663,
+      "key": "LONG_8"
     },
     "ACH_USDT": {
       "time": 1789398598,
@@ -930,8 +930,8 @@
       "key": "SHORT_9"
     },
     "RLC_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_11"
+      "time": 1789514663,
+      "key": "SHORT_8"
     },
     "TSLAX_USDT": {
       "time": 1789501726,
@@ -950,8 +950,8 @@
       "key": "SHORT_10"
     },
     "AAPLX_USDT": {
-      "time": 1789490182,
-      "key": "LONG_9"
+      "time": 1789514663,
+      "key": "SHORT_8"
     },
     "DEXE_USDT": {
       "time": 1789513747,
@@ -998,8 +998,8 @@
       "key": "LONG_8"
     },
     "CTK_USDT": {
-      "time": 1789509365,
-      "key": "LONG_10"
+      "time": 1789514663,
+      "key": "SHORT_9"
     },
     "DOT_USDT": {
       "time": 1789503573,
@@ -1010,7 +1010,7 @@
       "key": "SHORT_8"
     },
     "XEC_USDT": {
-      "time": 1789500940,
+      "time": 1789514663,
       "key": "LONG_8"
     },
     "COTI_USDT": {
@@ -1102,8 +1102,8 @@
       "key": "LONG_9"
     },
     "XLM_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_8"
+      "time": 1789514663,
+      "key": "LONG_8"
     },
     "FET_USDT": {
       "time": 1789513747,
@@ -1142,8 +1142,8 @@
       "key": "SHORT_10"
     },
     "SHIB_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789514663,
+      "key": "LONG_8"
     },
     "BEL_USDT": {
       "time": 1789513747,
@@ -1202,12 +1202,12 @@
       "key": "LONG_9"
     },
     "SAND_USDT": {
-      "time": 1789511333,
-      "key": "LONG_9"
+      "time": 1789514663,
+      "key": "LONG_8"
     },
     "SANTOS_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789514663,
+      "key": "LONG_8"
     },
     "PSG_USDT": {
       "time": 1789507062,
@@ -1226,8 +1226,8 @@
       "key": "SHORT_9"
     },
     "MEME_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_8"
+      "time": 1789514663,
+      "key": "LONG_8"
     }
   }
 }
