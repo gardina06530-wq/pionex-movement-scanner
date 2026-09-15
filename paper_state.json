@@ -1,8 +1,8 @@
 {
-  "balance": 835.6672413612846,
-  "realized_pnl": -164.3327586387155,
+  "balance": 827.3105689476718,
+  "realized_pnl": -172.6894310523284,
   "wins": 5,
-  "losses": 28,
+  "losses": 29,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -300,6 +300,15 @@
       "pnl": -8.27708442928887,
       "reason": "STOP LOSS",
       "time": 1789484228
+    },
+    {
+      "symbol": "VTHO_USDT",
+      "direction": "LONG",
+      "entry": 0.00076,
+      "exit": 0.0007486,
+      "pnl": -8.356672413612891,
+      "reason": "STOP LOSS",
+      "time": 1789491774
     }
   ],
   "positions": {
@@ -314,17 +323,6 @@
       "quality": "A+",
       "opened_at": 1789425191
     },
-    "VTHO_USDT": {
-      "symbol": "VTHO_USDT",
-      "direction": "LONG",
-      "entry": 0.00076,
-      "stop": 0.0007486,
-      "target": 0.0007828,
-      "size": 733041.4397906006,
-      "score": 12,
-      "quality": "A+",
-      "opened_at": 1789484276
-    },
     "ACM_USDT": {
       "symbol": "ACM_USDT",
       "direction": "SHORT",
@@ -335,6 +333,17 @@
       "score": 10,
       "quality": "A+",
       "opened_at": 1789485396
+    },
+    "HBAR_USDT": {
+      "symbol": "HBAR_USDT",
+      "direction": "SHORT",
+      "entry": 0.07684,
+      "stop": 0.0779926,
+      "target": 0.0745348,
+      "size": 7177.776929964184,
+      "score": 10,
+      "quality": "A+",
+      "opened_at": 1789491817
     }
   },
   "last_alerted": {
@@ -359,8 +368,8 @@
       "key": "LONG_8"
     },
     "CHZ_USDT": {
-      "time": 1789489172,
-      "key": "LONG_8"
+      "time": 1789491817,
+      "key": "LONG_9"
     },
     "FIL_USDT": {
       "time": 1789479467,
@@ -639,7 +648,7 @@
       "key": "LONG_9"
     },
     "IO_USDT": {
-      "time": 1789485396,
+      "time": 1789491817,
       "key": "LONG_8"
     },
     "BB_USDT": {
@@ -747,8 +756,8 @@
       "key": "SHORT_10"
     },
     "OKB_USDT": {
-      "time": 1789489172,
-      "key": "SHORT_8"
+      "time": 1789491817,
+      "key": "LONG_9"
     },
     "ACH_USDT": {
       "time": 1789398598,
@@ -911,8 +920,8 @@
       "key": "SHORT_8"
     },
     "XEC_USDT": {
-      "time": 1789491096,
-      "key": "LONG_8"
+      "time": 1789491817,
+      "key": "LONG_9"
     },
     "COTI_USDT": {
       "time": 1789485396,
@@ -983,7 +992,7 @@
       "key": "LONG_9"
     },
     "CAKE_USDT": {
-      "time": 1789483413,
+      "time": 1789491817,
       "key": "LONG_8"
     },
     "ENS_USDT": {
@@ -999,7 +1008,7 @@
       "key": "SHORT_8"
     },
     "ACE_USDT": {
-      "time": 1789489172,
+      "time": 1789491817,
       "key": "LONG_9"
     },
     "XLM_USDT": {
@@ -1035,8 +1044,8 @@
       "key": "SHORT_9"
     },
     "TFUEL_USDT": {
-      "time": 1789477211,
-      "key": "LONG_10"
+      "time": 1789491817,
+      "key": "SHORT_9"
     },
     "NEAR_USDT": {
       "time": 1789487989,
@@ -1075,8 +1084,8 @@
       "key": "SHORT_8"
     },
     "HBAR_USDT": {
-      "time": 1789478495,
-      "key": "SHORT_9"
+      "time": 1789491817,
+      "key": "SHORT_10"
     },
     "GMX_USDT": {
       "time": 1789477211,
