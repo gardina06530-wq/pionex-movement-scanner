@@ -1,8 +1,8 @@
 {
-  "balance": 827.7084429288848,
-  "realized_pnl": -172.29155707111534,
-  "wins": 4,
-  "losses": 27,
+  "balance": 835.6672413612846,
+  "realized_pnl": -164.3327586387155,
+  "wins": 5,
+  "losses": 28,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -282,6 +282,24 @@
       "pnl": 15.914299844451604,
       "reason": "TAKE PROFIT",
       "time": 1789483364
+    },
+    {
+      "symbol": "DASH_USDT",
+      "direction": "SHORT",
+      "entry": 52.83,
+      "exit": 51.245099999999994,
+      "pnl": 16.235882861688708,
+      "reason": "TAKE PROFIT",
+      "time": 1789484228
+    },
+    {
+      "symbol": "JUP_USDT",
+      "direction": "LONG",
+      "entry": 0.2365,
+      "exit": 0.23295249999999998,
+      "pnl": -8.27708442928887,
+      "reason": "STOP LOSS",
+      "time": 1789484228
     }
   ],
   "positions": {
@@ -296,27 +314,16 @@
       "quality": "A+",
       "opened_at": 1789425191
     },
-    "DASH_USDT": {
-      "symbol": "DASH_USDT",
-      "direction": "SHORT",
-      "entry": 52.83,
-      "stop": 53.62244999999999,
-      "target": 51.245099999999994,
-      "size": 10.244105534537612,
-      "score": 11,
-      "quality": "A+",
-      "opened_at": 1789480395
-    },
-    "JUP_USDT": {
-      "symbol": "JUP_USDT",
+    "VTHO_USDT": {
+      "symbol": "VTHO_USDT",
       "direction": "LONG",
-      "entry": 0.2365,
-      "stop": 0.23295249999999998,
-      "target": 0.243595,
-      "size": 2333.216188664933,
-      "score": 10,
+      "entry": 0.00076,
+      "stop": 0.0007486,
+      "target": 0.0007828,
+      "size": 733041.4397906006,
+      "score": 12,
       "quality": "A+",
-      "opened_at": 1789483413
+      "opened_at": 1789484276
     }
   },
   "last_alerted": {
@@ -493,8 +500,8 @@
       "key": "LONG_9"
     },
     "FLOKI_USDT": {
-      "time": 1789473005,
-      "key": "LONG_9"
+      "time": 1789484276,
+      "key": "LONG_8"
     },
     "DASH_USDT": {
       "time": 1789480395,
@@ -553,8 +560,8 @@
       "key": "LONG_9"
     },
     "ZIL_USDT": {
-      "time": 1789482401,
-      "key": "SHORT_9"
+      "time": 1789484276,
+      "key": "LONG_8"
     },
     "EDU_USDT": {
       "time": 1789473668,
@@ -589,8 +596,8 @@
       "key": "SHORT_8"
     },
     "VTHO_USDT": {
-      "time": 1789477211,
-      "key": "SHORT_10"
+      "time": 1789484276,
+      "key": "LONG_12"
     },
     "KAS_USDT": {
       "time": 1789483413,
@@ -645,8 +652,8 @@
       "key": "LONG_8"
     },
     "BNT_USDT": {
-      "time": 1789483413,
-      "key": "LONG_10"
+      "time": 1789484276,
+      "key": "LONG_9"
     },
     "QKC_USDT": {
       "time": 1789482401,
@@ -685,8 +692,8 @@
       "key": "LONG_8"
     },
     "AXL_USDT": {
-      "time": 1789483413,
-      "key": "LONG_8"
+      "time": 1789484276,
+      "key": "LONG_11"
     },
     "JUP_USDT": {
       "time": 1789483413,
@@ -809,11 +816,11 @@
       "key": "SHORT_8"
     },
     "LSK_USDT": {
-      "time": 1789483413,
-      "key": "LONG_8"
+      "time": 1789484276,
+      "key": "LONG_11"
     },
     "RLC_USDT": {
-      "time": 1789481287,
+      "time": 1789484276,
       "key": "LONG_9"
     },
     "TSLAX_USDT": {
@@ -829,8 +836,8 @@
       "key": "LONG_8"
     },
     "DODO_USDT": {
-      "time": 1789481287,
-      "key": "LONG_8"
+      "time": 1789484276,
+      "key": "LONG_10"
     },
     "AAPLX_USDT": {
       "time": 1789480395,
@@ -957,8 +964,8 @@
       "key": "LONG_8"
     },
     "STRK_USDT": {
-      "time": 1789467644,
-      "key": "LONG_9"
+      "time": 1789484276,
+      "key": "LONG_8"
     },
     "AAVE_USDT": {
       "time": 1789451661,
@@ -1069,8 +1076,8 @@
       "key": "SHORT_8"
     },
     "ID_USDT": {
-      "time": 1789483413,
-      "key": "LONG_10"
+      "time": 1789484276,
+      "key": "LONG_11"
     },
     "JUV_USDT": {
       "time": 1789483413,
