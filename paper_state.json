@@ -479,15 +479,15 @@
       "key": "LONG_8"
     },
     "DASH_USDT": {
-      "time": 1789457680,
-      "key": "SHORT_8"
+      "time": 1789468585,
+      "key": "LONG_8"
     },
     "SOL_USDT": {
       "time": 1789465467,
       "key": "LONG_9"
     },
     "KAVA_USDT": {
-      "time": 1789466392,
+      "time": 1789468585,
       "key": "LONG_8"
     },
     "BLUR_USDT": {
@@ -683,8 +683,8 @@
       "key": "LONG_8"
     },
     "CTSI_USDT": {
-      "time": 1789460891,
-      "key": "SHORT_10"
+      "time": 1789468585,
+      "key": "LONG_9"
     },
     "RIF_USDT": {
       "time": 1789465467,
@@ -703,8 +703,8 @@
       "key": "SHORT_8"
     },
     "GMT_USDT": {
-      "time": 1789446731,
-      "key": "LONG_8"
+      "time": 1789468585,
+      "key": "LONG_10"
     },
     "JASMY_USDT": {
       "time": 1789451661,
