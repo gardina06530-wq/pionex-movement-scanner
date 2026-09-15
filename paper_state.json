@@ -1,7 +1,7 @@
 {
-  "balance": 787.9926641142597,
-  "realized_pnl": -212.00733588574033,
-  "wins": 1,
+  "balance": 803.7525173965449,
+  "realized_pnl": -196.2474826034551,
+  "wins": 2,
   "losses": 26,
   "trades": [
     {
@@ -246,6 +246,15 @@
       "pnl": -7.959521859739957,
       "reason": "STOP LOSS",
       "time": 1789439312
+    },
+    {
+      "symbol": "CKB_USDT",
+      "direction": "SHORT",
+      "entry": 0.001179,
+      "exit": 0.0011436299999999999,
+      "pnl": 15.759853282285224,
+      "reason": "TAKE PROFIT",
+      "time": 1789458701
     }
   ],
   "positions": {
@@ -271,16 +280,16 @@
       "quality": "A+",
       "opened_at": 1789426777
     },
-    "CKB_USDT": {
-      "symbol": "CKB_USDT",
-      "direction": "SHORT",
-      "entry": 0.001179,
-      "stop": 0.0011966849999999998,
-      "target": 0.0011436299999999999,
-      "size": 445571.1982551653,
-      "score": 10,
+    "STRAX_USDT": {
+      "symbol": "STRAX_USDT",
+      "direction": "LONG",
+      "entry": 0.01251,
+      "stop": 0.01232235,
+      "target": 0.0128853,
+      "size": 42832.53489989581,
+      "score": 11,
       "quality": "A+",
-      "opened_at": 1789439345
+      "opened_at": 1789458745
     }
   },
   "last_alerted": {
@@ -289,7 +298,7 @@
       "key": "LONG_10"
     },
     "CSPR_USDT": {
-      "time": 1789449715,
+      "time": 1789458745,
       "key": "LONG_9"
     },
     "PROM_USDT": {
@@ -437,8 +446,8 @@
       "key": "LONG_10"
     },
     "STRAX_USDT": {
-      "time": 1789457680,
-      "key": "LONG_10"
+      "time": 1789458745,
+      "key": "LONG_11"
     },
     "FLUX_USDT": {
       "time": 1789435257,
@@ -569,8 +578,8 @@
       "key": "LONG_8"
     },
     "FTT_USDT": {
-      "time": 1789451661,
-      "key": "LONG_8"
+      "time": 1789458745,
+      "key": "LONG_10"
     },
     "IOST_USDT": {
       "time": 1789446731,
@@ -629,7 +638,7 @@
       "key": "LONG_11"
     },
     "BONK_USDT": {
-      "time": 1789448509,
+      "time": 1789458745,
       "key": "LONG_8"
     },
     "IOTX_USDT": {
@@ -1005,15 +1014,15 @@
       "key": "LONG_8"
     },
     "mETH_USDT": {
-      "time": 1789456515,
-      "key": "LONG_8"
+      "time": 1789458745,
+      "key": "LONG_9"
     },
     "ICP_USDT": {
       "time": 1789446731,
       "key": "LONG_8"
     },
     "TLM_USDT": {
-      "time": 1789446731,
+      "time": 1789458745,
       "key": "LONG_8"
     },
     "XRP_USDT": {
