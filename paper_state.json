@@ -1,8 +1,8 @@
 {
-  "balance": 852.1265767738262,
-  "realized_pnl": -147.87342322617394,
+  "balance": 843.605311006088,
+  "realized_pnl": -156.3946889939122,
   "wins": 7,
-  "losses": 30,
+  "losses": 31,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -336,6 +336,15 @@
       "pnl": 16.70836425046717,
       "reason": "TAKE PROFIT",
       "time": 1789507007
+    },
+    {
+      "symbol": "POLYX_USDT",
+      "direction": "LONG",
+      "entry": 0.0407,
+      "exit": 0.0400895,
+      "pnl": -8.521265767738262,
+      "reason": "STOP LOSS",
+      "time": 1789507848
     }
   ],
   "positions": {
@@ -361,16 +370,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "POLYX_USDT": {
-      "symbol": "POLYX_USDT",
+    "POWR_USDT": {
+      "symbol": "POWR_USDT",
       "direction": "LONG",
-      "entry": 0.0407,
-      "stop": 0.0400895,
-      "target": 0.041921,
-      "size": 13957.84728540256,
-      "score": 11,
-      "quality": "A",
-      "opened_at": 1789507062
+      "entry": 0.0625,
+      "stop": 0.0615625,
+      "target": 0.064375,
+      "size": 8998.456650731605,
+      "score": 13,
+      "quality": "A+",
+      "opened_at": 1789507891
     }
   },
   "last_alerted": {
@@ -539,8 +548,8 @@
       "key": "LONG_9"
     },
     "ZEN_USDT": {
-      "time": 1789447783,
-      "key": "LONG_11"
+      "time": 1789507891,
+      "key": "LONG_8"
     },
     "MTL_USDT": {
       "time": 1789504410,
@@ -631,8 +640,8 @@
       "key": "LONG_9"
     },
     "POWR_USDT": {
-      "time": 1789505277,
-      "key": "LONG_10"
+      "time": 1789507891,
+      "key": "LONG_13"
     },
     "PEPE_USDT": {
       "time": 1789491096,
@@ -671,8 +680,8 @@
       "key": "LONG_8"
     },
     "ALGO_USDT": {
-      "time": 1789489172,
-      "key": "LONG_9"
+      "time": 1789507891,
+      "key": "LONG_8"
     },
     "IO_USDT": {
       "time": 1789499120,
@@ -843,8 +852,8 @@
       "key": "SHORT_8"
     },
     "LRC_USDT": {
-      "time": 1789505277,
-      "key": "LONG_8"
+      "time": 1789507891,
+      "key": "LONG_10"
     },
     "PORTO_USDT": {
       "time": 1789500940,
