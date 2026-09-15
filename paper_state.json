@@ -331,7 +331,7 @@
       "key": "LONG_10"
     },
     "ONT_USDT": {
-      "time": 1789462970,
+      "time": 1789476332,
       "key": "LONG_9"
     },
     "USOX_USDT": {
@@ -423,8 +423,8 @@
       "key": "LONG_8"
     },
     "DUSK_USDT": {
-      "time": 1789472234,
-      "key": "LONG_8"
+      "time": 1789476332,
+      "key": "LONG_9"
     },
     "MBL_USDT": {
       "time": 1789447783,
@@ -471,8 +471,8 @@
       "key": "LONG_11"
     },
     "MTL_USDT": {
-      "time": 1789472234,
-      "key": "LONG_10"
+      "time": 1789476332,
+      "key": "LONG_9"
     },
     "FLOKI_USDT": {
       "time": 1789473005,
@@ -503,12 +503,12 @@
       "key": "LONG_9"
     },
     "AUCTION_USDT": {
-      "time": 1789471317,
-      "key": "LONG_11"
+      "time": 1789476332,
+      "key": "LONG_8"
     },
     "PYTH_USDT": {
-      "time": 1789449715,
-      "key": "LONG_8"
+      "time": 1789476332,
+      "key": "LONG_9"
     },
     "LDO_USDT": {
       "time": 1789454257,
@@ -523,8 +523,8 @@
       "key": "SHORT_9"
     },
     "XVG_USDT": {
-      "time": 1789462970,
-      "key": "LONG_10"
+      "time": 1789476332,
+      "key": "LONG_11"
     },
     "NACHA_USDT": {
       "time": 1789470253,
@@ -659,7 +659,7 @@
       "key": "LONG_9"
     },
     "TRX_USDT": {
-      "time": 1789464267,
+      "time": 1789476332,
       "key": "LONG_9"
     },
     "MANA_USDT": {
@@ -695,7 +695,7 @@
       "key": "LONG_8"
     },
     "JTO_USDT": {
-      "time": 1789471317,
+      "time": 1789476332,
       "key": "LONG_8"
     },
     "GLM_USDT": {
@@ -759,8 +759,8 @@
       "key": "LONG_9"
     },
     "LPT_USDT": {
-      "time": 1789475112,
-      "key": "LONG_8"
+      "time": 1789476332,
+      "key": "LONG_9"
     },
     "ALICE_USDT": {
       "time": 1789462970,
@@ -955,8 +955,8 @@
       "key": "LONG_8"
     },
     "THETA_USDT": {
-      "time": 1789437220,
-      "key": "SHORT_8"
+      "time": 1789476332,
+      "key": "LONG_8"
     },
     "DIA_USDT": {
       "time": 1789464267,
@@ -979,8 +979,8 @@
       "key": "LONG_8"
     },
     "TIA_USDT": {
-      "time": 1789454257,
-      "key": "LONG_9"
+      "time": 1789476332,
+      "key": "LONG_8"
     },
     "SLVX_USDT": {
       "time": 1789450720,
@@ -991,8 +991,8 @@
       "key": "LONG_9"
     },
     "LAZIO_USDT": {
-      "time": 1789473005,
-      "key": "LONG_8"
+      "time": 1789476332,
+      "key": "LONG_10"
     },
     "APE_USDT": {
       "time": 1789454257,
@@ -1057,6 +1057,10 @@
     "JUV_USDT": {
       "time": 1789464267,
       "key": "LONG_9"
+    },
+    "BTC_USDT": {
+      "time": 1789476332,
+      "key": "LONG_8"
     }
   }
 }
