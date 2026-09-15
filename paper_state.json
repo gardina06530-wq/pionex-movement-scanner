@@ -1,8 +1,8 @@
 {
-  "balance": 826.8175653170667,
-  "realized_pnl": -173.18243468293338,
+  "balance": 818.5493896638961,
+  "realized_pnl": -181.45061033610395,
   "wins": 7,
-  "losses": 33,
+  "losses": 34,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -363,6 +363,15 @@
       "pnl": -8.351692578960279,
       "reason": "STOP LOSS",
       "time": 1789509316
+    },
+    {
+      "symbol": "NACHA_USDT",
+      "direction": "SHORT",
+      "entry": 0.130127,
+      "exit": 0.13207890499999997,
+      "pnl": -8.268175653170566,
+      "reason": "STOP LOSS",
+      "time": 1789510342
     }
   ],
   "positions": {
@@ -388,16 +397,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "NACHA_USDT": {
-      "symbol": "NACHA_USDT",
-      "direction": "SHORT",
-      "entry": 0.130127,
-      "stop": 0.13207890499999997,
-      "target": 0.12622318999999999,
-      "size": 4235.951879405334,
-      "score": 12,
+    "CTK_USDT": {
+      "symbol": "CTK_USDT",
+      "direction": "LONG",
+      "entry": 0.1237,
+      "stop": 0.12184450000000001,
+      "target": 0.127411,
+      "size": 4411.476096275377,
+      "score": 10,
       "quality": "A+",
-      "opened_at": 1789509365
+      "opened_at": 1789510377
     }
   },
   "last_alerted": {
@@ -450,8 +459,8 @@
       "key": "LONG_8"
     },
     "NVDAX_USDT": {
-      "time": 1789509365,
-      "key": "LONG_8"
+      "time": 1789510377,
+      "key": "LONG_10"
     },
     "METIS_USDT": {
       "time": 1789496335,
@@ -514,8 +523,8 @@
       "key": "SHORT_8"
     },
     "WIN_USDT": {
-      "time": 1789500107,
-      "key": "LONG_9"
+      "time": 1789510377,
+      "key": "LONG_8"
     },
     "NEO_USDT": {
       "time": 1789505277,
@@ -538,8 +547,8 @@
       "key": "LONG_9"
     },
     "AUDIO_USDT": {
-      "time": 1789509365,
-      "key": "LONG_9"
+      "time": 1789510377,
+      "key": "LONG_8"
     },
     "METAX_USDT": {
       "time": 1789509365,
@@ -578,8 +587,8 @@
       "key": "LONG_8"
     },
     "DASH_USDT": {
-      "time": 1789502395,
-      "key": "LONG_8"
+      "time": 1789510377,
+      "key": "LONG_10"
     },
     "SOL_USDT": {
       "time": 1789465467,
@@ -622,8 +631,8 @@
       "key": "LONG_8"
     },
     "XVG_USDT": {
-      "time": 1789501726,
-      "key": "SHORT_8"
+      "time": 1789510377,
+      "key": "LONG_8"
     },
     "NACHA_USDT": {
       "time": 1789508690,
@@ -818,8 +827,8 @@
       "key": "LONG_8"
     },
     "MASK_USDT": {
-      "time": 1789509365,
-      "key": "LONG_9"
+      "time": 1789510377,
+      "key": "LONG_10"
     },
     "STX_USDT": {
       "time": 1789496335,
@@ -862,7 +871,7 @@
       "key": "LONG_8"
     },
     "ALICE_USDT": {
-      "time": 1789489172,
+      "time": 1789510377,
       "key": "LONG_9"
     },
     "SNX_USDT": {
@@ -1082,8 +1091,8 @@
       "key": "LONG_8"
     },
     "SLVX_USDT": {
-      "time": 1789496335,
-      "key": "SHORT_9"
+      "time": 1789510377,
+      "key": "LONG_10"
     },
     "mBTC_USDT": {
       "time": 1789499120,
