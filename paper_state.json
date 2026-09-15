@@ -1,8 +1,8 @@
 {
-  "balance": 810.3638957672572,
-  "realized_pnl": -189.6361042327429,
+  "balance": 802.2602568095846,
+  "realized_pnl": -197.7397431904155,
   "wins": 7,
-  "losses": 35,
+  "losses": 36,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -381,6 +381,15 @@
       "pnl": -8.185493896638945,
       "reason": "STOP LOSS",
       "time": 1789511282
+    },
+    {
+      "symbol": "IOST_USDT",
+      "direction": "LONG",
+      "entry": 0.000777,
+      "exit": 0.000765345,
+      "pnl": -8.103638957672617,
+      "reason": "STOP LOSS",
+      "time": 1789512143
     }
   ],
   "positions": {
@@ -406,16 +415,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "IOST_USDT": {
-      "symbol": "IOST_USDT",
+    "ORDI_USDT": {
+      "symbol": "ORDI_USDT",
       "direction": "LONG",
-      "entry": 0.000777,
-      "stop": 0.000765345,
-      "target": 0.00080031,
-      "size": 695292.9178612246,
+      "entry": 4.068,
+      "stop": 4.0069799999999995,
+      "target": 4.19004,
+      "size": 131.4749683398205,
       "score": 11,
       "quality": "A+",
-      "opened_at": 1789511333
+      "opened_at": 1789512191
     }
   },
   "last_alerted": {
@@ -428,8 +437,8 @@
       "key": "LONG_8"
     },
     "PROM_USDT": {
-      "time": 1789511333,
-      "key": "LONG_10"
+      "time": 1789512191,
+      "key": "LONG_8"
     },
     "PUNDIX_USDT": {
       "time": 1789501726,
@@ -448,8 +457,8 @@
       "key": "LONG_10"
     },
     "ONT_USDT": {
-      "time": 1789495089,
-      "key": "LONG_8"
+      "time": 1789512191,
+      "key": "LONG_10"
     },
     "USOX_USDT": {
       "time": 1789508690,
@@ -468,8 +477,8 @@
       "key": "LONG_8"
     },
     "NVDAX_USDT": {
-      "time": 1789510377,
-      "key": "LONG_10"
+      "time": 1789512191,
+      "key": "LONG_9"
     },
     "METIS_USDT": {
       "time": 1789496335,
@@ -548,7 +557,7 @@
       "key": "LONG_9"
     },
     "CKB_USDT": {
-      "time": 1789487330,
+      "time": 1789512191,
       "key": "LONG_10"
     },
     "ETC_USDT": {
@@ -672,16 +681,16 @@
       "key": "LONG_10"
     },
     "ORDI_USDT": {
-      "time": 1789471317,
-      "key": "LONG_9"
+      "time": 1789512191,
+      "key": "LONG_11"
     },
     "POWR_USDT": {
       "time": 1789507891,
       "key": "LONG_13"
     },
     "PEPE_USDT": {
-      "time": 1789491096,
-      "key": "SHORT_8"
+      "time": 1789512191,
+      "key": "LONG_10"
     },
     "BOME_USDT": {
       "time": 1789496335,
