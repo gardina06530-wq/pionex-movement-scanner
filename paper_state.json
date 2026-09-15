@@ -1,7 +1,7 @@
 {
-  "balance": 819.0374632581951,
-  "realized_pnl": -180.96253674180502,
-  "wins": 5,
+  "balance": 835.418212523359,
+  "realized_pnl": -164.58178747664113,
+  "wins": 6,
   "losses": 30,
   "trades": [
     {
@@ -318,6 +318,15 @@
       "pnl": -8.273105689476646,
       "reason": "STOP LOSS",
       "time": 1789493561
+    },
+    {
+      "symbol": "UNI_USDT",
+      "direction": "SHORT",
+      "entry": 6.526,
+      "exit": 6.33022,
+      "pnl": 16.38074926516391,
+      "reason": "TAKE PROFIT",
+      "time": 1789498308
     }
   ],
   "positions": {
@@ -343,16 +352,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "UNI_USDT": {
-      "symbol": "UNI_USDT",
+    "GLM_USDT": {
+      "symbol": "GLM_USDT",
       "direction": "SHORT",
-      "entry": 6.526,
-      "stop": 6.623889999999999,
-      "target": 6.33022,
-      "size": 83.66916572256565,
-      "score": 10,
+      "entry": 0.1151,
+      "stop": 0.11682649999999999,
+      "target": 0.111647,
+      "size": 4838.796481455888,
+      "score": 11,
       "quality": "A+",
-      "opened_at": 1789493608
+      "opened_at": 1789498344
     }
   },
   "last_alerted": {
@@ -369,15 +378,15 @@
       "key": "LONG_9"
     },
     "PUNDIX_USDT": {
-      "time": 1789495089,
-      "key": "LONG_12"
+      "time": 1789498344,
+      "key": "SHORT_11"
     },
     "RVN_USDT": {
       "time": 1789489172,
       "key": "LONG_8"
     },
     "CHZ_USDT": {
-      "time": 1789491817,
+      "time": 1789498344,
       "key": "LONG_9"
     },
     "FIL_USDT": {
@@ -433,7 +442,7 @@
       "key": "LONG_12"
     },
     "USDC_USDT": {
-      "time": 1789487989,
+      "time": 1789498344,
       "key": "SHORT_8"
     },
     "SUSHI_USDT": {
@@ -473,7 +482,7 @@
       "key": "LONG_8"
     },
     "NEO_USDT": {
-      "time": 1789492829,
+      "time": 1789498344,
       "key": "LONG_9"
     },
     "DUSK_USDT": {
@@ -513,8 +522,8 @@
       "key": "SHORT_9"
     },
     "FLUX_USDT": {
-      "time": 1789480395,
-      "key": "SHORT_11"
+      "time": 1789498344,
+      "key": "LONG_8"
     },
     "BAT_USDT": {
       "time": 1789495089,
@@ -549,15 +558,15 @@
       "key": "LONG_10"
     },
     "SAGA_USDT": {
-      "time": 1789495089,
-      "key": "SHORT_10"
+      "time": 1789498344,
+      "key": "SHORT_9"
     },
     "AVA_USDT": {
       "time": 1789479467,
       "key": "LONG_9"
     },
     "AUCTION_USDT": {
-      "time": 1789494428,
+      "time": 1789498344,
       "key": "LONG_9"
     },
     "PYTH_USDT": {
@@ -613,8 +622,8 @@
       "key": "LONG_9"
     },
     "POWR_USDT": {
-      "time": 1789497366,
-      "key": "LONG_10"
+      "time": 1789498344,
+      "key": "LONG_9"
     },
     "PEPE_USDT": {
       "time": 1789491096,
@@ -633,8 +642,8 @@
       "key": "SHORT_8"
     },
     "POLYX_USDT": {
-      "time": 1789497366,
-      "key": "LONG_12"
+      "time": 1789498344,
+      "key": "SHORT_8"
     },
     "OSMO_USDT": {
       "time": 1789496335,
@@ -669,8 +678,8 @@
       "key": "SHORT_8"
     },
     "ASTR_USDT": {
-      "time": 1789496335,
-      "key": "SHORT_10"
+      "time": 1789498344,
+      "key": "SHORT_9"
     },
     "CITY_USDT": {
       "time": 1789489172,
@@ -753,8 +762,8 @@
       "key": "LONG_8"
     },
     "GLM_USDT": {
-      "time": 1789496335,
-      "key": "SHORT_8"
+      "time": 1789498344,
+      "key": "SHORT_11"
     },
     "GMT_USDT": {
       "time": 1789489172,
@@ -789,8 +798,8 @@
       "key": "LONG_10"
     },
     "BCH_USDT": {
-      "time": 1789475112,
-      "key": "LONG_9"
+      "time": 1789498344,
+      "key": "SHORT_8"
     },
     "CELR_USDT": {
       "time": 1789482401,
@@ -841,12 +850,12 @@
       "key": "SHORT_9"
     },
     "ARPA_USDT": {
-      "time": 1789479467,
-      "key": "SHORT_8"
+      "time": 1789498344,
+      "key": "SHORT_11"
     },
     "LSK_USDT": {
-      "time": 1789486373,
-      "key": "LONG_8"
+      "time": 1789498344,
+      "key": "SHORT_10"
     },
     "RLC_USDT": {
       "time": 1789487330,
@@ -973,7 +982,7 @@
       "key": "SHORT_9"
     },
     "BNB_USDT": {
-      "time": 1789487989,
+      "time": 1789498344,
       "key": "SHORT_8"
     },
     "ETH_USDT": {
