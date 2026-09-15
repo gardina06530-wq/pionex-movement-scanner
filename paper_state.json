@@ -324,6 +324,17 @@
       "score": 12,
       "quality": "A+",
       "opened_at": 1789484276
+    },
+    "ACM_USDT": {
+      "symbol": "ACM_USDT",
+      "direction": "SHORT",
+      "entry": 0.263,
+      "stop": 0.266945,
+      "target": 0.25511,
+      "size": 2118.2946549081994,
+      "score": 10,
+      "quality": "A+",
+      "opened_at": 1789485396
     }
   },
   "last_alerted": {
@@ -516,8 +527,8 @@
       "key": "LONG_8"
     },
     "BLUR_USDT": {
-      "time": 1789473005,
-      "key": "LONG_8"
+      "time": 1789485396,
+      "key": "LONG_10"
     },
     "SAGA_USDT": {
       "time": 1789449715,
@@ -568,7 +579,7 @@
       "key": "LONG_10"
     },
     "AEVO_USDT": {
-      "time": 1789450720,
+      "time": 1789485396,
       "key": "LONG_9"
     },
     "WAXP_USDT": {
@@ -628,7 +639,7 @@
       "key": "LONG_8"
     },
     "IO_USDT": {
-      "time": 1789480395,
+      "time": 1789485396,
       "key": "LONG_8"
     },
     "BB_USDT": {
@@ -692,8 +703,8 @@
       "key": "LONG_8"
     },
     "AXL_USDT": {
-      "time": 1789484276,
-      "key": "LONG_11"
+      "time": 1789485396,
+      "key": "LONG_9"
     },
     "JUP_USDT": {
       "time": 1789483413,
@@ -748,8 +759,8 @@
       "key": "LONG_8"
     },
     "STX_USDT": {
-      "time": 1789426777,
-      "key": "SHORT_10"
+      "time": 1789485396,
+      "key": "LONG_9"
     },
     "RARE_USDT": {
       "time": 1789471317,
@@ -780,8 +791,8 @@
       "key": "SHORT_8"
     },
     "ACM_USDT": {
-      "time": 1789473005,
-      "key": "LONG_9"
+      "time": 1789485396,
+      "key": "SHORT_10"
     },
     "LPT_USDT": {
       "time": 1789483413,
@@ -816,8 +827,8 @@
       "key": "SHORT_8"
     },
     "LSK_USDT": {
-      "time": 1789484276,
-      "key": "LONG_11"
+      "time": 1789485396,
+      "key": "LONG_10"
     },
     "RLC_USDT": {
       "time": 1789484276,
@@ -876,11 +887,11 @@
       "key": "LONG_10"
     },
     "KSM_USDT": {
-      "time": 1789477211,
-      "key": "LONG_10"
+      "time": 1789485396,
+      "key": "LONG_8"
     },
     "DGB_USDT": {
-      "time": 1789462151,
+      "time": 1789485396,
       "key": "LONG_8"
     },
     "AI_USDT": {
@@ -904,8 +915,8 @@
       "key": "LONG_9"
     },
     "COTI_USDT": {
-      "time": 1789456515,
-      "key": "SHORT_8"
+      "time": 1789485396,
+      "key": "LONG_8"
     },
     "PAXG_USDT": {
       "time": 1789446731,
@@ -1012,8 +1023,8 @@
       "key": "LONG_8"
     },
     "mBTC_USDT": {
-      "time": 1789471317,
-      "key": "LONG_9"
+      "time": 1789485396,
+      "key": "LONG_8"
     },
     "LAZIO_USDT": {
       "time": 1789476332,
