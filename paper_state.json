@@ -345,8 +345,8 @@
       "key": "LONG_8"
     },
     "PENDLE_USDT": {
-      "time": 1789440448,
-      "key": "SHORT_8"
+      "time": 1789442514,
+      "key": "LONG_8"
     },
     "INJ_USDT": {
       "time": 1789436235,
@@ -437,8 +437,8 @@
       "key": "SHORT_9"
     },
     "STRAX_USDT": {
-      "time": 1789433957,
-      "key": "SHORT_8"
+      "time": 1789442514,
+      "key": "SHORT_9"
     },
     "FLUX_USDT": {
       "time": 1789435257,
@@ -589,8 +589,8 @@
       "key": "SHORT_8"
     },
     "BB_USDT": {
-      "time": 1789441224,
-      "key": "LONG_11"
+      "time": 1789442514,
+      "key": "LONG_9"
     },
     "API3_USDT": {
       "time": 1789428602,
@@ -613,8 +613,8 @@
       "key": "SHORT_8"
     },
     "QKC_USDT": {
-      "time": 1789438192,
-      "key": "LONG_12"
+      "time": 1789442514,
+      "key": "SHORT_10"
     },
     "ASR_USDT": {
       "time": 1789435257,
@@ -641,8 +641,8 @@
       "key": "SHORT_8"
     },
     "TRX_USDT": {
-      "time": 1789435257,
-      "key": "LONG_8"
+      "time": 1789442514,
+      "key": "LONG_9"
     },
     "MANA_USDT": {
       "time": 1789426777,
@@ -773,15 +773,15 @@
       "key": "LONG_9"
     },
     "LSK_USDT": {
-      "time": 1789433957,
-      "key": "LONG_10"
+      "time": 1789442514,
+      "key": "LONG_9"
     },
     "RLC_USDT": {
       "time": 1789426106,
       "key": "SHORT_8"
     },
     "TSLAX_USDT": {
-      "time": 1789431426,
+      "time": 1789442514,
       "key": "LONG_9"
     },
     "SKL_USDT": {
@@ -821,8 +821,8 @@
       "key": "SHORT_10"
     },
     "CORE_USDT": {
-      "time": 1789426777,
-      "key": "SHORT_9"
+      "time": 1789442514,
+      "key": "SHORT_8"
     },
     "TWT_USDT": {
       "time": 1789433957,
@@ -845,7 +845,7 @@
       "key": "SHORT_10"
     },
     "CTK_USDT": {
-      "time": 1789405660,
+      "time": 1789442514,
       "key": "LONG_8"
     },
     "DOT_USDT": {
@@ -885,8 +885,8 @@
       "key": "SHORT_9"
     },
     "AR_USDT": {
-      "time": 1789441224,
-      "key": "LONG_8"
+      "time": 1789442514,
+      "key": "SHORT_10"
     },
     "LUNA_USDT": {
       "time": 1789438192,
@@ -993,8 +993,8 @@
       "key": "SHORT_9"
     },
     "BEL_USDT": {
-      "time": 1789433957,
-      "key": "SHORT_9"
+      "time": 1789442514,
+      "key": "SHORT_8"
     },
     "ETHFI_USDT": {
       "time": 1789440448,
