@@ -315,8 +315,8 @@
       "key": "LONG_9"
     },
     "PUNDIX_USDT": {
-      "time": 1789460891,
-      "key": "LONG_8"
+      "time": 1789466392,
+      "key": "SHORT_8"
     },
     "RVN_USDT": {
       "time": 1789438192,
@@ -327,8 +327,8 @@
       "key": "SHORT_8"
     },
     "FIL_USDT": {
-      "time": 1789462151,
-      "key": "LONG_8"
+      "time": 1789466392,
+      "key": "LONG_10"
     },
     "ONT_USDT": {
       "time": 1789462970,
@@ -471,7 +471,7 @@
       "key": "LONG_11"
     },
     "MTL_USDT": {
-      "time": 1789460891,
+      "time": 1789466392,
       "key": "SHORT_9"
     },
     "FLOKI_USDT": {
@@ -487,8 +487,8 @@
       "key": "LONG_9"
     },
     "KAVA_USDT": {
-      "time": 1789464267,
-      "key": "LONG_10"
+      "time": 1789466392,
+      "key": "LONG_8"
     },
     "BLUR_USDT": {
       "time": 1789465467,
@@ -559,8 +559,8 @@
       "key": "LONG_9"
     },
     "POWR_USDT": {
-      "time": 1789464267,
-      "key": "LONG_10"
+      "time": 1789466392,
+      "key": "SHORT_10"
     },
     "PEPE_USDT": {
       "time": 1789447783,
@@ -571,11 +571,11 @@
       "key": "LONG_8"
     },
     "VTHO_USDT": {
-      "time": 1789465467,
-      "key": "LONG_9"
+      "time": 1789466392,
+      "key": "SHORT_9"
     },
     "KAS_USDT": {
-      "time": 1789441224,
+      "time": 1789466392,
       "key": "LONG_8"
     },
     "POLYX_USDT": {
@@ -615,8 +615,8 @@
       "key": "LONG_9"
     },
     "ASTR_USDT": {
-      "time": 1789465467,
-      "key": "SHORT_9"
+      "time": 1789466392,
+      "key": "LONG_9"
     },
     "CITY_USDT": {
       "time": 1789464267,
@@ -691,8 +691,8 @@
       "key": "LONG_9"
     },
     "ALT_USDT": {
-      "time": 1789464267,
-      "key": "LONG_11"
+      "time": 1789466392,
+      "key": "LONG_8"
     },
     "JTO_USDT": {
       "time": 1789462970,
@@ -807,8 +807,8 @@
       "key": "LONG_10"
     },
     "GOOGLX_USDT": {
-      "time": 1789465467,
-      "key": "LONG_8"
+      "time": 1789466392,
+      "key": "LONG_9"
     },
     "DODO_USDT": {
       "time": 1789462970,
@@ -875,8 +875,8 @@
       "key": "SHORT_8"
     },
     "XEC_USDT": {
-      "time": 1789446731,
-      "key": "LONG_8"
+      "time": 1789466392,
+      "key": "LONG_9"
     },
     "COTI_USDT": {
       "time": 1789456515,
