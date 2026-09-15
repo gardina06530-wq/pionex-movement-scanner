@@ -325,16 +325,16 @@
       "key": "LONG_9"
     },
     "GRT_USDT": {
-      "time": 1789440448,
-      "key": "LONG_8"
+      "time": 1789445574,
+      "key": "SHORT_8"
     },
     "ARKM_USDT": {
       "time": 1789423044,
       "key": "SHORT_11"
     },
     "NVDAX_USDT": {
-      "time": 1789438192,
-      "key": "LONG_8"
+      "time": 1789445574,
+      "key": "SHORT_8"
     },
     "METIS_USDT": {
       "time": 1789438192,
@@ -425,7 +425,7 @@
       "key": "SHORT_8"
     },
     "METAX_USDT": {
-      "time": 1789415577,
+      "time": 1789445574,
       "key": "LONG_8"
     },
     "IMX_USDT": {
@@ -781,8 +781,8 @@
       "key": "SHORT_8"
     },
     "TSLAX_USDT": {
-      "time": 1789442514,
-      "key": "LONG_9"
+      "time": 1789445574,
+      "key": "SHORT_9"
     },
     "SKL_USDT": {
       "time": 1789428602,
@@ -797,7 +797,7 @@
       "key": "SHORT_12"
     },
     "AAPLX_USDT": {
-      "time": 1789443567,
+      "time": 1789445574,
       "key": "LONG_8"
     },
     "DEXE_USDT": {
@@ -965,8 +965,8 @@
       "key": "SHORT_8"
     },
     "SLVX_USDT": {
-      "time": 1789425191,
-      "key": "SHORT_9"
+      "time": 1789445574,
+      "key": "SHORT_8"
     },
     "mBTC_USDT": {
       "time": 1789426106,
@@ -981,8 +981,8 @@
       "key": "SHORT_8"
     },
     "TFUEL_USDT": {
-      "time": 1789431426,
-      "key": "SHORT_9"
+      "time": 1789445574,
+      "key": "LONG_9"
     },
     "NEAR_USDT": {
       "time": 1789437220,
@@ -1001,8 +1001,8 @@
       "key": "LONG_11"
     },
     "AMZNX_USDT": {
-      "time": 1789444515,
-      "key": "SHORT_8"
+      "time": 1789445574,
+      "key": "LONG_8"
     }
   }
 }
