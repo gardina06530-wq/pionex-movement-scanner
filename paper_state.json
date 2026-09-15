@@ -367,11 +367,11 @@
       "key": "LONG_8"
     },
     "INJ_USDT": {
-      "time": 1789462151,
+      "time": 1789470253,
       "key": "LONG_9"
     },
     "COMP_USDT": {
-      "time": 1789462970,
+      "time": 1789470253,
       "key": "LONG_9"
     },
     "CYBER_USDT": {
@@ -443,7 +443,7 @@
       "key": "SHORT_9"
     },
     "METAX_USDT": {
-      "time": 1789445574,
+      "time": 1789470253,
       "key": "LONG_8"
     },
     "IMX_USDT": {
@@ -471,8 +471,8 @@
       "key": "LONG_11"
     },
     "MTL_USDT": {
-      "time": 1789466392,
-      "key": "SHORT_9"
+      "time": 1789470253,
+      "key": "LONG_8"
     },
     "FLOKI_USDT": {
       "time": 1789455366,
@@ -527,7 +527,7 @@
       "key": "LONG_10"
     },
     "NACHA_USDT": {
-      "time": 1789444515,
+      "time": 1789470253,
       "key": "SHORT_9"
     },
     "EGLD_USDT": {
@@ -551,8 +551,8 @@
       "key": "LONG_10"
     },
     "CRCLX_USDT": {
-      "time": 1789456515,
-      "key": "LONG_8"
+      "time": 1789470253,
+      "key": "LONG_10"
     },
     "ORDI_USDT": {
       "time": 1789440448,
@@ -599,8 +599,8 @@
       "key": "SHORT_8"
     },
     "ALGO_USDT": {
-      "time": 1789449715,
-      "key": "LONG_11"
+      "time": 1789470253,
+      "key": "LONG_8"
     },
     "IO_USDT": {
       "time": 1789448509,
@@ -615,8 +615,8 @@
       "key": "LONG_9"
     },
     "ASTR_USDT": {
-      "time": 1789466392,
-      "key": "LONG_9"
+      "time": 1789470253,
+      "key": "LONG_8"
     },
     "CITY_USDT": {
       "time": 1789464267,
@@ -875,8 +875,8 @@
       "key": "LONG_9"
     },
     "XEC_USDT": {
-      "time": 1789466392,
-      "key": "LONG_9"
+      "time": 1789470253,
+      "key": "LONG_10"
     },
     "COTI_USDT": {
       "time": 1789456515,
@@ -1043,8 +1043,8 @@
       "key": "SHORT_9"
     },
     "GMX_USDT": {
-      "time": 1789456515,
-      "key": "SHORT_10"
+      "time": 1789470253,
+      "key": "LONG_8"
     },
     "LTC_USDT": {
       "time": 1789464267,
