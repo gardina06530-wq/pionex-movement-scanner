@@ -345,7 +345,7 @@
       "key": "LONG_8"
     },
     "PENDLE_USDT": {
-      "time": 1789442514,
+      "time": 1789451661,
       "key": "LONG_8"
     },
     "INJ_USDT": {
@@ -457,15 +457,15 @@
       "key": "LONG_11"
     },
     "FLOKI_USDT": {
-      "time": 1789446731,
-      "key": "LONG_8"
+      "time": 1789451661,
+      "key": "LONG_9"
     },
     "DASH_USDT": {
       "time": 1789449715,
       "key": "LONG_9"
     },
     "SOL_USDT": {
-      "time": 1789447783,
+      "time": 1789451661,
       "key": "LONG_9"
     },
     "KAVA_USDT": {
@@ -569,8 +569,8 @@
       "key": "LONG_8"
     },
     "FTT_USDT": {
-      "time": 1789430109,
-      "key": "SHORT_11"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "IOST_USDT": {
       "time": 1789446731,
@@ -589,8 +589,8 @@
       "key": "LONG_11"
     },
     "BB_USDT": {
-      "time": 1789442514,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_13"
     },
     "API3_USDT": {
       "time": 1789447783,
@@ -605,16 +605,16 @@
       "key": "LONG_10"
     },
     "SUI_USDT": {
-      "time": 1789449715,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "BNT_USDT": {
       "time": 1789450720,
       "key": "LONG_11"
     },
     "QKC_USDT": {
-      "time": 1789442514,
-      "key": "SHORT_10"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "ASR_USDT": {
       "time": 1789448509,
@@ -665,7 +665,7 @@
       "key": "SHORT_9"
     },
     "CTSI_USDT": {
-      "time": 1789443567,
+      "time": 1789451661,
       "key": "SHORT_8"
     },
     "RIF_USDT": {
@@ -689,8 +689,8 @@
       "key": "LONG_8"
     },
     "JASMY_USDT": {
-      "time": 1789450720,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "OKB_USDT": {
       "time": 1789450720,
@@ -701,16 +701,16 @@
       "key": "LONG_8"
     },
     "MASK_USDT": {
-      "time": 1789449715,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "STX_USDT": {
       "time": 1789426777,
       "key": "SHORT_10"
     },
     "RARE_USDT": {
-      "time": 1789450720,
-      "key": "SHORT_11"
+      "time": 1789451661,
+      "key": "SHORT_8"
     },
     "CVC_USDT": {
       "time": 1789433957,
@@ -725,8 +725,8 @@
       "key": "SHORT_8"
     },
     "NEXO_USDT": {
-      "time": 1789426106,
-      "key": "LONG_8"
+      "time": 1789451661,
+      "key": "LONG_10"
     },
     "CVX_USDT": {
       "time": 1789423044,
@@ -793,16 +793,16 @@
       "key": "LONG_8"
     },
     "DODO_USDT": {
-      "time": 1789450720,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "AAPLX_USDT": {
       "time": 1789445574,
       "key": "LONG_8"
     },
     "DEXE_USDT": {
-      "time": 1789440448,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "TAO_USDT": {
       "time": 1789449715,
@@ -821,8 +821,8 @@
       "key": "SHORT_10"
     },
     "CORE_USDT": {
-      "time": 1789446731,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_10"
     },
     "TWT_USDT": {
       "time": 1789449715,
@@ -833,8 +833,8 @@
       "key": "SHORT_9"
     },
     "KSM_USDT": {
-      "time": 1789448509,
-      "key": "LONG_9"
+      "time": 1789451661,
+      "key": "LONG_8"
     },
     "DGB_USDT": {
       "time": 1789441224,
@@ -917,7 +917,7 @@
       "key": "SHORT_10"
     },
     "BMNRX_USDT": {
-      "time": 1789446731,
+      "time": 1789451661,
       "key": "LONG_9"
     },
     "STRK_USDT": {
@@ -925,8 +925,8 @@
       "key": "LONG_10"
     },
     "AAVE_USDT": {
-      "time": 1789449715,
-      "key": "LONG_11"
+      "time": 1789451661,
+      "key": "LONG_9"
     },
     "CAKE_USDT": {
       "time": 1789449715,
@@ -1029,12 +1029,12 @@
       "key": "LONG_9"
     },
     "LTC_USDT": {
-      "time": 1789447783,
+      "time": 1789451661,
       "key": "LONG_8"
     },
     "ID_USDT": {
-      "time": 1789448509,
-      "key": "LONG_10"
+      "time": 1789451661,
+      "key": "LONG_8"
     }
   }
 }
