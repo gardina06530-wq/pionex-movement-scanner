@@ -1,7 +1,7 @@
 {
-  "balance": 795.7149922225794,
-  "realized_pnl": -204.2850077774206,
-  "wins": 2,
+  "balance": 811.7941430844331,
+  "realized_pnl": -188.20585691556693,
+  "wins": 3,
   "losses": 27,
   "trades": [
     {
@@ -264,6 +264,15 @@
       "pnl": -8.037525173965491,
       "reason": "STOP LOSS",
       "time": 1789459570
+    },
+    {
+      "symbol": "STX_USDT",
+      "direction": "SHORT",
+      "entry": 0.2651,
+      "exit": 0.257147,
+      "pnl": 16.07915086185366,
+      "reason": "TAKE PROFIT",
+      "time": 1789480355
     }
   ],
   "positions": {
@@ -278,17 +287,6 @@
       "quality": "A+",
       "opened_at": 1789425191
     },
-    "STX_USDT": {
-      "symbol": "STX_USDT",
-      "direction": "SHORT",
-      "entry": 0.2651,
-      "stop": 0.2690765,
-      "target": 0.257147,
-      "size": 2021.7717668620248,
-      "score": 10,
-      "quality": "A+",
-      "opened_at": 1789426777
-    },
     "KSM_USDT": {
       "symbol": "KSM_USDT",
       "direction": "SHORT",
@@ -299,6 +297,17 @@
       "score": 10,
       "quality": "A+",
       "opened_at": 1789459608
+    },
+    "DASH_USDT": {
+      "symbol": "DASH_USDT",
+      "direction": "SHORT",
+      "entry": 52.83,
+      "stop": 53.62244999999999,
+      "target": 51.245099999999994,
+      "size": 10.244105534537612,
+      "score": 11,
+      "quality": "A+",
+      "opened_at": 1789480395
     }
   },
   "last_alerted": {
@@ -347,8 +356,8 @@
       "key": "LONG_9"
     },
     "ARKM_USDT": {
-      "time": 1789472234,
-      "key": "LONG_8"
+      "time": 1789480395,
+      "key": "SHORT_8"
     },
     "NVDAX_USDT": {
       "time": 1789462151,
@@ -379,7 +388,7 @@
       "key": "LONG_10"
     },
     "USDC_USDT": {
-      "time": 1789459608,
+      "time": 1789480395,
       "key": "SHORT_8"
     },
     "SUSHI_USDT": {
@@ -459,8 +468,8 @@
       "key": "SHORT_9"
     },
     "FLUX_USDT": {
-      "time": 1789462151,
-      "key": "SHORT_8"
+      "time": 1789480395,
+      "key": "SHORT_11"
     },
     "BAT_USDT": {
       "time": 1789472234,
@@ -479,8 +488,8 @@
       "key": "LONG_9"
     },
     "DASH_USDT": {
-      "time": 1789468585,
-      "key": "LONG_8"
+      "time": 1789480395,
+      "key": "SHORT_11"
     },
     "SOL_USDT": {
       "time": 1789465467,
@@ -507,8 +516,8 @@
       "key": "LONG_9"
     },
     "PYTH_USDT": {
-      "time": 1789476332,
-      "key": "LONG_9"
+      "time": 1789480395,
+      "key": "SHORT_8"
     },
     "LDO_USDT": {
       "time": 1789479467,
@@ -535,8 +544,8 @@
       "key": "SHORT_10"
     },
     "ZIL_USDT": {
-      "time": 1789479467,
-      "key": "LONG_9"
+      "time": 1789480395,
+      "key": "LONG_8"
     },
     "EDU_USDT": {
       "time": 1789473668,
@@ -603,8 +612,8 @@
       "key": "LONG_8"
     },
     "IO_USDT": {
-      "time": 1789448509,
-      "key": "LONG_11"
+      "time": 1789480395,
+      "key": "LONG_8"
     },
     "BB_USDT": {
       "time": 1789455366,
@@ -815,12 +824,12 @@
       "key": "SHORT_10"
     },
     "AAPLX_USDT": {
-      "time": 1789477211,
-      "key": "SHORT_8"
+      "time": 1789480395,
+      "key": "SHORT_9"
     },
     "DEXE_USDT": {
-      "time": 1789478495,
-      "key": "SHORT_9"
+      "time": 1789480395,
+      "key": "SHORT_10"
     },
     "TAO_USDT": {
       "time": 1789471317,
@@ -859,8 +868,8 @@
       "key": "LONG_8"
     },
     "AI_USDT": {
-      "time": 1789473005,
-      "key": "LONG_8"
+      "time": 1789480395,
+      "key": "LONG_9"
     },
     "CTK_USDT": {
       "time": 1789477211,
@@ -875,8 +884,8 @@
       "key": "LONG_9"
     },
     "XEC_USDT": {
-      "time": 1789470253,
-      "key": "LONG_10"
+      "time": 1789480395,
+      "key": "SHORT_8"
     },
     "COTI_USDT": {
       "time": 1789456515,
@@ -899,7 +908,7 @@
       "key": "SHORT_9"
     },
     "RSR_USDT": {
-      "time": 1789457680,
+      "time": 1789480395,
       "key": "SHORT_8"
     },
     "AR_USDT": {
