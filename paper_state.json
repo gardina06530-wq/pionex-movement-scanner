@@ -564,8 +564,8 @@
       "key": "SHORT_11"
     },
     "IOST_USDT": {
-      "time": 1789436235,
-      "key": "SHORT_8"
+      "time": 1789437220,
+      "key": "SHORT_9"
     },
     "PHA_USDT": {
       "time": 1789431426,
@@ -588,7 +588,7 @@
       "key": "SHORT_9"
     },
     "ASTR_USDT": {
-      "time": 1789422265,
+      "time": 1789437220,
       "key": "SHORT_9"
     },
     "CITY_USDT": {
@@ -660,8 +660,8 @@
       "key": "LONG_10"
     },
     "RIF_USDT": {
-      "time": 1789432903,
-      "key": "LONG_10"
+      "time": 1789437220,
+      "key": "LONG_9"
     },
     "ALT_USDT": {
       "time": 1789427833,
@@ -692,8 +692,8 @@
       "key": "LONG_8"
     },
     "MASK_USDT": {
-      "time": 1789421272,
-      "key": "SHORT_11"
+      "time": 1789437220,
+      "key": "SHORT_8"
     },
     "STX_USDT": {
       "time": 1789426777,
@@ -820,8 +820,8 @@
       "key": "SHORT_10"
     },
     "ONE_USDT": {
-      "time": 1789421272,
-      "key": "SHORT_8"
+      "time": 1789437220,
+      "key": "SHORT_9"
     },
     "KSM_USDT": {
       "time": 1789428602,
@@ -928,8 +928,8 @@
       "key": "LONG_8"
     },
     "THETA_USDT": {
-      "time": 1789426106,
-      "key": "LONG_9"
+      "time": 1789437220,
+      "key": "SHORT_8"
     },
     "DIA_USDT": {
       "time": 1789415577,
@@ -976,8 +976,8 @@
       "key": "SHORT_9"
     },
     "NEAR_USDT": {
-      "time": 1789427833,
-      "key": "SHORT_8"
+      "time": 1789437220,
+      "key": "SHORT_9"
     },
     "SHIB_USDT": {
       "time": 1789432903,
