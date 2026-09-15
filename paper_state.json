@@ -382,8 +382,8 @@
       "key": "SHORT_8"
     },
     "RVN_USDT": {
-      "time": 1789501726,
-      "key": "SHORT_8"
+      "time": 1789504410,
+      "key": "LONG_12"
     },
     "CHZ_USDT": {
       "time": 1789498344,
@@ -514,8 +514,8 @@
       "key": "LONG_8"
     },
     "DYM_USDT": {
-      "time": 1789499120,
-      "key": "LONG_8"
+      "time": 1789504410,
+      "key": "SHORT_8"
     },
     "STRAX_USDT": {
       "time": 1789477211,
@@ -534,8 +534,8 @@
       "key": "LONG_11"
     },
     "MTL_USDT": {
-      "time": 1789495089,
-      "key": "LONG_8"
+      "time": 1789504410,
+      "key": "LONG_9"
     },
     "FLOKI_USDT": {
       "time": 1789484276,
@@ -818,8 +818,8 @@
       "key": "SHORT_8"
     },
     "ACM_USDT": {
-      "time": 1789501726,
-      "key": "SHORT_9"
+      "time": 1789504410,
+      "key": "SHORT_8"
     },
     "LPT_USDT": {
       "time": 1789494428,
@@ -834,7 +834,7 @@
       "key": "SHORT_8"
     },
     "LRC_USDT": {
-      "time": 1789499120,
+      "time": 1789504410,
       "key": "LONG_9"
     },
     "PORTO_USDT": {
