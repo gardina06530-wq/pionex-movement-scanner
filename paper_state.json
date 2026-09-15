@@ -402,8 +402,8 @@
       "key": "SHORT_9"
     },
     "TRB_USDT": {
-      "time": 1789501726,
-      "key": "SHORT_11"
+      "time": 1789502395,
+      "key": "SHORT_8"
     },
     "GRT_USDT": {
       "time": 1789501726,
@@ -522,7 +522,7 @@
       "key": "SHORT_9"
     },
     "FLUX_USDT": {
-      "time": 1789498344,
+      "time": 1789502395,
       "key": "LONG_8"
     },
     "BAT_USDT": {
@@ -542,7 +542,7 @@
       "key": "LONG_8"
     },
     "DASH_USDT": {
-      "time": 1789494428,
+      "time": 1789502395,
       "key": "LONG_8"
     },
     "SOL_USDT": {
@@ -594,8 +594,8 @@
       "key": "SHORT_10"
     },
     "EGLD_USDT": {
-      "time": 1789482401,
-      "key": "LONG_9"
+      "time": 1789502395,
+      "key": "LONG_8"
     },
     "ZIL_USDT": {
       "time": 1789487989,
@@ -622,8 +622,8 @@
       "key": "LONG_9"
     },
     "POWR_USDT": {
-      "time": 1789501726,
-      "key": "LONG_10"
+      "time": 1789502395,
+      "key": "LONG_11"
     },
     "PEPE_USDT": {
       "time": 1789491096,
@@ -638,7 +638,7 @@
       "key": "LONG_12"
     },
     "KAS_USDT": {
-      "time": 1789494428,
+      "time": 1789502395,
       "key": "SHORT_8"
     },
     "POLYX_USDT": {
@@ -910,8 +910,8 @@
       "key": "LONG_9"
     },
     "ONE_USDT": {
-      "time": 1789478495,
-      "key": "LONG_10"
+      "time": 1789502395,
+      "key": "SHORT_8"
     },
     "KSM_USDT": {
       "time": 1789491096,
@@ -966,8 +966,8 @@
       "key": "LONG_9"
     },
     "AR_USDT": {
-      "time": 1789493608,
-      "key": "SHORT_9"
+      "time": 1789502395,
+      "key": "LONG_8"
     },
     "LUNA_USDT": {
       "time": 1789487330,
@@ -1010,8 +1010,8 @@
       "key": "LONG_9"
     },
     "CAKE_USDT": {
-      "time": 1789491817,
-      "key": "LONG_8"
+      "time": 1789502395,
+      "key": "SHORT_8"
     },
     "ENS_USDT": {
       "time": 1789425191,
