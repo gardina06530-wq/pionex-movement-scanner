@@ -906,16 +906,16 @@
       "key": "LONG_8"
     },
     "IMX_USDT": {
-      "time": 1789591196,
-      "key": "LONG_10"
+      "time": 1789598493,
+      "key": "SHORT_8"
     },
     "DYM_USDT": {
-      "time": 1789597580,
-      "key": "LONG_11"
+      "time": 1789598493,
+      "key": "SHORT_8"
     },
     "STRAX_USDT": {
-      "time": 1789597580,
-      "key": "SHORT_10"
+      "time": 1789598493,
+      "key": "SHORT_9"
     },
     "FLUX_USDT": {
       "time": 1789527612,
@@ -962,8 +962,8 @@
       "key": "LONG_9"
     },
     "AUCTION_USDT": {
-      "time": 1789596611,
-      "key": "LONG_10"
+      "time": 1789598493,
+      "key": "LONG_8"
     },
     "PYTH_USDT": {
       "time": 1789594963,
@@ -998,8 +998,8 @@
       "key": "LONG_9"
     },
     "EDU_USDT": {
-      "time": 1789592020,
-      "key": "LONG_9"
+      "time": 1789598493,
+      "key": "LONG_8"
     },
     "AEVO_USDT": {
       "time": 1789593997,
@@ -1010,8 +1010,8 @@
       "key": "LONG_8"
     },
     "CRCLX_USDT": {
-      "time": 1789597580,
-      "key": "SHORT_11"
+      "time": 1789598493,
+      "key": "SHORT_8"
     },
     "ORDI_USDT": {
       "time": 1789575645,
@@ -1066,8 +1066,8 @@
       "key": "SHORT_8"
     },
     "BB_USDT": {
-      "time": 1789594963,
-      "key": "LONG_11"
+      "time": 1789598493,
+      "key": "SHORT_12"
     },
     "API3_USDT": {
       "time": 1789586741,
@@ -1202,8 +1202,8 @@
       "key": "LONG_9"
     },
     "NEXO_USDT": {
-      "time": 1789591196,
-      "key": "LONG_10"
+      "time": 1789598493,
+      "key": "SHORT_8"
     },
     "CVX_USDT": {
       "time": 1789593997,
@@ -1290,7 +1290,7 @@
       "key": "SHORT_9"
     },
     "DCR_USDT": {
-      "time": 1789589106,
+      "time": 1789598493,
       "key": "SHORT_8"
     },
     "AGLD_USDT": {
@@ -1362,16 +1362,16 @@
       "key": "SHORT_9"
     },
     "AR_USDT": {
-      "time": 1789597580,
-      "key": "SHORT_12"
+      "time": 1789598493,
+      "key": "LONG_8"
     },
     "LUNA_USDT": {
       "time": 1789592943,
       "key": "LONG_8"
     },
     "ONDO_USDT": {
-      "time": 1789595675,
-      "key": "SHORT_11"
+      "time": 1789598493,
+      "key": "LONG_8"
     },
     "WLD_USDT": {
       "time": 1789587631,
@@ -1394,8 +1394,8 @@
       "key": "LONG_9"
     },
     "BMNRX_USDT": {
-      "time": 1789579186,
-      "key": "LONG_9"
+      "time": 1789598493,
+      "key": "LONG_10"
     },
     "STRK_USDT": {
       "time": 1789590217,
