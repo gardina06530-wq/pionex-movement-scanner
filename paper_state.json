@@ -522,6 +522,17 @@
       "score": 12,
       "quality": "A+",
       "opened_at": 1789530638
+    },
+    "BEAMX_USDT": {
+      "symbol": "BEAMX_USDT",
+      "direction": "LONG",
+      "entry": 0.00159,
+      "stop": 0.00156615,
+      "target": 0.0016377000000000002,
+      "size": 306995.7098274598,
+      "score": 11,
+      "quality": "A+",
+      "opened_at": 1789531351
     }
   },
   "last_alerted": {
@@ -534,8 +545,8 @@
       "key": "LONG_10"
     },
     "PROM_USDT": {
-      "time": 1789529756,
-      "key": "LONG_9"
+      "time": 1789531351,
+      "key": "LONG_8"
     },
     "PUNDIX_USDT": {
       "time": 1789520377,
@@ -558,8 +569,8 @@
       "key": "LONG_8"
     },
     "USOX_USDT": {
-      "time": 1789516848,
-      "key": "SHORT_10"
+      "time": 1789531351,
+      "key": "LONG_9"
     },
     "TRB_USDT": {
       "time": 1789527612,
@@ -602,8 +613,8 @@
       "key": "LONG_11"
     },
     "USDC_USDT": {
-      "time": 1789509365,
-      "key": "SHORT_8"
+      "time": 1789531351,
+      "key": "LONG_8"
     },
     "SUSHI_USDT": {
       "time": 1789529756,
@@ -662,12 +673,12 @@
       "key": "LONG_8"
     },
     "AUDIO_USDT": {
-      "time": 1789527612,
-      "key": "LONG_11"
+      "time": 1789531351,
+      "key": "SHORT_8"
     },
     "METAX_USDT": {
-      "time": 1789528781,
-      "key": "LONG_8"
+      "time": 1789531351,
+      "key": "LONG_9"
     },
     "IMX_USDT": {
       "time": 1789528781,
@@ -718,7 +729,7 @@
       "key": "LONG_9"
     },
     "SAGA_USDT": {
-      "time": 1789527612,
+      "time": 1789531351,
       "key": "LONG_9"
     },
     "AVA_USDT": {
@@ -742,12 +753,12 @@
       "key": "LONG_9"
     },
     "BEAMX_USDT": {
-      "time": 1789527612,
-      "key": "LONG_9"
+      "time": 1789531351,
+      "key": "LONG_11"
     },
     "XVG_USDT": {
-      "time": 1789530638,
-      "key": "LONG_9"
+      "time": 1789531351,
+      "key": "LONG_8"
     },
     "NACHA_USDT": {
       "time": 1789527612,
@@ -762,8 +773,8 @@
       "key": "LONG_12"
     },
     "EDU_USDT": {
-      "time": 1789528781,
-      "key": "LONG_10"
+      "time": 1789531351,
+      "key": "LONG_8"
     },
     "AEVO_USDT": {
       "time": 1789527612,
@@ -802,8 +813,8 @@
       "key": "SHORT_8"
     },
     "POLYX_USDT": {
-      "time": 1789527612,
-      "key": "LONG_9"
+      "time": 1789531351,
+      "key": "LONG_8"
     },
     "OSMO_USDT": {
       "time": 1789530638,
@@ -898,8 +909,8 @@
       "key": "LONG_9"
     },
     "BAR_USDT": {
-      "time": 1789516183,
-      "key": "SHORT_8"
+      "time": 1789531351,
+      "key": "LONG_9"
     },
     "ATOM_USDT": {
       "time": 1789527612,
@@ -986,8 +997,8 @@
       "key": "SHORT_9"
     },
     "ALICE_USDT": {
-      "time": 1789516848,
-      "key": "LONG_9"
+      "time": 1789531351,
+      "key": "SHORT_8"
     },
     "SNX_USDT": {
       "time": 1789528781,
@@ -1010,8 +1021,8 @@
       "key": "LONG_9"
     },
     "ARPA_USDT": {
-      "time": 1789529756,
-      "key": "LONG_9"
+      "time": 1789531351,
+      "key": "LONG_10"
     },
     "LSK_USDT": {
       "time": 1789528781,
@@ -1030,8 +1041,8 @@
       "key": "SHORT_9"
     },
     "GOOGLX_USDT": {
-      "time": 1789526050,
-      "key": "SHORT_8"
+      "time": 1789531351,
+      "key": "LONG_9"
     },
     "DODO_USDT": {
       "time": 1789526946,
@@ -1042,8 +1053,8 @@
       "key": "SHORT_9"
     },
     "DEXE_USDT": {
-      "time": 1789515490,
-      "key": "LONG_8"
+      "time": 1789531351,
+      "key": "SHORT_8"
     },
     "TAO_USDT": {
       "time": 1789529756,
@@ -1090,7 +1101,7 @@
       "key": "SHORT_8"
     },
     "DOT_USDT": {
-      "time": 1789527612,
+      "time": 1789531351,
       "key": "LONG_8"
     },
     "XAUT_USDT": {
@@ -1106,8 +1117,8 @@
       "key": "LONG_9"
     },
     "PAXG_USDT": {
-      "time": 1789527612,
-      "key": "LONG_8"
+      "time": 1789531351,
+      "key": "SHORT_8"
     },
     "LUNC_USDT": {
       "time": 1789527612,
@@ -1134,8 +1145,8 @@
       "key": "LONG_8"
     },
     "ONDO_USDT": {
-      "time": 1789528781,
-      "key": "LONG_10"
+      "time": 1789531351,
+      "key": "LONG_8"
     },
     "WLD_USDT": {
       "time": 1789528781,
@@ -1210,8 +1221,8 @@
       "key": "SHORT_8"
     },
     "mBTC_USDT": {
-      "time": 1789528781,
-      "key": "LONG_9"
+      "time": 1789531351,
+      "key": "LONG_8"
     },
     "LAZIO_USDT": {
       "time": 1789527612,
@@ -1274,8 +1285,8 @@
       "key": "LONG_8"
     },
     "ID_USDT": {
-      "time": 1789523193,
-      "key": "LONG_11"
+      "time": 1789531351,
+      "key": "SHORT_10"
     },
     "JUV_USDT": {
       "time": 1789527612,
