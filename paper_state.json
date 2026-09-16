@@ -1,8 +1,8 @@
 {
-  "balance": 668.844016858398,
-  "realized_pnl": -331.1559831416019,
+  "balance": 662.1555766898141,
+  "realized_pnl": -337.84442331018585,
   "wins": 12,
-  "losses": 64,
+  "losses": 65,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -687,6 +687,15 @@
       "pnl": 14.20876296291902,
       "reason": "TAKE PROFIT",
       "time": 1789580814
+    },
+    {
+      "symbol": "AI_USDT",
+      "direction": "SHORT",
+      "entry": 0.0168,
+      "exit": 0.017051999999999998,
+      "pnl": -6.688440168583948,
+      "reason": "STOP LOSS",
+      "time": 1789582814
     }
   ],
   "positions": {
@@ -712,16 +721,16 @@
       "quality": "A+",
       "opened_at": 1789579186
     },
-    "AI_USDT": {
-      "symbol": "AI_USDT",
-      "direction": "SHORT",
-      "entry": 0.0168,
-      "stop": 0.017051999999999998,
-      "target": 0.016295999999999998,
-      "size": 26541.42924041262,
-      "score": 11,
+    "RARE_USDT": {
+      "symbol": "RARE_USDT",
+      "direction": "LONG",
+      "entry": 0.0114,
+      "stop": 0.011229,
+      "target": 0.011742,
+      "size": 38722.54834443357,
+      "score": 12,
       "quality": "A+",
-      "opened_at": 1789580868
+      "opened_at": 1789582868
     }
   },
   "last_alerted": {
@@ -942,8 +951,8 @@
       "key": "LONG_11"
     },
     "BEAMX_USDT": {
-      "time": 1789575645,
-      "key": "SHORT_13"
+      "time": 1789582868,
+      "key": "LONG_9"
     },
     "XVG_USDT": {
       "time": 1789574456,
@@ -958,15 +967,15 @@
       "key": "LONG_8"
     },
     "ZIL_USDT": {
-      "time": 1789581535,
-      "key": "LONG_9"
+      "time": 1789582868,
+      "key": "SHORT_8"
     },
     "EDU_USDT": {
       "time": 1789575645,
       "key": "SHORT_8"
     },
     "AEVO_USDT": {
-      "time": 1789572901,
+      "time": 1789582868,
       "key": "LONG_9"
     },
     "WAXP_USDT": {
@@ -1014,8 +1023,8 @@
       "key": "LONG_8"
     },
     "IOST_USDT": {
-      "time": 1789571987,
-      "key": "LONG_10"
+      "time": 1789582868,
+      "key": "SHORT_9"
     },
     "PHA_USDT": {
       "time": 1789577450,
@@ -1050,8 +1059,8 @@
       "key": "SHORT_9"
     },
     "BNT_USDT": {
-      "time": 1789574456,
-      "key": "SHORT_8"
+      "time": 1789582868,
+      "key": "LONG_8"
     },
     "QKC_USDT": {
       "time": 1789527612,
@@ -1078,8 +1087,8 @@
       "key": "LONG_9"
     },
     "AVAX_USDT": {
-      "time": 1789581535,
-      "key": "LONG_9"
+      "time": 1789582868,
+      "key": "LONG_8"
     },
     "TRX_USDT": {
       "time": 1789577450,
@@ -1090,8 +1099,8 @@
       "key": "LONG_8"
     },
     "AXL_USDT": {
-      "time": 1789570836,
-      "key": "LONG_10"
+      "time": 1789582868,
+      "key": "LONG_8"
     },
     "JUP_USDT": {
       "time": 1789575645,
@@ -1114,7 +1123,7 @@
       "key": "LONG_8"
     },
     "ALT_USDT": {
-      "time": 1789567963,
+      "time": 1789582868,
       "key": "LONG_9"
     },
     "JTO_USDT": {
@@ -1130,12 +1139,12 @@
       "key": "LONG_8"
     },
     "JASMY_USDT": {
-      "time": 1789548760,
-      "key": "LONG_10"
+      "time": 1789582868,
+      "key": "LONG_9"
     },
     "OKB_USDT": {
-      "time": 1789576547,
-      "key": "SHORT_8"
+      "time": 1789582868,
+      "key": "LONG_8"
     },
     "ACH_USDT": {
       "time": 1789579186,
@@ -1150,8 +1159,8 @@
       "key": "SHORT_9"
     },
     "RARE_USDT": {
-      "time": 1789570836,
-      "key": "SHORT_9"
+      "time": 1789582868,
+      "key": "LONG_12"
     },
     "CVC_USDT": {
       "time": 1789578196,
@@ -1186,8 +1195,8 @@
       "key": "SHORT_9"
     },
     "ALICE_USDT": {
-      "time": 1789578196,
-      "key": "LONG_9"
+      "time": 1789582868,
+      "key": "LONG_10"
     },
     "SNX_USDT": {
       "time": 1789557503,
@@ -1306,8 +1315,8 @@
       "key": "SHORT_8"
     },
     "PAXG_USDT": {
-      "time": 1789580042,
-      "key": "SHORT_8"
+      "time": 1789582868,
+      "key": "LONG_8"
     },
     "LUNC_USDT": {
       "time": 1789576547,
@@ -1362,8 +1371,8 @@
       "key": "LONG_9"
     },
     "STRK_USDT": {
-      "time": 1789554604,
-      "key": "SHORT_9"
+      "time": 1789582868,
+      "key": "SHORT_8"
     },
     "AAVE_USDT": {
       "time": 1789571987,
@@ -1418,8 +1427,8 @@
       "key": "LONG_8"
     },
     "APE_USDT": {
-      "time": 1789571987,
-      "key": "LONG_9"
+      "time": 1789582868,
+      "key": "LONG_8"
     },
     "TFUEL_USDT": {
       "time": 1789577450,
@@ -1454,8 +1463,8 @@
       "key": "LONG_8"
     },
     "TLM_USDT": {
-      "time": 1789578196,
-      "key": "LONG_9"
+      "time": 1789582868,
+      "key": "LONG_11"
     },
     "XRP_USDT": {
       "time": 1789576547,
