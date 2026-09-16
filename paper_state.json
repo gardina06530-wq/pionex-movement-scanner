@@ -1,8 +1,8 @@
 {
-  "balance": 794.2376542414887,
-  "realized_pnl": -205.76234575851137,
+  "balance": 786.2952776990738,
+  "realized_pnl": -213.70472230092622,
   "wins": 7,
-  "losses": 37,
+  "losses": 38,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -399,6 +399,15 @@
       "pnl": -8.022602568095856,
       "reason": "STOP LOSS",
       "time": 1789513695
+    },
+    {
+      "symbol": "XVG_USDT",
+      "direction": "SHORT",
+      "entry": 0.002631,
+      "exit": 0.002670465,
+      "pnl": -7.9423765424148485,
+      "reason": "STOP LOSS",
+      "time": 1789520325
     }
   ],
   "positions": {
@@ -424,16 +433,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "XVG_USDT": {
-      "symbol": "XVG_USDT",
+    "ARKM_USDT": {
+      "symbol": "ARKM_USDT",
       "direction": "SHORT",
-      "entry": 0.002631,
-      "stop": 0.002670465,
-      "target": 0.00255207,
-      "size": 201251.14766032906,
-      "score": 12,
+      "entry": 0.0989,
+      "stop": 0.10038349999999999,
+      "target": 0.095933,
+      "size": 5300.271504543807,
+      "score": 9,
       "quality": "A+",
-      "opened_at": 1789513747
+      "opened_at": 1789520377
     }
   },
   "last_alerted": {
@@ -450,7 +459,7 @@
       "key": "SHORT_8"
     },
     "PUNDIX_USDT": {
-      "time": 1789513747,
+      "time": 1789520377,
       "key": "LONG_8"
     },
     "RVN_USDT": {
@@ -482,7 +491,7 @@
       "key": "SHORT_8"
     },
     "ARKM_USDT": {
-      "time": 1789513747,
+      "time": 1789520377,
       "key": "SHORT_9"
     },
     "NVDAX_USDT": {
@@ -666,7 +675,7 @@
       "key": "SHORT_10"
     },
     "EGLD_USDT": {
-      "time": 1789502395,
+      "time": 1789520377,
       "key": "LONG_8"
     },
     "ZIL_USDT": {
@@ -742,8 +751,8 @@
       "key": "LONG_9"
     },
     "BB_USDT": {
-      "time": 1789516183,
-      "key": "LONG_11"
+      "time": 1789520377,
+      "key": "LONG_9"
     },
     "API3_USDT": {
       "time": 1789513747,
@@ -862,8 +871,8 @@
       "key": "SHORT_8"
     },
     "RARE_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_11"
+      "time": 1789520377,
+      "key": "LONG_9"
     },
     "CVC_USDT": {
       "time": 1789516848,
@@ -934,7 +943,7 @@
       "key": "SHORT_8"
     },
     "TSLAX_USDT": {
-      "time": 1789515490,
+      "time": 1789520377,
       "key": "LONG_8"
     },
     "SKL_USDT": {
@@ -1038,8 +1047,8 @@
       "key": "SHORT_9"
     },
     "AR_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_10"
+      "time": 1789520377,
+      "key": "LONG_8"
     },
     "LUNA_USDT": {
       "time": 1789513747,
@@ -1166,8 +1175,8 @@
       "key": "SHORT_8"
     },
     "TLM_USDT": {
-      "time": 1789516183,
-      "key": "LONG_10"
+      "time": 1789520377,
+      "key": "SHORT_8"
     },
     "XRP_USDT": {
       "time": 1789513747,
