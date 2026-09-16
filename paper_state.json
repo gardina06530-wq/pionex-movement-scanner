@@ -1,8 +1,8 @@
 {
-  "balance": 723.8481079903158,
-  "realized_pnl": -276.15189200968416,
+  "balance": 716.6096269104127,
+  "realized_pnl": -283.3903730895873,
   "wins": 11,
-  "losses": 54,
+  "losses": 55,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -588,6 +588,15 @@
       "pnl": -7.165115869901211,
       "reason": "STOP LOSS",
       "time": 1789568976
+    },
+    {
+      "symbol": "CVC_USDT",
+      "direction": "LONG",
+      "entry": 0.0286,
+      "exit": 0.028171,
+      "pnl": -7.23848107990314,
+      "reason": "STOP LOSS",
+      "time": 1789569996
     }
   ],
   "positions": {
@@ -602,16 +611,16 @@
       "quality": "A+",
       "opened_at": 1789534403
     },
-    "CVC_USDT": {
-      "symbol": "CVC_USDT",
+    "MTL_USDT": {
+      "symbol": "MTL_USDT",
       "direction": "LONG",
-      "entry": 0.0286,
-      "stop": 0.028171,
-      "target": 0.029458,
-      "size": 16872.916270170535,
-      "score": 10,
-      "quality": "A",
-      "opened_at": 1789569010
+      "entry": 0.293,
+      "stop": 0.288605,
+      "target": 0.30179,
+      "size": 1630.5110964969574,
+      "score": 11,
+      "quality": "A+",
+      "opened_at": 1789570038
     }
   },
   "last_alerted": {
@@ -680,7 +689,7 @@
       "key": "LONG_10"
     },
     "INJ_USDT": {
-      "time": 1789564980,
+      "time": 1789570038,
       "key": "LONG_8"
     },
     "COMP_USDT": {
@@ -784,7 +793,7 @@
       "key": "SHORT_8"
     },
     "MTL_USDT": {
-      "time": 1789566909,
+      "time": 1789570038,
       "key": "LONG_11"
     },
     "FLOKI_USDT": {
@@ -904,8 +913,8 @@
       "key": "SHORT_8"
     },
     "IOST_USDT": {
-      "time": 1789565964,
-      "key": "LONG_9"
+      "time": 1789570038,
+      "key": "LONG_8"
     },
     "PHA_USDT": {
       "time": 1789567963,
@@ -924,8 +933,8 @@
       "key": "SHORT_9"
     },
     "API3_USDT": {
-      "time": 1789544754,
-      "key": "LONG_10"
+      "time": 1789570038,
+      "key": "LONG_9"
     },
     "ASTR_USDT": {
       "time": 1789565964,
@@ -984,7 +993,7 @@
       "key": "LONG_11"
     },
     "JUP_USDT": {
-      "time": 1789562865,
+      "time": 1789570038,
       "key": "LONG_8"
     },
     "BAR_USDT": {
@@ -1156,8 +1165,8 @@
       "key": "LONG_9"
     },
     "TWT_USDT": {
-      "time": 1789563726,
-      "key": "LONG_8"
+      "time": 1789570038,
+      "key": "LONG_10"
     },
     "ONE_USDT": {
       "time": 1789562865,
@@ -1216,8 +1225,8 @@
       "key": "LONG_9"
     },
     "AR_USDT": {
-      "time": 1789567963,
-      "key": "LONG_10"
+      "time": 1789570038,
+      "key": "LONG_8"
     },
     "LUNA_USDT": {
       "time": 1789562865,
