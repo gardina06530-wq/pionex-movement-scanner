@@ -869,8 +869,8 @@
       "key": "LONG_8"
     },
     "NEO_USDT": {
-      "time": 1789580042,
-      "key": "LONG_8"
+      "time": 1789586741,
+      "key": "LONG_9"
     },
     "DUSK_USDT": {
       "time": 1789583955,
@@ -905,8 +905,8 @@
       "key": "LONG_9"
     },
     "STRAX_USDT": {
-      "time": 1789561568,
-      "key": "SHORT_8"
+      "time": 1789586741,
+      "key": "LONG_8"
     },
     "FLUX_USDT": {
       "time": 1789527612,
@@ -921,8 +921,8 @@
       "key": "SHORT_8"
     },
     "MTL_USDT": {
-      "time": 1789577450,
-      "key": "SHORT_8"
+      "time": 1789586741,
+      "key": "LONG_9"
     },
     "FLOKI_USDT": {
       "time": 1789580042,
@@ -937,8 +937,8 @@
       "key": "SHORT_8"
     },
     "KAVA_USDT": {
-      "time": 1789553535,
-      "key": "LONG_9"
+      "time": 1789586741,
+      "key": "LONG_8"
     },
     "BLUR_USDT": {
       "time": 1789581535,
@@ -1061,8 +1061,8 @@
       "key": "LONG_11"
     },
     "API3_USDT": {
-      "time": 1789570038,
-      "key": "LONG_9"
+      "time": 1789586741,
+      "key": "LONG_8"
     },
     "ASTR_USDT": {
       "time": 1789585761,
@@ -1241,8 +1241,8 @@
       "key": "SHORT_9"
     },
     "LSK_USDT": {
-      "time": 1789578196,
-      "key": "SHORT_10"
+      "time": 1789586741,
+      "key": "LONG_10"
     },
     "RLC_USDT": {
       "time": 1789578196,
@@ -1297,7 +1297,7 @@
       "key": "LONG_8"
     },
     "ONE_USDT": {
-      "time": 1789580042,
+      "time": 1789586741,
       "key": "LONG_8"
     },
     "KSM_USDT": {
@@ -1513,8 +1513,8 @@
       "key": "SHORT_8"
     },
     "PI_USDT": {
-      "time": 1789576547,
-      "key": "SHORT_9"
+      "time": 1789586741,
+      "key": "LONG_9"
     },
     "SAND_USDT": {
       "time": 1789546765,
