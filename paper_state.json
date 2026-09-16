@@ -712,8 +712,8 @@
       "key": "LONG_9"
     },
     "DYM_USDT": {
-      "time": 1789535254,
-      "key": "LONG_8"
+      "time": 1789536288,
+      "key": "LONG_12"
     },
     "STRAX_USDT": {
       "time": 1789533527,
@@ -756,8 +756,8 @@
       "key": "LONG_8"
     },
     "SAGA_USDT": {
-      "time": 1789531351,
-      "key": "LONG_9"
+      "time": 1789536288,
+      "key": "LONG_8"
     },
     "AVA_USDT": {
       "time": 1789534403,
@@ -780,15 +780,15 @@
       "key": "LONG_8"
     },
     "BEAMX_USDT": {
-      "time": 1789531351,
-      "key": "LONG_11"
+      "time": 1789536288,
+      "key": "LONG_9"
     },
     "XVG_USDT": {
       "time": 1789531351,
       "key": "LONG_8"
     },
     "NACHA_USDT": {
-      "time": 1789527612,
+      "time": 1789536288,
       "key": "SHORT_9"
     },
     "EGLD_USDT": {
@@ -848,8 +848,8 @@
       "key": "LONG_8"
     },
     "FTT_USDT": {
-      "time": 1789529756,
-      "key": "LONG_11"
+      "time": 1789536288,
+      "key": "LONG_8"
     },
     "IOST_USDT": {
       "time": 1789528781,
@@ -916,11 +916,11 @@
       "key": "LONG_9"
     },
     "AVAX_USDT": {
-      "time": 1789533527,
+      "time": 1789536288,
       "key": "LONG_8"
     },
     "TRX_USDT": {
-      "time": 1789532522,
+      "time": 1789536288,
       "key": "SHORT_8"
     },
     "MANA_USDT": {
@@ -960,8 +960,8 @@
       "key": "LONG_9"
     },
     "GLM_USDT": {
-      "time": 1789527612,
-      "key": "LONG_10"
+      "time": 1789536288,
+      "key": "LONG_9"
     },
     "GMT_USDT": {
       "time": 1789534403,
@@ -1008,8 +1008,8 @@
       "key": "SHORT_10"
     },
     "CVX_USDT": {
-      "time": 1789533527,
-      "key": "LONG_11"
+      "time": 1789536288,
+      "key": "LONG_9"
     },
     "ZEC_USDT": {
       "time": 1789528781,
@@ -1140,8 +1140,8 @@
       "key": "SHORT_11"
     },
     "COTI_USDT": {
-      "time": 1789519590,
-      "key": "LONG_9"
+      "time": 1789536288,
+      "key": "LONG_10"
     },
     "PAXG_USDT": {
       "time": 1789531351,
@@ -1260,8 +1260,8 @@
       "key": "LONG_10"
     },
     "TFUEL_USDT": {
-      "time": 1789532522,
-      "key": "LONG_8"
+      "time": 1789536288,
+      "key": "LONG_11"
     },
     "NEAR_USDT": {
       "time": 1789527612,
