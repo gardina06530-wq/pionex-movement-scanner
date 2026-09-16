@@ -446,8 +446,8 @@
       "key": "LONG_8"
     },
     "PROM_USDT": {
-      "time": 1789512191,
-      "key": "LONG_8"
+      "time": 1789518370,
+      "key": "SHORT_8"
     },
     "PUNDIX_USDT": {
       "time": 1789513747,
@@ -590,15 +590,15 @@
       "key": "SHORT_12"
     },
     "STRAX_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789518370,
+      "key": "SHORT_8"
     },
     "FLUX_USDT": {
       "time": 1789513747,
       "key": "LONG_8"
     },
     "BAT_USDT": {
-      "time": 1789513747,
+      "time": 1789518370,
       "key": "SHORT_8"
     },
     "ZEN_USDT": {
@@ -682,7 +682,7 @@
       "key": "SHORT_9"
     },
     "WAXP_USDT": {
-      "time": 1789515490,
+      "time": 1789518370,
       "key": "LONG_8"
     },
     "CRCLX_USDT": {
@@ -730,8 +730,8 @@
       "key": "LONG_11"
     },
     "PHA_USDT": {
-      "time": 1789514663,
-      "key": "LONG_8"
+      "time": 1789518370,
+      "key": "SHORT_8"
     },
     "ALGO_USDT": {
       "time": 1789516183,
@@ -978,16 +978,16 @@
       "key": "SHORT_8"
     },
     "TWT_USDT": {
-      "time": 1789499120,
-      "key": "LONG_9"
+      "time": 1789518370,
+      "key": "SHORT_9"
     },
     "ONE_USDT": {
       "time": 1789502395,
       "key": "SHORT_8"
     },
     "KSM_USDT": {
-      "time": 1789516848,
-      "key": "LONG_9"
+      "time": 1789518370,
+      "key": "SHORT_9"
     },
     "DGB_USDT": {
       "time": 1789516183,
@@ -1118,8 +1118,8 @@
       "key": "SHORT_9"
     },
     "SLVX_USDT": {
-      "time": 1789510377,
-      "key": "LONG_10"
+      "time": 1789518370,
+      "key": "SHORT_8"
     },
     "mBTC_USDT": {
       "time": 1789515490,
