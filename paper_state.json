@@ -607,8 +607,8 @@
       "key": "SHORT_9"
     },
     "RVN_USDT": {
-      "time": 1789547814,
-      "key": "LONG_8"
+      "time": 1789550687,
+      "key": "SHORT_8"
     },
     "CHZ_USDT": {
       "time": 1789542620,
@@ -643,7 +643,7 @@
       "key": "SHORT_8"
     },
     "METIS_USDT": {
-      "time": 1789543731,
+      "time": 1789550687,
       "key": "LONG_9"
     },
     "DOGE_USDT": {
@@ -663,8 +663,8 @@
       "key": "LONG_9"
     },
     "CYBER_USDT": {
-      "time": 1789540541,
-      "key": "SHORT_10"
+      "time": 1789550687,
+      "key": "LONG_9"
     },
     "USDC_USDT": {
       "time": 1789543731,
@@ -779,8 +779,8 @@
       "key": "SHORT_9"
     },
     "BLUR_USDT": {
-      "time": 1789549595,
-      "key": "LONG_11"
+      "time": 1789550687,
+      "key": "LONG_12"
     },
     "SAGA_USDT": {
       "time": 1789546765,
@@ -859,7 +859,7 @@
       "key": "SHORT_8"
     },
     "VTHO_USDT": {
-      "time": 1789547814,
+      "time": 1789550687,
       "key": "LONG_9"
     },
     "KAS_USDT": {
@@ -879,8 +879,8 @@
       "key": "LONG_8"
     },
     "IOST_USDT": {
-      "time": 1789548760,
-      "key": "LONG_9"
+      "time": 1789550687,
+      "key": "SHORT_10"
     },
     "PHA_USDT": {
       "time": 1789543731,
@@ -1027,8 +1027,8 @@
       "key": "LONG_8"
     },
     "CELR_USDT": {
-      "time": 1789528781,
-      "key": "LONG_11"
+      "time": 1789550687,
+      "key": "LONG_9"
     },
     "NEXO_USDT": {
       "time": 1789549595,
@@ -1095,7 +1095,7 @@
       "key": "SHORT_11"
     },
     "GOOGLX_USDT": {
-      "time": 1789546765,
+      "time": 1789550687,
       "key": "SHORT_8"
     },
     "DODO_USDT": {
@@ -1107,8 +1107,8 @@
       "key": "LONG_8"
     },
     "DEXE_USDT": {
-      "time": 1789540541,
-      "key": "SHORT_8"
+      "time": 1789550687,
+      "key": "LONG_8"
     },
     "TAO_USDT": {
       "time": 1789534403,
@@ -1151,8 +1151,8 @@
       "key": "LONG_8"
     },
     "CTK_USDT": {
-      "time": 1789540541,
-      "key": "SHORT_11"
+      "time": 1789550687,
+      "key": "LONG_8"
     },
     "DOT_USDT": {
       "time": 1789549595,
