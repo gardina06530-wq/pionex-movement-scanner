@@ -1,8 +1,8 @@
 {
-  "balance": 802.0211832530553,
-  "realized_pnl": -197.97881674694474,
+  "balance": 794.0009714205247,
+  "realized_pnl": -205.99902857947527,
   "wins": 8,
-  "losses": 38,
+  "losses": 39,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -417,6 +417,15 @@
       "pnl": 15.725905553981463,
       "reason": "TAKE PROFIT",
       "time": 1789523151
+    },
+    {
+      "symbol": "WIN_USDT",
+      "direction": "LONG",
+      "entry": 3.879e-05,
+      "exit": 3.820815e-05,
+      "pnl": -8.020211832530531,
+      "reason": "STOP LOSS",
+      "time": 1789523858
     }
   ],
   "positions": {
@@ -442,16 +451,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "WIN_USDT": {
-      "symbol": "WIN_USDT",
+    "ARPA_USDT": {
+      "symbol": "ARPA_USDT",
       "direction": "LONG",
-      "entry": 3.879e-05,
-      "stop": 3.820815e-05,
-      "target": 3.9953700000000003e-05,
-      "size": 13783985.275467135,
+      "entry": 0.009949,
+      "stop": 0.009799765,
+      "target": 0.01024747,
+      "size": 53204.742280331346,
       "score": 11,
       "quality": "A+",
-      "opened_at": 1789523193
+      "opened_at": 1789523901
     }
   },
   "last_alerted": {
@@ -460,8 +469,8 @@
       "key": "LONG_8"
     },
     "CSPR_USDT": {
-      "time": 1789516183,
-      "key": "LONG_8"
+      "time": 1789523901,
+      "key": "LONG_10"
     },
     "PROM_USDT": {
       "time": 1789518370,
@@ -660,8 +669,8 @@
       "key": "SHORT_8"
     },
     "PYTH_USDT": {
-      "time": 1789523193,
-      "key": "LONG_9"
+      "time": 1789523901,
+      "key": "LONG_10"
     },
     "LDO_USDT": {
       "time": 1789516183,
@@ -900,8 +909,8 @@
       "key": "LONG_10"
     },
     "CVX_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_8"
+      "time": 1789523901,
+      "key": "LONG_8"
     },
     "ZEC_USDT": {
       "time": 1789513747,
@@ -940,8 +949,8 @@
       "key": "SHORT_10"
     },
     "ARPA_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789523901,
+      "key": "LONG_11"
     },
     "LSK_USDT": {
       "time": 1789505277,
@@ -1128,12 +1137,12 @@
       "key": "SHORT_9"
     },
     "TNSR_USDT": {
-      "time": 1789516848,
+      "time": 1789523901,
       "key": "LONG_9"
     },
     "TIA_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789523901,
+      "key": "LONG_9"
     },
     "SLVX_USDT": {
       "time": 1789518370,
