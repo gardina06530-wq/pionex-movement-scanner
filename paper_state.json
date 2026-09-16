@@ -1,8 +1,8 @@
 {
-  "balance": 655.5340209229159,
-  "realized_pnl": -344.465979077084,
+  "balance": 648.9786807136868,
+  "realized_pnl": -351.0213192863132,
   "wins": 12,
-  "losses": 66,
+  "losses": 67,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -705,6 +705,15 @@
       "pnl": -6.6215557668981795,
       "reason": "STOP LOSS",
       "time": 1789583919
+    },
+    {
+      "symbol": "DGB_USDT",
+      "direction": "LONG",
+      "entry": 0.00383,
+      "exit": 0.00377255,
+      "pnl": -6.555340209229174,
+      "reason": "STOP LOSS",
+      "time": 1789584822
     }
   ],
   "positions": {
@@ -730,16 +739,16 @@
       "quality": "A+",
       "opened_at": 1789579186
     },
-    "DGB_USDT": {
-      "symbol": "DGB_USDT",
+    "BEAMX_USDT": {
+      "symbol": "BEAMX_USDT",
       "direction": "LONG",
-      "entry": 0.00383,
-      "stop": 0.00377255,
-      "target": 0.0039449,
-      "size": 114105.13854184786,
-      "score": 11,
+      "entry": 0.00155,
+      "stop": 0.00152675,
+      "target": 0.0015965,
+      "size": 279130.6153607255,
+      "score": 10,
       "quality": "A+",
-      "opened_at": 1789583955
+      "opened_at": 1789584866
     }
   },
   "last_alerted": {
@@ -960,8 +969,8 @@
       "key": "LONG_11"
     },
     "BEAMX_USDT": {
-      "time": 1789582868,
-      "key": "LONG_9"
+      "time": 1789584866,
+      "key": "LONG_10"
     },
     "XVG_USDT": {
       "time": 1789574456,
@@ -1020,15 +1029,15 @@
       "key": "SHORT_8"
     },
     "POLYX_USDT": {
-      "time": 1789578196,
-      "key": "LONG_8"
+      "time": 1789584866,
+      "key": "SHORT_8"
     },
     "OSMO_USDT": {
       "time": 1789579186,
       "key": "LONG_8"
     },
     "FTT_USDT": {
-      "time": 1789571987,
+      "time": 1789584866,
       "key": "LONG_8"
     },
     "IOST_USDT": {
@@ -1116,7 +1125,7 @@
       "key": "SHORT_9"
     },
     "BAR_USDT": {
-      "time": 1789577450,
+      "time": 1789584866,
       "key": "LONG_9"
     },
     "ATOM_USDT": {
@@ -1252,8 +1261,8 @@
       "key": "SHORT_8"
     },
     "DODO_USDT": {
-      "time": 1789576547,
-      "key": "LONG_9"
+      "time": 1789584866,
+      "key": "LONG_8"
     },
     "AAPLX_USDT": {
       "time": 1789576547,
@@ -1516,7 +1525,7 @@
       "key": "LONG_9"
     },
     "PSG_USDT": {
-      "time": 1789581535,
+      "time": 1789584866,
       "key": "LONG_8"
     },
     "WIF_USDT": {
