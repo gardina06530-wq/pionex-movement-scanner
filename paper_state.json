@@ -1,8 +1,8 @@
 {
-  "balance": 655.4119017890059,
-  "realized_pnl": -344.5880982109942,
-  "wins": 13,
-  "losses": 68,
+  "balance": 661.9504878490255,
+  "realized_pnl": -338.0495121509746,
+  "wins": 14,
+  "losses": 69,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -732,20 +732,27 @@
       "pnl": 12.979573614273763,
       "reason": "TAKE PROFIT",
       "time": 1789600992
-    }
-  ],
-  "positions": {
-    "APT_USDT": {
+    },
+    {
       "symbol": "APT_USDT",
       "direction": "LONG",
       "entry": 0.534,
-      "stop": 0.5259900000000001,
-      "target": 0.5500200000000001,
-      "size": 817.2724767733821,
-      "score": 11,
-      "quality": "A+",
-      "opened_at": 1789579186
+      "exit": 0.5500200000000001,
+      "pnl": 13.09270507790961,
+      "reason": "TAKE PROFIT",
+      "time": 1789601869
     },
+    {
+      "symbol": "LAZIO_USDT",
+      "direction": "SHORT",
+      "entry": 0.35,
+      "exit": 0.35524999999999995,
+      "pnl": -6.554119017890031,
+      "reason": "STOP LOSS",
+      "time": 1789601869
+    }
+  ],
+  "positions": {
     "TSLAX_USDT": {
       "symbol": "TSLAX_USDT",
       "direction": "SHORT",
@@ -757,16 +764,16 @@
       "quality": "A+",
       "opened_at": 1789595675
     },
-    "LAZIO_USDT": {
-      "symbol": "LAZIO_USDT",
-      "direction": "SHORT",
-      "entry": 0.35,
-      "stop": 0.35524999999999995,
-      "target": 0.33949999999999997,
-      "size": 1248.4036224552494,
-      "score": 10,
+    "IOST_USDT": {
+      "symbol": "IOST_USDT",
+      "direction": "LONG",
+      "entry": 0.000853,
+      "stop": 0.000840205,
+      "target": 0.0008785900000000001,
+      "size": 517350.90883081325,
+      "score": 11,
       "quality": "A+",
-      "opened_at": 1789601038
+      "opened_at": 1789601913
     }
   },
   "last_alerted": {
@@ -935,8 +942,8 @@
       "key": "SHORT_8"
     },
     "ZEN_USDT": {
-      "time": 1789558468,
-      "key": "SHORT_8"
+      "time": 1789601913,
+      "key": "SHORT_10"
     },
     "MTL_USDT": {
       "time": 1789589106,
@@ -947,7 +954,7 @@
       "key": "LONG_8"
     },
     "DASH_USDT": {
-      "time": 1789600063,
+      "time": 1789601913,
       "key": "SHORT_8"
     },
     "SOL_USDT": {
@@ -1035,8 +1042,8 @@
       "key": "LONG_8"
     },
     "BOME_USDT": {
-      "time": 1789566909,
-      "key": "SHORT_9"
+      "time": 1789601913,
+      "key": "LONG_9"
     },
     "VTHO_USDT": {
       "time": 1789573758,
@@ -1059,8 +1066,8 @@
       "key": "LONG_8"
     },
     "IOST_USDT": {
-      "time": 1789595675,
-      "key": "LONG_8"
+      "time": 1789601913,
+      "key": "LONG_11"
     },
     "PHA_USDT": {
       "time": 1789577450,
@@ -1075,8 +1082,8 @@
       "key": "SHORT_9"
     },
     "BB_USDT": {
-      "time": 1789598493,
-      "key": "SHORT_12"
+      "time": 1789601913,
+      "key": "SHORT_9"
     },
     "API3_USDT": {
       "time": 1789586741,
@@ -1103,8 +1110,8 @@
       "key": "LONG_8"
     },
     "ASR_USDT": {
-      "time": 1789585761,
-      "key": "LONG_8"
+      "time": 1789601913,
+      "key": "SHORT_9"
     },
     "TKO_USDT": {
       "time": 1789579186,
@@ -1155,8 +1162,8 @@
       "key": "LONG_11"
     },
     "RIF_USDT": {
-      "time": 1789596611,
-      "key": "SHORT_9"
+      "time": 1789601913,
+      "key": "SHORT_11"
     },
     "ALT_USDT": {
       "time": 1789601038,
@@ -1211,8 +1218,8 @@
       "key": "LONG_8"
     },
     "NEXO_USDT": {
-      "time": 1789601038,
-      "key": "SHORT_8"
+      "time": 1789601913,
+      "key": "SHORT_11"
     },
     "CVX_USDT": {
       "time": 1789599208,
@@ -1355,16 +1362,16 @@
       "key": "LONG_8"
     },
     "LUNC_USDT": {
-      "time": 1789600063,
-      "key": "SHORT_9"
+      "time": 1789601913,
+      "key": "SHORT_8"
     },
     "AXS_USDT": {
       "time": 1789575645,
       "key": "SHORT_8"
     },
     "SYN_USDT": {
-      "time": 1789592020,
-      "key": "SHORT_12"
+      "time": 1789601913,
+      "key": "LONG_10"
     },
     "RSR_USDT": {
       "time": 1789597580,
@@ -1459,8 +1466,8 @@
       "key": "SHORT_9"
     },
     "LAZIO_USDT": {
-      "time": 1789601038,
-      "key": "SHORT_10"
+      "time": 1789601913,
+      "key": "SHORT_8"
     },
     "APE_USDT": {
       "time": 1789597580,
