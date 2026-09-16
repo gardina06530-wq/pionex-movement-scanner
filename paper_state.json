@@ -1,7 +1,7 @@
 {
-  "balance": 654.6352538954791,
-  "realized_pnl": -345.3647461045209,
-  "wins": 11,
+  "balance": 668.844016858398,
+  "realized_pnl": -331.1559831416019,
+  "wins": 12,
   "losses": 64,
   "trades": [
     {
@@ -678,20 +678,18 @@
       "pnl": -6.612477312075533,
       "reason": "STOP LOSS",
       "time": 1789578140
-    }
-  ],
-  "positions": {
-    "SKL_USDT": {
+    },
+    {
       "symbol": "SKL_USDT",
       "direction": "SHORT",
       "entry": 0.00351,
-      "stop": 0.0035626499999999997,
-      "target": 0.0034047,
-      "size": 134936.02054054147,
-      "score": 11,
-      "quality": "A+",
-      "opened_at": 1789534403
-    },
+      "exit": 0.0034047,
+      "pnl": 14.20876296291902,
+      "reason": "TAKE PROFIT",
+      "time": 1789580814
+    }
+  ],
+  "positions": {
     "DYM_USDT": {
       "symbol": "DYM_USDT",
       "direction": "SHORT",
@@ -713,6 +711,17 @@
       "score": 11,
       "quality": "A+",
       "opened_at": 1789579186
+    },
+    "AI_USDT": {
+      "symbol": "AI_USDT",
+      "direction": "SHORT",
+      "entry": 0.0168,
+      "stop": 0.017051999999999998,
+      "target": 0.016295999999999998,
+      "size": 26541.42924041262,
+      "score": 11,
+      "quality": "A+",
+      "opened_at": 1789580868
     }
   },
   "last_alerted": {
@@ -757,8 +766,8 @@
       "key": "SHORT_8"
     },
     "GRT_USDT": {
-      "time": 1789575645,
-      "key": "SHORT_8"
+      "time": 1789580868,
+      "key": "SHORT_9"
     },
     "ARKM_USDT": {
       "time": 1789575645,
@@ -829,8 +838,8 @@
       "key": "SHORT_8"
     },
     "WIN_USDT": {
-      "time": 1789566909,
-      "key": "LONG_9"
+      "time": 1789580868,
+      "key": "LONG_8"
     },
     "NEO_USDT": {
       "time": 1789580042,
@@ -949,8 +958,8 @@
       "key": "LONG_8"
     },
     "ZIL_USDT": {
-      "time": 1789580042,
-      "key": "LONG_9"
+      "time": 1789580868,
+      "key": "LONG_11"
     },
     "EDU_USDT": {
       "time": 1789575645,
@@ -977,8 +986,8 @@
       "key": "LONG_9"
     },
     "PEPE_USDT": {
-      "time": 1789575645,
-      "key": "SHORT_8"
+      "time": 1789580868,
+      "key": "LONG_8"
     },
     "BOME_USDT": {
       "time": 1789566909,
@@ -1013,8 +1022,8 @@
       "key": "SHORT_11"
     },
     "ALGO_USDT": {
-      "time": 1789555592,
-      "key": "LONG_8"
+      "time": 1789580868,
+      "key": "SHORT_9"
     },
     "IO_USDT": {
       "time": 1789578196,
@@ -1113,7 +1122,7 @@
       "key": "LONG_8"
     },
     "GLM_USDT": {
-      "time": 1789578196,
+      "time": 1789580868,
       "key": "LONG_8"
     },
     "GMT_USDT": {
@@ -1193,8 +1202,8 @@
       "key": "LONG_8"
     },
     "ARB_USDT": {
-      "time": 1789563726,
-      "key": "LONG_10"
+      "time": 1789580868,
+      "key": "SHORT_8"
     },
     "OP_USDT": {
       "time": 1789579186,
@@ -1273,8 +1282,8 @@
       "key": "SHORT_8"
     },
     "AI_USDT": {
-      "time": 1789559387,
-      "key": "SHORT_8"
+      "time": 1789580868,
+      "key": "SHORT_11"
     },
     "CTK_USDT": {
       "time": 1789579186,
@@ -1341,8 +1350,8 @@
       "key": "SHORT_8"
     },
     "OG_USDT": {
-      "time": 1789566909,
-      "key": "LONG_8"
+      "time": 1789580868,
+      "key": "SHORT_8"
     },
     "SEI_USDT": {
       "time": 1789555592,
@@ -1497,12 +1506,12 @@
       "key": "SHORT_8"
     },
     "ETHW_USDT": {
-      "time": 1789575645,
-      "key": "SHORT_8"
+      "time": 1789580868,
+      "key": "LONG_8"
     },
     "QNT_USDT": {
-      "time": 1789555592,
-      "key": "LONG_9"
+      "time": 1789580868,
+      "key": "LONG_8"
     },
     "MEME_USDT": {
       "time": 1789575645,
