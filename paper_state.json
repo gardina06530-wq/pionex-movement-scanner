@@ -777,8 +777,8 @@
       "key": "LONG_8"
     },
     "FIL_USDT": {
-      "time": 1789592020,
-      "key": "SHORT_10"
+      "time": 1789594963,
+      "key": "LONG_9"
     },
     "ONT_USDT": {
       "time": 1789592943,
@@ -821,8 +821,8 @@
       "key": "LONG_11"
     },
     "COMP_USDT": {
-      "time": 1789556309,
-      "key": "LONG_9"
+      "time": 1789594963,
+      "key": "LONG_8"
     },
     "CYBER_USDT": {
       "time": 1789591196,
@@ -849,8 +849,8 @@
       "key": "LONG_9"
     },
     "IQ_USDT": {
-      "time": 1789592943,
-      "key": "LONG_8"
+      "time": 1789594963,
+      "key": "SHORT_10"
     },
     "BICO_USDT": {
       "time": 1789576547,
@@ -957,7 +957,7 @@
       "key": "LONG_9"
     },
     "PYTH_USDT": {
-      "time": 1789575645,
+      "time": 1789594963,
       "key": "LONG_8"
     },
     "LDO_USDT": {
@@ -1057,7 +1057,7 @@
       "key": "LONG_8"
     },
     "BB_USDT": {
-      "time": 1789585761,
+      "time": 1789594963,
       "key": "LONG_11"
     },
     "API3_USDT": {
@@ -1393,8 +1393,8 @@
       "key": "LONG_11"
     },
     "AAVE_USDT": {
-      "time": 1789589106,
-      "key": "LONG_9"
+      "time": 1789594963,
+      "key": "LONG_8"
     },
     "CAKE_USDT": {
       "time": 1789578196,
