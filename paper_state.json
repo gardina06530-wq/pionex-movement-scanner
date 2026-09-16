@@ -564,7 +564,7 @@
   },
   "last_alerted": {
     "RAY_USDT": {
-      "time": 1789528781,
+      "time": 1789535254,
       "key": "LONG_9"
     },
     "CSPR_USDT": {
@@ -596,7 +596,7 @@
       "key": "SHORT_8"
     },
     "USOX_USDT": {
-      "time": 1789531351,
+      "time": 1789535254,
       "key": "LONG_9"
     },
     "TRB_USDT": {
@@ -712,8 +712,8 @@
       "key": "LONG_9"
     },
     "DYM_USDT": {
-      "time": 1789532522,
-      "key": "SHORT_8"
+      "time": 1789535254,
+      "key": "LONG_8"
     },
     "STRAX_USDT": {
       "time": 1789533527,
@@ -844,8 +844,8 @@
       "key": "LONG_8"
     },
     "OSMO_USDT": {
-      "time": 1789530638,
-      "key": "LONG_9"
+      "time": 1789535254,
+      "key": "LONG_8"
     },
     "FTT_USDT": {
       "time": 1789529756,
@@ -888,8 +888,8 @@
       "key": "LONG_9"
     },
     "BNT_USDT": {
-      "time": 1789516183,
-      "key": "LONG_10"
+      "time": 1789535254,
+      "key": "LONG_9"
     },
     "QKC_USDT": {
       "time": 1789527612,
@@ -988,8 +988,8 @@
       "key": "LONG_9"
     },
     "RARE_USDT": {
-      "time": 1789534403,
-      "key": "LONG_9"
+      "time": 1789535254,
+      "key": "LONG_11"
     },
     "CVC_USDT": {
       "time": 1789534403,
@@ -1020,8 +1020,8 @@
       "key": "LONG_10"
     },
     "LPT_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789535254,
+      "key": "LONG_9"
     },
     "ALICE_USDT": {
       "time": 1789531351,
@@ -1032,8 +1032,8 @@
       "key": "LONG_8"
     },
     "LRC_USDT": {
-      "time": 1789525118,
-      "key": "LONG_11"
+      "time": 1789535254,
+      "key": "LONG_9"
     },
     "PORTO_USDT": {
       "time": 1789534403,
@@ -1092,16 +1092,16 @@
       "key": "LONG_10"
     },
     "DCR_USDT": {
-      "time": 1789534403,
-      "key": "LONG_10"
+      "time": 1789535254,
+      "key": "LONG_9"
     },
     "AGLD_USDT": {
       "time": 1789527612,
       "key": "SHORT_11"
     },
     "CORE_USDT": {
-      "time": 1789528781,
-      "key": "LONG_11"
+      "time": 1789535254,
+      "key": "LONG_8"
     },
     "TWT_USDT": {
       "time": 1789527612,
