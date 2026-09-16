@@ -1,8 +1,8 @@
 {
-  "balance": 716.6096269104127,
-  "realized_pnl": -283.3903730895873,
+  "balance": 709.4435306413086,
+  "realized_pnl": -290.5564693586914,
   "wins": 11,
-  "losses": 55,
+  "losses": 56,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -597,6 +597,15 @@
       "pnl": -7.23848107990314,
       "reason": "STOP LOSS",
       "time": 1789569996
+    },
+    {
+      "symbol": "MTL_USDT",
+      "direction": "LONG",
+      "entry": 0.293,
+      "exit": 0.288605,
+      "pnl": -7.166096269104099,
+      "reason": "STOP LOSS",
+      "time": 1789570789
     }
   ],
   "positions": {
@@ -611,16 +620,16 @@
       "quality": "A+",
       "opened_at": 1789534403
     },
-    "MTL_USDT": {
-      "symbol": "MTL_USDT",
+    "AXL_USDT": {
+      "symbol": "AXL_USDT",
       "direction": "LONG",
-      "entry": 0.293,
-      "stop": 0.288605,
-      "target": 0.30179,
-      "size": 1630.5110964969574,
-      "score": 11,
+      "entry": 0.0439,
+      "stop": 0.0432415,
+      "target": 0.045217,
+      "size": 10773.629926215772,
+      "score": 10,
       "quality": "A+",
-      "opened_at": 1789570038
+      "opened_at": 1789570836
     }
   },
   "last_alerted": {
@@ -761,7 +770,7 @@
       "key": "LONG_9"
     },
     "AUDIO_USDT": {
-      "time": 1789559387,
+      "time": 1789570836,
       "key": "LONG_9"
     },
     "METAX_USDT": {
@@ -873,8 +882,8 @@
       "key": "LONG_8"
     },
     "CRCLX_USDT": {
-      "time": 1789559387,
-      "key": "SHORT_9"
+      "time": 1789570836,
+      "key": "LONG_9"
     },
     "ORDI_USDT": {
       "time": 1789566909,
@@ -989,8 +998,8 @@
       "key": "LONG_8"
     },
     "AXL_USDT": {
-      "time": 1789548760,
-      "key": "LONG_11"
+      "time": 1789570836,
+      "key": "LONG_10"
     },
     "JUP_USDT": {
       "time": 1789570038,
@@ -1049,11 +1058,11 @@
       "key": "LONG_8"
     },
     "RARE_USDT": {
-      "time": 1789562865,
-      "key": "LONG_8"
+      "time": 1789570836,
+      "key": "SHORT_9"
     },
     "CVC_USDT": {
-      "time": 1789569010,
+      "time": 1789570836,
       "key": "LONG_10"
     },
     "BCH_USDT": {
@@ -1093,8 +1102,8 @@
       "key": "LONG_8"
     },
     "LRC_USDT": {
-      "time": 1789549595,
-      "key": "LONG_13"
+      "time": 1789570836,
+      "key": "LONG_8"
     },
     "PORTO_USDT": {
       "time": 1789553535,
@@ -1109,7 +1118,7 @@
       "key": "LONG_8"
     },
     "ARPA_USDT": {
-      "time": 1789562865,
+      "time": 1789570836,
       "key": "LONG_9"
     },
     "LSK_USDT": {
