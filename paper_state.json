@@ -603,8 +603,8 @@
       "key": "LONG_9"
     },
     "PUNDIX_USDT": {
-      "time": 1789552522,
-      "key": "SHORT_10"
+      "time": 1789560077,
+      "key": "LONG_12"
     },
     "RVN_USDT": {
       "time": 1789550687,
@@ -619,8 +619,8 @@
       "key": "SHORT_11"
     },
     "ONT_USDT": {
-      "time": 1789552522,
-      "key": "SHORT_9"
+      "time": 1789560077,
+      "key": "LONG_9"
     },
     "USOX_USDT": {
       "time": 1789559387,
@@ -815,8 +815,8 @@
       "key": "SHORT_11"
     },
     "NACHA_USDT": {
-      "time": 1789557503,
-      "key": "LONG_11"
+      "time": 1789560077,
+      "key": "LONG_8"
     },
     "EGLD_USDT": {
       "time": 1789558468,
@@ -871,8 +871,8 @@
       "key": "SHORT_9"
     },
     "OSMO_USDT": {
-      "time": 1789542620,
-      "key": "SHORT_8"
+      "time": 1789560077,
+      "key": "SHORT_9"
     },
     "FTT_USDT": {
       "time": 1789557503,
@@ -895,8 +895,8 @@
       "key": "LONG_9"
     },
     "BB_USDT": {
-      "time": 1789554604,
-      "key": "SHORT_11"
+      "time": 1789560077,
+      "key": "SHORT_9"
     },
     "API3_USDT": {
       "time": 1789544754,
@@ -979,16 +979,16 @@
       "key": "SHORT_9"
     },
     "ALT_USDT": {
-      "time": 1789552522,
-      "key": "LONG_9"
+      "time": 1789560077,
+      "key": "SHORT_9"
     },
     "JTO_USDT": {
       "time": 1789557503,
       "key": "SHORT_8"
     },
     "GLM_USDT": {
-      "time": 1789559387,
-      "key": "LONG_8"
+      "time": 1789560077,
+      "key": "LONG_9"
     },
     "GMT_USDT": {
       "time": 1789558468,
@@ -999,8 +999,8 @@
       "key": "LONG_10"
     },
     "OKB_USDT": {
-      "time": 1789556309,
-      "key": "LONG_9"
+      "time": 1789560077,
+      "key": "LONG_8"
     },
     "ACH_USDT": {
       "time": 1789540541,
@@ -1079,8 +1079,8 @@
       "key": "SHORT_9"
     },
     "LSK_USDT": {
-      "time": 1789548760,
-      "key": "SHORT_9"
+      "time": 1789560077,
+      "key": "SHORT_8"
     },
     "RLC_USDT": {
       "time": 1789548760,
@@ -1159,7 +1159,7 @@
       "key": "LONG_9"
     },
     "XAUT_USDT": {
-      "time": 1789557503,
+      "time": 1789560077,
       "key": "SHORT_8"
     },
     "XEC_USDT": {
@@ -1215,8 +1215,8 @@
       "key": "LONG_8"
     },
     "OG_USDT": {
-      "time": 1789542620,
-      "key": "SHORT_8"
+      "time": 1789560077,
+      "key": "LONG_9"
     },
     "SEI_USDT": {
       "time": 1789555592,
@@ -1363,7 +1363,7 @@
       "key": "LONG_8"
     },
     "PSG_USDT": {
-      "time": 1789553535,
+      "time": 1789560077,
       "key": "LONG_9"
     },
     "WIF_USDT": {
