@@ -1,7 +1,7 @@
 {
-  "balance": 710.4381481459508,
-  "realized_pnl": -289.5618518540492,
-  "wins": 8,
+  "balance": 725.0818435047206,
+  "realized_pnl": -274.9181564952794,
+  "wins": 9,
   "losses": 50,
   "trades": [
     {
@@ -525,6 +525,15 @@
       "pnl": -7.176142910565109,
       "reason": "STOP LOSS",
       "time": 1789534358
+    },
+    {
+      "symbol": "ZIL_USDT",
+      "direction": "LONG",
+      "entry": 0.002812,
+      "exit": 0.0028963599999999997,
+      "pnl": 14.64369535876982,
+      "reason": "TAKE PROFIT",
+      "time": 1789542579
     }
   ],
   "positions": {
@@ -539,17 +548,6 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "ZIL_USDT": {
-      "symbol": "ZIL_USDT",
-      "direction": "LONG",
-      "entry": 0.002812,
-      "stop": 0.0027698199999999997,
-      "target": 0.0028963599999999997,
-      "size": 173585.76764781695,
-      "score": 12,
-      "quality": "A+",
-      "opened_at": 1789530638
-    },
     "SKL_USDT": {
       "symbol": "SKL_USDT",
       "direction": "SHORT",
@@ -560,6 +558,17 @@
       "score": 11,
       "quality": "A+",
       "opened_at": 1789534403
+    },
+    "THETA_USDT": {
+      "symbol": "THETA_USDT",
+      "direction": "SHORT",
+      "entry": 0.1802,
+      "stop": 0.18290299999999998,
+      "target": 0.174794,
+      "size": 2682.507745115504,
+      "score": 9,
+      "quality": "A+",
+      "opened_at": 1789542620
     }
   },
   "last_alerted": {
@@ -584,8 +593,8 @@
       "key": "SHORT_11"
     },
     "CHZ_USDT": {
-      "time": 1789539110,
-      "key": "SHORT_11"
+      "time": 1789542620,
+      "key": "LONG_9"
     },
     "FIL_USDT": {
       "time": 1789532522,
@@ -668,7 +677,7 @@
       "key": "SHORT_8"
     },
     "CHR_USDT": {
-      "time": 1789537242,
+      "time": 1789542620,
       "key": "LONG_8"
     },
     "QTUM_USDT": {
@@ -844,8 +853,8 @@
       "key": "SHORT_11"
     },
     "OSMO_USDT": {
-      "time": 1789537242,
-      "key": "LONG_8"
+      "time": 1789542620,
+      "key": "SHORT_8"
     },
     "FTT_USDT": {
       "time": 1789536288,
@@ -936,8 +945,8 @@
       "key": "LONG_9"
     },
     "BAR_USDT": {
-      "time": 1789539110,
-      "key": "SHORT_8"
+      "time": 1789542620,
+      "key": "LONG_8"
     },
     "ATOM_USDT": {
       "time": 1789527612,
@@ -1156,8 +1165,8 @@
       "key": "SHORT_9"
     },
     "SYN_USDT": {
-      "time": 1789522339,
-      "key": "LONG_10"
+      "time": 1789542620,
+      "key": "SHORT_9"
     },
     "RSR_USDT": {
       "time": 1789537242,
@@ -1188,8 +1197,8 @@
       "key": "LONG_8"
     },
     "OG_USDT": {
-      "time": 1789541640,
-      "key": "LONG_8"
+      "time": 1789542620,
+      "key": "SHORT_8"
     },
     "SEI_USDT": {
       "time": 1789533527,
@@ -1216,11 +1225,11 @@
       "key": "SHORT_12"
     },
     "THETA_USDT": {
-      "time": 1789532522,
-      "key": "LONG_8"
+      "time": 1789542620,
+      "key": "SHORT_9"
     },
     "DIA_USDT": {
-      "time": 1789534403,
+      "time": 1789542620,
       "key": "LONG_8"
     },
     "ACE_USDT": {
@@ -1236,8 +1245,8 @@
       "key": "SHORT_9"
     },
     "TNSR_USDT": {
-      "time": 1789534403,
-      "key": "SHORT_9"
+      "time": 1789542620,
+      "key": "LONG_9"
     },
     "TIA_USDT": {
       "time": 1789539110,
@@ -1348,8 +1357,8 @@
       "key": "LONG_9"
     },
     "QNT_USDT": {
-      "time": 1789516848,
-      "key": "LONG_9"
+      "time": 1789542620,
+      "key": "LONG_8"
     },
     "MEME_USDT": {
       "time": 1789527612,
