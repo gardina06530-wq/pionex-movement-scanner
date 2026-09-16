@@ -1,8 +1,8 @@
 {
-  "balance": 674.6737386058102,
-  "realized_pnl": -325.3262613941897,
+  "balance": 667.9270012197521,
+  "realized_pnl": -332.0729987802478,
   "wins": 11,
-  "losses": 61,
+  "losses": 62,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -651,6 +651,15 @@
       "pnl": -6.814886248543577,
       "reason": "STOP LOSS",
       "time": 1789575596
+    },
+    {
+      "symbol": "BEAMX_USDT",
+      "direction": "SHORT",
+      "entry": 0.00151,
+      "exit": 0.00153265,
+      "pnl": -6.746737386058079,
+      "reason": "STOP LOSS",
+      "time": 1789576506
     }
   ],
   "positions": {
@@ -665,22 +674,22 @@
       "quality": "A+",
       "opened_at": 1789534403
     },
-    "BEAMX_USDT": {
-      "symbol": "BEAMX_USDT",
-      "direction": "SHORT",
-      "entry": 0.00151,
-      "stop": 0.00153265,
-      "target": 0.0014647,
-      "size": 297869.20026746584,
-      "score": 13,
+    "BICO_USDT": {
+      "symbol": "BICO_USDT",
+      "direction": "LONG",
+      "entry": 0.0186,
+      "stop": 0.018320999999999997,
+      "target": 0.019157999999999998,
+      "size": 23940.035886012625,
+      "score": 10,
       "quality": "A+",
-      "opened_at": 1789575645
+      "opened_at": 1789576547
     }
   },
   "last_alerted": {
     "RAY_USDT": {
-      "time": 1789571987,
-      "key": "LONG_9"
+      "time": 1789576547,
+      "key": "SHORT_8"
     },
     "CSPR_USDT": {
       "time": 1789574456,
@@ -731,8 +740,8 @@
       "key": "SHORT_9"
     },
     "METIS_USDT": {
-      "time": 1789564980,
-      "key": "LONG_10"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "DOGE_USDT": {
       "time": 1789571987,
@@ -755,8 +764,8 @@
       "key": "LONG_10"
     },
     "USDC_USDT": {
-      "time": 1789554604,
-      "key": "SHORT_8"
+      "time": 1789576547,
+      "key": "LONG_8"
     },
     "SUSHI_USDT": {
       "time": 1789575645,
@@ -775,12 +784,12 @@
       "key": "SHORT_8"
     },
     "IQ_USDT": {
-      "time": 1789565964,
-      "key": "LONG_12"
+      "time": 1789576547,
+      "key": "SHORT_8"
     },
     "BICO_USDT": {
-      "time": 1789575645,
-      "key": "LONG_8"
+      "time": 1789576547,
+      "key": "LONG_10"
     },
     "CHR_USDT": {
       "time": 1789564980,
@@ -951,8 +960,8 @@
       "key": "LONG_8"
     },
     "KAS_USDT": {
-      "time": 1789558468,
-      "key": "LONG_9"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "POLYX_USDT": {
       "time": 1789575645,
@@ -971,8 +980,8 @@
       "key": "LONG_10"
     },
     "PHA_USDT": {
-      "time": 1789575645,
-      "key": "LONG_9"
+      "time": 1789576547,
+      "key": "LONG_8"
     },
     "ALGO_USDT": {
       "time": 1789555592,
@@ -995,8 +1004,8 @@
       "key": "LONG_8"
     },
     "CITY_USDT": {
-      "time": 1789575645,
-      "key": "SHORT_8"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "SUI_USDT": {
       "time": 1789540541,
@@ -1087,8 +1096,8 @@
       "key": "LONG_10"
     },
     "OKB_USDT": {
-      "time": 1789571987,
-      "key": "LONG_8"
+      "time": 1789576547,
+      "key": "SHORT_8"
     },
     "ACH_USDT": {
       "time": 1789574456,
@@ -1099,16 +1108,16 @@
       "key": "SHORT_8"
     },
     "STX_USDT": {
-      "time": 1789571987,
-      "key": "LONG_8"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "RARE_USDT": {
       "time": 1789570836,
       "key": "SHORT_9"
     },
     "CVC_USDT": {
-      "time": 1789570836,
-      "key": "LONG_10"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "BCH_USDT": {
       "time": 1789571987,
@@ -1131,8 +1140,8 @@
       "key": "SHORT_9"
     },
     "ACM_USDT": {
-      "time": 1789573758,
-      "key": "LONG_12"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "LPT_USDT": {
       "time": 1789544754,
@@ -1163,16 +1172,16 @@
       "key": "LONG_8"
     },
     "ARPA_USDT": {
-      "time": 1789570836,
-      "key": "LONG_9"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "LSK_USDT": {
       "time": 1789564980,
       "key": "SHORT_8"
     },
     "RLC_USDT": {
-      "time": 1789575645,
-      "key": "SHORT_10"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "TSLAX_USDT": {
       "time": 1789569010,
@@ -1187,11 +1196,11 @@
       "key": "SHORT_8"
     },
     "DODO_USDT": {
-      "time": 1789574456,
-      "key": "LONG_10"
+      "time": 1789576547,
+      "key": "LONG_9"
     },
     "AAPLX_USDT": {
-      "time": 1789553535,
+      "time": 1789576547,
       "key": "SHORT_8"
     },
     "DEXE_USDT": {
@@ -1251,7 +1260,7 @@
       "key": "SHORT_8"
     },
     "XEC_USDT": {
-      "time": 1789562865,
+      "time": 1789576547,
       "key": "SHORT_8"
     },
     "COTI_USDT": {
@@ -1263,8 +1272,8 @@
       "key": "SHORT_8"
     },
     "LUNC_USDT": {
-      "time": 1789558468,
-      "key": "LONG_8"
+      "time": 1789576547,
+      "key": "SHORT_8"
     },
     "AXS_USDT": {
       "time": 1789575645,
@@ -1283,8 +1292,8 @@
       "key": "LONG_8"
     },
     "LUNA_USDT": {
-      "time": 1789562865,
-      "key": "LONG_8"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "ONDO_USDT": {
       "time": 1789571987,
@@ -1355,8 +1364,8 @@
       "key": "LONG_8"
     },
     "TIA_USDT": {
-      "time": 1789553535,
-      "key": "SHORT_11"
+      "time": 1789576547,
+      "key": "SHORT_8"
     },
     "SLVX_USDT": {
       "time": 1789571987,
@@ -1383,8 +1392,8 @@
       "key": "LONG_8"
     },
     "SHIB_USDT": {
-      "time": 1789575645,
-      "key": "SHORT_9"
+      "time": 1789576547,
+      "key": "SHORT_8"
     },
     "BEL_USDT": {
       "time": 1789572901,
@@ -1411,8 +1420,8 @@
       "key": "LONG_9"
     },
     "XRP_USDT": {
-      "time": 1789571987,
-      "key": "LONG_8"
+      "time": 1789576547,
+      "key": "SHORT_8"
     },
     "HBAR_USDT": {
       "time": 1789555592,
@@ -1439,8 +1448,8 @@
       "key": "LONG_8"
     },
     "PI_USDT": {
-      "time": 1789562865,
-      "key": "SHORT_8"
+      "time": 1789576547,
+      "key": "SHORT_9"
     },
     "SAND_USDT": {
       "time": 1789546765,
