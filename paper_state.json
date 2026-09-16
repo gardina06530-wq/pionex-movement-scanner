@@ -1,8 +1,8 @@
 {
-  "balance": 662.1555766898141,
-  "realized_pnl": -337.84442331018585,
+  "balance": 655.5340209229159,
+  "realized_pnl": -344.465979077084,
   "wins": 12,
-  "losses": 65,
+  "losses": 66,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -696,6 +696,15 @@
       "pnl": -6.688440168583948,
       "reason": "STOP LOSS",
       "time": 1789582814
+    },
+    {
+      "symbol": "RARE_USDT",
+      "direction": "LONG",
+      "entry": 0.0114,
+      "exit": 0.011229,
+      "pnl": -6.6215557668981795,
+      "reason": "STOP LOSS",
+      "time": 1789583919
     }
   ],
   "positions": {
@@ -721,16 +730,16 @@
       "quality": "A+",
       "opened_at": 1789579186
     },
-    "RARE_USDT": {
-      "symbol": "RARE_USDT",
+    "DGB_USDT": {
+      "symbol": "DGB_USDT",
       "direction": "LONG",
-      "entry": 0.0114,
-      "stop": 0.011229,
-      "target": 0.011742,
-      "size": 38722.54834443357,
-      "score": 12,
+      "entry": 0.00383,
+      "stop": 0.00377255,
+      "target": 0.0039449,
+      "size": 114105.13854184786,
+      "score": 11,
       "quality": "A+",
-      "opened_at": 1789582868
+      "opened_at": 1789583955
     }
   },
   "last_alerted": {
@@ -747,11 +756,11 @@
       "key": "LONG_8"
     },
     "PUNDIX_USDT": {
-      "time": 1789579186,
-      "key": "LONG_9"
+      "time": 1789583955,
+      "key": "LONG_8"
     },
     "RVN_USDT": {
-      "time": 1789572901,
+      "time": 1789583955,
       "key": "LONG_9"
     },
     "CHZ_USDT": {
@@ -855,7 +864,7 @@
       "key": "LONG_8"
     },
     "DUSK_USDT": {
-      "time": 1789558468,
+      "time": 1789583955,
       "key": "LONG_8"
     },
     "MBL_USDT": {
@@ -975,8 +984,8 @@
       "key": "SHORT_8"
     },
     "AEVO_USDT": {
-      "time": 1789582868,
-      "key": "LONG_9"
+      "time": 1789583955,
+      "key": "SHORT_8"
     },
     "WAXP_USDT": {
       "time": 1789574456,
@@ -1039,8 +1048,8 @@
       "key": "LONG_8"
     },
     "BB_USDT": {
-      "time": 1789579186,
-      "key": "LONG_11"
+      "time": 1789583955,
+      "key": "SHORT_9"
     },
     "API3_USDT": {
       "time": 1789570038,
@@ -1287,8 +1296,8 @@
       "key": "LONG_9"
     },
     "DGB_USDT": {
-      "time": 1789581535,
-      "key": "LONG_8"
+      "time": 1789583955,
+      "key": "LONG_11"
     },
     "AI_USDT": {
       "time": 1789580868,
