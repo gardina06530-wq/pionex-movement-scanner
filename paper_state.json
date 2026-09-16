@@ -1,8 +1,8 @@
 {
-  "balance": 702.3490953348955,
-  "realized_pnl": -297.65090466510446,
+  "balance": 695.3256043815466,
+  "realized_pnl": -304.6743956184534,
   "wins": 11,
-  "losses": 57,
+  "losses": 58,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -615,6 +615,15 @@
       "pnl": -7.094435306413079,
       "reason": "STOP LOSS",
       "time": 1789571952
+    },
+    {
+      "symbol": "BCH_USDT",
+      "direction": "LONG",
+      "entry": 221.5,
+      "exit": 218.1775,
+      "pnl": -7.0234909533489365,
+      "reason": "STOP LOSS",
+      "time": 1789572856
     }
   ],
   "positions": {
@@ -629,16 +638,16 @@
       "quality": "A+",
       "opened_at": 1789534403
     },
-    "BCH_USDT": {
-      "symbol": "BCH_USDT",
+    "RVN_USDT": {
+      "symbol": "RVN_USDT",
       "direction": "LONG",
-      "entry": 221.5,
-      "stop": 218.1775,
-      "target": 228.145,
-      "size": 2.113917517937985,
-      "score": 11,
+      "entry": 0.00209,
+      "stop": 0.00205865,
+      "target": 0.0021527,
+      "size": 221794.45115838808,
+      "score": 9,
       "quality": "A+",
-      "opened_at": 1789571987
+      "opened_at": 1789572901
     }
   },
   "last_alerted": {
@@ -659,7 +668,7 @@
       "key": "LONG_11"
     },
     "RVN_USDT": {
-      "time": 1789561568,
+      "time": 1789572901,
       "key": "LONG_9"
     },
     "CHZ_USDT": {
@@ -743,8 +752,8 @@
       "key": "LONG_12"
     },
     "BICO_USDT": {
-      "time": 1789569010,
-      "key": "LONG_8"
+      "time": 1789572901,
+      "key": "LONG_9"
     },
     "CHR_USDT": {
       "time": 1789564980,
@@ -803,7 +812,7 @@
       "key": "SHORT_9"
     },
     "BAT_USDT": {
-      "time": 1789555592,
+      "time": 1789572901,
       "key": "LONG_8"
     },
     "ZEN_USDT": {
@@ -811,8 +820,8 @@
       "key": "SHORT_8"
     },
     "MTL_USDT": {
-      "time": 1789570038,
-      "key": "LONG_11"
+      "time": 1789572901,
+      "key": "LONG_9"
     },
     "FLOKI_USDT": {
       "time": 1789562865,
@@ -879,11 +888,11 @@
       "key": "SHORT_8"
     },
     "EDU_USDT": {
-      "time": 1789558468,
-      "key": "SHORT_9"
+      "time": 1789572901,
+      "key": "SHORT_8"
     },
     "AEVO_USDT": {
-      "time": 1789566909,
+      "time": 1789572901,
       "key": "LONG_9"
     },
     "WAXP_USDT": {
@@ -1087,8 +1096,8 @@
       "key": "LONG_8"
     },
     "CVX_USDT": {
-      "time": 1789553535,
-      "key": "SHORT_11"
+      "time": 1789572901,
+      "key": "LONG_9"
     },
     "ZEC_USDT": {
       "time": 1789552522,
@@ -1351,8 +1360,8 @@
       "key": "LONG_8"
     },
     "BEL_USDT": {
-      "time": 1789571987,
-      "key": "LONG_9"
+      "time": 1789572901,
+      "key": "LONG_8"
     },
     "ETHFI_USDT": {
       "time": 1789540541,
