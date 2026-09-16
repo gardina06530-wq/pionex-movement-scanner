@@ -1,8 +1,8 @@
 {
-  "balance": 794.0009714205247,
-  "realized_pnl": -205.99902857947527,
+  "balance": 786.0609617063195,
+  "realized_pnl": -213.93903829368048,
   "wins": 8,
-  "losses": 39,
+  "losses": 40,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -426,6 +426,15 @@
       "pnl": -8.020211832530531,
       "reason": "STOP LOSS",
       "time": 1789523858
+    },
+    {
+      "symbol": "ARPA_USDT",
+      "direction": "LONG",
+      "entry": 0.009949,
+      "exit": 0.009799765,
+      "pnl": -7.940009714205211,
+      "reason": "STOP LOSS",
+      "time": 1789525070
     }
   ],
   "positions": {
@@ -451,16 +460,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "ARPA_USDT": {
-      "symbol": "ARPA_USDT",
+    "ENA_USDT": {
+      "symbol": "ENA_USDT",
       "direction": "LONG",
-      "entry": 0.009949,
-      "stop": 0.009799765,
-      "target": 0.01024747,
-      "size": 53204.742280331346,
+      "entry": 0.1452,
+      "stop": 0.14302199999999998,
+      "target": 0.149556,
+      "size": 3609.0953246387494,
       "score": 11,
       "quality": "A+",
-      "opened_at": 1789523901
+      "opened_at": 1789525118
     }
   },
   "last_alerted": {
@@ -549,8 +558,8 @@
       "key": "SHORT_9"
     },
     "ENA_USDT": {
-      "time": 1789516848,
-      "key": "LONG_9"
+      "time": 1789525118,
+      "key": "LONG_11"
     },
     "ADA_USDT": {
       "time": 1789516848,
@@ -561,8 +570,8 @@
       "key": "SHORT_9"
     },
     "IQ_USDT": {
-      "time": 1789509365,
-      "key": "LONG_11"
+      "time": 1789525118,
+      "key": "LONG_10"
     },
     "BICO_USDT": {
       "time": 1789516848,
@@ -605,16 +614,16 @@
       "key": "LONG_9"
     },
     "METAX_USDT": {
-      "time": 1789514663,
-      "key": "LONG_9"
+      "time": 1789525118,
+      "key": "SHORT_8"
     },
     "IMX_USDT": {
       "time": 1789513747,
       "key": "SHORT_11"
     },
     "DYM_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_12"
+      "time": 1789525118,
+      "key": "SHORT_8"
     },
     "STRAX_USDT": {
       "time": 1789518370,
@@ -821,8 +830,8 @@
       "key": "SHORT_9"
     },
     "TRX_USDT": {
-      "time": 1789503573,
-      "key": "LONG_9"
+      "time": 1789525118,
+      "key": "LONG_8"
     },
     "MANA_USDT": {
       "time": 1789516183,
@@ -933,8 +942,8 @@
       "key": "LONG_9"
     },
     "LRC_USDT": {
-      "time": 1789507891,
-      "key": "LONG_10"
+      "time": 1789525118,
+      "key": "LONG_11"
     },
     "PORTO_USDT": {
       "time": 1789513747,
@@ -961,8 +970,8 @@
       "key": "LONG_8"
     },
     "TSLAX_USDT": {
-      "time": 1789523193,
-      "key": "LONG_8"
+      "time": 1789525118,
+      "key": "LONG_9"
     },
     "SKL_USDT": {
       "time": 1789513747,
@@ -1017,8 +1026,8 @@
       "key": "SHORT_9"
     },
     "DGB_USDT": {
-      "time": 1789516183,
-      "key": "SHORT_10"
+      "time": 1789525118,
+      "key": "LONG_8"
     },
     "AI_USDT": {
       "time": 1789519590,
@@ -1117,8 +1126,8 @@
       "key": "LONG_9"
     },
     "THETA_USDT": {
-      "time": 1789509365,
-      "key": "SHORT_8"
+      "time": 1789525118,
+      "key": "LONG_10"
     },
     "DIA_USDT": {
       "time": 1789513747,
