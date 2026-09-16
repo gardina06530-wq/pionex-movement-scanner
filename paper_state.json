@@ -765,8 +765,8 @@
       "key": "LONG_8"
     },
     "PUNDIX_USDT": {
-      "time": 1789583955,
-      "key": "LONG_8"
+      "time": 1789591196,
+      "key": "SHORT_8"
     },
     "RVN_USDT": {
       "time": 1789590217,
@@ -825,11 +825,11 @@
       "key": "LONG_9"
     },
     "CYBER_USDT": {
-      "time": 1789590217,
-      "key": "LONG_8"
+      "time": 1789591196,
+      "key": "LONG_9"
     },
     "USDC_USDT": {
-      "time": 1789576547,
+      "time": 1789591196,
       "key": "LONG_8"
     },
     "SUSHI_USDT": {
@@ -897,8 +897,8 @@
       "key": "SHORT_8"
     },
     "IMX_USDT": {
-      "time": 1789562865,
-      "key": "LONG_9"
+      "time": 1789591196,
+      "key": "LONG_10"
     },
     "DYM_USDT": {
       "time": 1789588304,
@@ -1097,7 +1097,7 @@
       "key": "SHORT_9"
     },
     "BONK_USDT": {
-      "time": 1789574456,
+      "time": 1789591196,
       "key": "LONG_8"
     },
     "IOTX_USDT": {
@@ -1193,8 +1193,8 @@
       "key": "LONG_9"
     },
     "NEXO_USDT": {
-      "time": 1789574456,
-      "key": "LONG_9"
+      "time": 1789591196,
+      "key": "LONG_10"
     },
     "CVX_USDT": {
       "time": 1789580042,
@@ -1213,8 +1213,8 @@
       "key": "SHORT_9"
     },
     "ALICE_USDT": {
-      "time": 1789582868,
-      "key": "LONG_10"
+      "time": 1789591196,
+      "key": "LONG_9"
     },
     "SNX_USDT": {
       "time": 1789557503,
@@ -1301,8 +1301,8 @@
       "key": "LONG_9"
     },
     "KSM_USDT": {
-      "time": 1789588304,
-      "key": "LONG_8"
+      "time": 1789591196,
+      "key": "LONG_10"
     },
     "DGB_USDT": {
       "time": 1789583955,
@@ -1481,8 +1481,8 @@
       "key": "LONG_10"
     },
     "TLM_USDT": {
-      "time": 1789582868,
-      "key": "LONG_11"
+      "time": 1789591196,
+      "key": "LONG_10"
     },
     "XRP_USDT": {
       "time": 1789590217,
@@ -1501,8 +1501,8 @@
       "key": "LONG_9"
     },
     "ID_USDT": {
-      "time": 1789567963,
-      "key": "LONG_8"
+      "time": 1789591196,
+      "key": "LONG_9"
     },
     "JUV_USDT": {
       "time": 1789573758,
