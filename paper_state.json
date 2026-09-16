@@ -603,12 +603,12 @@
       "key": "LONG_9"
     },
     "PUNDIX_USDT": {
-      "time": 1789560077,
-      "key": "LONG_12"
+      "time": 1789561568,
+      "key": "LONG_11"
     },
     "RVN_USDT": {
-      "time": 1789550687,
-      "key": "SHORT_8"
+      "time": 1789561568,
+      "key": "LONG_9"
     },
     "CHZ_USDT": {
       "time": 1789554604,
@@ -707,7 +707,7 @@
       "key": "SHORT_9"
     },
     "NEO_USDT": {
-      "time": 1789544754,
+      "time": 1789561568,
       "key": "LONG_8"
     },
     "DUSK_USDT": {
@@ -743,7 +743,7 @@
       "key": "LONG_10"
     },
     "STRAX_USDT": {
-      "time": 1789548760,
+      "time": 1789561568,
       "key": "SHORT_8"
     },
     "FLUX_USDT": {
@@ -783,8 +783,8 @@
       "key": "LONG_12"
     },
     "SAGA_USDT": {
-      "time": 1789546765,
-      "key": "LONG_9"
+      "time": 1789561568,
+      "key": "LONG_8"
     },
     "AVA_USDT": {
       "time": 1789543731,
@@ -907,8 +907,8 @@
       "key": "SHORT_9"
     },
     "CITY_USDT": {
-      "time": 1789533527,
-      "key": "SHORT_8"
+      "time": 1789561568,
+      "key": "SHORT_9"
     },
     "SUI_USDT": {
       "time": 1789540541,
@@ -1191,8 +1191,8 @@
       "key": "LONG_9"
     },
     "AR_USDT": {
-      "time": 1789555592,
-      "key": "LONG_8"
+      "time": 1789561568,
+      "key": "LONG_11"
     },
     "LUNA_USDT": {
       "time": 1789555592,
@@ -1283,8 +1283,8 @@
       "key": "LONG_9"
     },
     "APE_USDT": {
-      "time": 1789541640,
-      "key": "SHORT_9"
+      "time": 1789561568,
+      "key": "LONG_8"
     },
     "TFUEL_USDT": {
       "time": 1789558468,
