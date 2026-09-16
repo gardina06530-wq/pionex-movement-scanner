@@ -631,8 +631,8 @@
       "key": "SHORT_9"
     },
     "GRT_USDT": {
-      "time": 1789553535,
-      "key": "SHORT_11"
+      "time": 1789558468,
+      "key": "SHORT_8"
     },
     "ARKM_USDT": {
       "time": 1789543731,
@@ -651,8 +651,8 @@
       "key": "LONG_10"
     },
     "PENDLE_USDT": {
-      "time": 1789557503,
-      "key": "LONG_11"
+      "time": 1789558468,
+      "key": "LONG_10"
     },
     "INJ_USDT": {
       "time": 1789553535,
@@ -711,8 +711,8 @@
       "key": "LONG_8"
     },
     "DUSK_USDT": {
-      "time": 1789545511,
-      "key": "SHORT_8"
+      "time": 1789558468,
+      "key": "LONG_8"
     },
     "MBL_USDT": {
       "time": 1789554604,
@@ -731,8 +731,8 @@
       "key": "LONG_9"
     },
     "METAX_USDT": {
-      "time": 1789546765,
-      "key": "SHORT_8"
+      "time": 1789558468,
+      "key": "LONG_8"
     },
     "IMX_USDT": {
       "time": 1789553535,
@@ -755,8 +755,8 @@
       "key": "LONG_8"
     },
     "ZEN_USDT": {
-      "time": 1789557503,
-      "key": "SHORT_9"
+      "time": 1789558468,
+      "key": "SHORT_8"
     },
     "MTL_USDT": {
       "time": 1789552522,
@@ -791,7 +791,7 @@
       "key": "LONG_8"
     },
     "AUCTION_USDT": {
-      "time": 1789555592,
+      "time": 1789558468,
       "key": "LONG_9"
     },
     "PYTH_USDT": {
@@ -819,16 +819,16 @@
       "key": "LONG_11"
     },
     "EGLD_USDT": {
-      "time": 1789546765,
-      "key": "LONG_9"
+      "time": 1789558468,
+      "key": "SHORT_8"
     },
     "ZIL_USDT": {
       "time": 1789556309,
       "key": "SHORT_8"
     },
     "EDU_USDT": {
-      "time": 1789553535,
-      "key": "SHORT_11"
+      "time": 1789558468,
+      "key": "SHORT_9"
     },
     "AEVO_USDT": {
       "time": 1789553535,
@@ -863,8 +863,8 @@
       "key": "LONG_9"
     },
     "KAS_USDT": {
-      "time": 1789538042,
-      "key": "SHORT_9"
+      "time": 1789558468,
+      "key": "LONG_9"
     },
     "POLYX_USDT": {
       "time": 1789546765,
@@ -991,8 +991,8 @@
       "key": "SHORT_10"
     },
     "GMT_USDT": {
-      "time": 1789534403,
-      "key": "LONG_8"
+      "time": 1789558468,
+      "key": "LONG_9"
     },
     "JASMY_USDT": {
       "time": 1789548760,
@@ -1171,11 +1171,11 @@
       "key": "SHORT_8"
     },
     "PAXG_USDT": {
-      "time": 1789549595,
+      "time": 1789558468,
       "key": "SHORT_8"
     },
     "LUNC_USDT": {
-      "time": 1789547814,
+      "time": 1789558468,
       "key": "LONG_8"
     },
     "AXS_USDT": {
@@ -1187,8 +1187,8 @@
       "key": "SHORT_11"
     },
     "RSR_USDT": {
-      "time": 1789555592,
-      "key": "LONG_8"
+      "time": 1789558468,
+      "key": "LONG_9"
     },
     "AR_USDT": {
       "time": 1789555592,
@@ -1199,8 +1199,8 @@
       "key": "LONG_9"
     },
     "ONDO_USDT": {
-      "time": 1789555592,
-      "key": "LONG_9"
+      "time": 1789558468,
+      "key": "LONG_8"
     },
     "WLD_USDT": {
       "time": 1789557503,
@@ -1275,7 +1275,7 @@
       "key": "SHORT_8"
     },
     "mBTC_USDT": {
-      "time": 1789555592,
+      "time": 1789558468,
       "key": "LONG_9"
     },
     "LAZIO_USDT": {
@@ -1287,8 +1287,8 @@
       "key": "SHORT_9"
     },
     "TFUEL_USDT": {
-      "time": 1789546765,
-      "key": "SHORT_9"
+      "time": 1789558468,
+      "key": "SHORT_10"
     },
     "NEAR_USDT": {
       "time": 1789555592,
@@ -1311,7 +1311,7 @@
       "key": "SHORT_9"
     },
     "mETH_USDT": {
-      "time": 1789555592,
+      "time": 1789558468,
       "key": "LONG_9"
     },
     "ICP_USDT": {
@@ -1319,8 +1319,8 @@
       "key": "LONG_8"
     },
     "TLM_USDT": {
-      "time": 1789554604,
-      "key": "SHORT_10"
+      "time": 1789558468,
+      "key": "SHORT_9"
     },
     "XRP_USDT": {
       "time": 1789533527,
@@ -1347,7 +1347,7 @@
       "key": "LONG_8"
     },
     "BTC_USDT": {
-      "time": 1789555592,
+      "time": 1789558468,
       "key": "LONG_8"
     },
     "PI_USDT": {
@@ -1359,7 +1359,7 @@
       "key": "LONG_11"
     },
     "SANTOS_USDT": {
-      "time": 1789556309,
+      "time": 1789558468,
       "key": "LONG_8"
     },
     "PSG_USDT": {
