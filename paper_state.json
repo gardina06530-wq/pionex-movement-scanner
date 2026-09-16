@@ -1,8 +1,8 @@
 {
-  "balance": 716.5115869901226,
-  "realized_pnl": -283.4884130098773,
-  "wins": 10,
-  "losses": 53,
+  "balance": 723.8481079903158,
+  "realized_pnl": -276.15189200968416,
+  "wins": 11,
+  "losses": 54,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -570,6 +570,24 @@
       "pnl": -7.237490777678035,
       "reason": "STOP LOSS",
       "time": 1789567916
+    },
+    {
+      "symbol": "THETA_USDT",
+      "direction": "SHORT",
+      "entry": 0.1802,
+      "exit": 0.174794,
+      "pnl": 14.501636870094398,
+      "reason": "TAKE PROFIT",
+      "time": 1789568976
+    },
+    {
+      "symbol": "GMT_USDT",
+      "direction": "LONG",
+      "entry": 0.00713,
+      "exit": 0.00702305,
+      "pnl": -7.165115869901211,
+      "reason": "STOP LOSS",
+      "time": 1789568976
     }
   ],
   "positions": {
@@ -584,27 +602,16 @@
       "quality": "A+",
       "opened_at": 1789534403
     },
-    "THETA_USDT": {
-      "symbol": "THETA_USDT",
-      "direction": "SHORT",
-      "entry": 0.1802,
-      "stop": 0.18290299999999998,
-      "target": 0.174794,
-      "size": 2682.507745115504,
-      "score": 9,
-      "quality": "A+",
-      "opened_at": 1789542620
-    },
-    "GMT_USDT": {
-      "symbol": "GMT_USDT",
+    "CVC_USDT": {
+      "symbol": "CVC_USDT",
       "direction": "LONG",
-      "entry": 0.00713,
-      "stop": 0.00702305,
-      "target": 0.0073439,
-      "size": 66995.00579617791,
+      "entry": 0.0286,
+      "stop": 0.028171,
+      "target": 0.029458,
+      "size": 16872.916270170535,
       "score": 10,
-      "quality": "A+",
-      "opened_at": 1789567963
+      "quality": "A",
+      "opened_at": 1789569010
     }
   },
   "last_alerted": {
@@ -709,8 +716,8 @@
       "key": "LONG_12"
     },
     "BICO_USDT": {
-      "time": 1789527612,
-      "key": "SHORT_8"
+      "time": 1789569010,
+      "key": "LONG_8"
     },
     "CHR_USDT": {
       "time": 1789564980,
@@ -1037,7 +1044,7 @@
       "key": "LONG_8"
     },
     "CVC_USDT": {
-      "time": 1789559387,
+      "time": 1789569010,
       "key": "LONG_10"
     },
     "BCH_USDT": {
@@ -1105,7 +1112,7 @@
       "key": "LONG_8"
     },
     "TSLAX_USDT": {
-      "time": 1789546765,
+      "time": 1789569010,
       "key": "SHORT_9"
     },
     "SKL_USDT": {
