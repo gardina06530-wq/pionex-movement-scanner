@@ -1,8 +1,8 @@
 {
-  "balance": 786.0609617063195,
-  "realized_pnl": -213.93903829368048,
+  "balance": 769.9969949705719,
+  "realized_pnl": -230.00300502942812,
   "wins": 8,
-  "losses": 40,
+  "losses": 42,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -435,20 +435,27 @@
       "pnl": -7.940009714205211,
       "reason": "STOP LOSS",
       "time": 1789525070
-    }
-  ],
-  "positions": {
-    "SLVX_USDT": {
+    },
+    {
       "symbol": "SLVX_USDT",
       "direction": "SHORT",
       "entry": 56.92,
-      "stop": 57.773799999999994,
-      "target": 55.2124,
-      "size": 9.608054718534172,
-      "score": 9,
-      "quality": "A+",
-      "opened_at": 1789425191
+      "exit": 57.773799999999994,
+      "pnl": -8.203357118684405,
+      "reason": "STOP LOSS",
+      "time": 1789526007
     },
+    {
+      "symbol": "ENA_USDT",
+      "direction": "LONG",
+      "entry": 0.1452,
+      "exit": 0.14302199999999998,
+      "pnl": -7.860609617063244,
+      "reason": "STOP LOSS",
+      "time": 1789526007
+    }
+  ],
+  "positions": {
     "ACM_USDT": {
       "symbol": "ACM_USDT",
       "direction": "SHORT",
@@ -460,16 +467,16 @@
       "quality": "A+",
       "opened_at": 1789485396
     },
-    "ENA_USDT": {
-      "symbol": "ENA_USDT",
+    "MEME_USDT": {
+      "symbol": "MEME_USDT",
       "direction": "LONG",
-      "entry": 0.1452,
-      "stop": 0.14302199999999998,
-      "target": 0.149556,
-      "size": 3609.0953246387494,
+      "entry": 0.000522,
+      "stop": 0.00051417,
+      "target": 0.00053766,
+      "size": 983393.3524528377,
       "score": 11,
       "quality": "A+",
-      "opened_at": 1789525118
+      "opened_at": 1789526050
     }
   },
   "last_alerted": {
@@ -498,8 +505,8 @@
       "key": "LONG_8"
     },
     "FIL_USDT": {
-      "time": 1789500107,
-      "key": "LONG_10"
+      "time": 1789526050,
+      "key": "LONG_8"
     },
     "ONT_USDT": {
       "time": 1789523193,
@@ -590,16 +597,16 @@
       "key": "LONG_11"
     },
     "NEO_USDT": {
-      "time": 1789516848,
-      "key": "LONG_8"
+      "time": 1789526050,
+      "key": "LONG_10"
     },
     "DUSK_USDT": {
       "time": 1789516183,
       "key": "LONG_9"
     },
     "MBL_USDT": {
-      "time": 1789447783,
-      "key": "LONG_9"
+      "time": 1789526050,
+      "key": "LONG_10"
     },
     "CKB_USDT": {
       "time": 1789513747,
@@ -626,8 +633,8 @@
       "key": "SHORT_8"
     },
     "STRAX_USDT": {
-      "time": 1789518370,
-      "key": "SHORT_8"
+      "time": 1789526050,
+      "key": "LONG_8"
     },
     "FLUX_USDT": {
       "time": 1789513747,
@@ -886,8 +893,8 @@
       "key": "LONG_8"
     },
     "ACH_USDT": {
-      "time": 1789398598,
-      "key": "LONG_8"
+      "time": 1789526050,
+      "key": "LONG_11"
     },
     "MASK_USDT": {
       "time": 1789515490,
@@ -962,8 +969,8 @@
       "key": "LONG_11"
     },
     "LSK_USDT": {
-      "time": 1789505277,
-      "key": "SHORT_9"
+      "time": 1789526050,
+      "key": "LONG_10"
     },
     "RLC_USDT": {
       "time": 1789522339,
@@ -974,12 +981,12 @@
       "key": "LONG_9"
     },
     "SKL_USDT": {
-      "time": 1789513747,
-      "key": "SHORT_9"
+      "time": 1789526050,
+      "key": "LONG_8"
     },
     "GOOGLX_USDT": {
-      "time": 1789511333,
-      "key": "LONG_9"
+      "time": 1789526050,
+      "key": "SHORT_8"
     },
     "DODO_USDT": {
       "time": 1789499120,
@@ -1262,8 +1269,8 @@
       "key": "LONG_9"
     },
     "MEME_USDT": {
-      "time": 1789516848,
-      "key": "LONG_8"
+      "time": 1789526050,
+      "key": "LONG_11"
     }
   }
 }
