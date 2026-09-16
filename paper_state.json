@@ -893,15 +893,15 @@
       "key": "SHORT_9"
     },
     "METAX_USDT": {
-      "time": 1789577450,
-      "key": "SHORT_8"
+      "time": 1789588304,
+      "key": "SHORT_9"
     },
     "IMX_USDT": {
       "time": 1789562865,
       "key": "LONG_9"
     },
     "DYM_USDT": {
-      "time": 1789579186,
+      "time": 1789588304,
       "key": "LONG_9"
     },
     "STRAX_USDT": {
@@ -921,8 +921,8 @@
       "key": "SHORT_8"
     },
     "MTL_USDT": {
-      "time": 1789586741,
-      "key": "LONG_9"
+      "time": 1789588304,
+      "key": "LONG_11"
     },
     "FLOKI_USDT": {
       "time": 1789580042,
@@ -981,7 +981,7 @@
       "key": "SHORT_9"
     },
     "EGLD_USDT": {
-      "time": 1789579186,
+      "time": 1789588304,
       "key": "LONG_8"
     },
     "ZIL_USDT": {
@@ -1157,11 +1157,11 @@
       "key": "LONG_8"
     },
     "JASMY_USDT": {
-      "time": 1789582868,
-      "key": "LONG_9"
+      "time": 1789588304,
+      "key": "LONG_8"
     },
     "OKB_USDT": {
-      "time": 1789582868,
+      "time": 1789588304,
       "key": "LONG_8"
     },
     "ACH_USDT": {
@@ -1185,8 +1185,8 @@
       "key": "LONG_8"
     },
     "BCH_USDT": {
-      "time": 1789571987,
-      "key": "LONG_11"
+      "time": 1789588304,
+      "key": "LONG_9"
     },
     "CELR_USDT": {
       "time": 1789550687,
@@ -1285,8 +1285,8 @@
       "key": "SHORT_8"
     },
     "AGLD_USDT": {
-      "time": 1789587631,
-      "key": "LONG_8"
+      "time": 1789588304,
+      "key": "LONG_10"
     },
     "CORE_USDT": {
       "time": 1789574456,
@@ -1301,8 +1301,8 @@
       "key": "LONG_9"
     },
     "KSM_USDT": {
-      "time": 1789565964,
-      "key": "LONG_9"
+      "time": 1789588304,
+      "key": "LONG_8"
     },
     "DGB_USDT": {
       "time": 1789583955,
@@ -1429,8 +1429,8 @@
       "key": "LONG_8"
     },
     "TIA_USDT": {
-      "time": 1789576547,
-      "key": "SHORT_8"
+      "time": 1789588304,
+      "key": "LONG_8"
     },
     "SLVX_USDT": {
       "time": 1789571987,
@@ -1441,7 +1441,7 @@
       "key": "SHORT_9"
     },
     "LAZIO_USDT": {
-      "time": 1789579186,
+      "time": 1789588304,
       "key": "LONG_8"
     },
     "APE_USDT": {
