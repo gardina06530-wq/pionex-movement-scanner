@@ -1,1356 +1,379 @@
 import os
-import json
 import time
-import urllib.parse
-import urllib.request
-from statistics import mean
-
-API = "https://api.pionex.com"
-
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+import requests
 
 # =========================
-# PARAMETRES V4
+# CONFIGURATION
 # =========================
 
-DEEP_SCAN_COUNT = 200
-MIN_24H_VOLUME = 50000
+PIONEX = "https://api.pionex.com/api/v1"
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
-MIN_SIGNAL_SCORE = 6
-MIN_ENTRY_SCORE = 8
-
-MIN_VOLUME_SIGNAL = 1.0
-MIN_VOLUME_ENTRY = 1.5
-
-MAX_OPEN_POSITIONS = 3
-
-PAPER_START_BALANCE = 1000.0
-PAPER_RISK_PER_TRADE = 0.01
-PAPER_STOP_LOSS = 0.015
-PAPER_TAKE_PROFIT = 0.03
-
-STATE_FILE = "paper_state.json"
-
+SCAN_LIMIT = 15
+MIN_VOLUME_24H = 50000
 
 # =========================
 # API
 # =========================
 
-def get_json(path, params=None):
+def get_json(url, params=None):
+    r = requests.get(url, params=params, timeout=15)
+    r.raise_for_status()
+    data = r.json()
 
-    if params:
-        path += "?" + urllib.parse.urlencode(params)
-
-    request = urllib.request.Request(
-        API + path,
-        headers={
-            "User-Agent": "Pionex-Movement-Scanner-V4"
-        }
-    )
-
-    with urllib.request.urlopen(
-        request,
-        timeout=20
-    ) as response:
-
-        data = json.loads(
-            response.read().decode()
-        )
-
-    if not data.get("result"):
-        raise RuntimeError(
-            "Erreur API Pionex : " + str(data)
-        )
+    if data.get("result") is not True:
+        raise RuntimeError(f"Erreur Pionex: {data}")
 
     return data["data"]
 
 
-# =========================
-# TELEGRAM
-# =========================
-
-def send_telegram(message):
-
-    if not TELEGRAM_TOKEN:
-        raise RuntimeError(
-            "TELEGRAM_TOKEN absent."
-        )
-
-    if not CHAT_ID:
-        raise RuntimeError(
-            "TELEGRAM_CHAT_ID absent."
-        )
-
-    url = (
-        "https://api.telegram.org/bot"
-        + TELEGRAM_TOKEN
-        + "/sendMessage"
+def get_symbols():
+    data = get_json(
+        f"{PIONEX}/common/symbols",
+        {"type": "SPOT"}
     )
 
-    payload = urllib.parse.urlencode({
-        "chat_id": CHAT_ID,
-        "text": message
-    }).encode()
+    if isinstance(data, dict):
+        symbols = data.get("symbols", [])
+    else:
+        symbols = data
 
-    request = urllib.request.Request(
-        url,
-        data=payload,
-        method="POST"
+    result = []
+
+    for s in symbols:
+        symbol = s.get("symbol", "")
+
+        if symbol.endswith("_USDT"):
+            result.append(symbol)
+
+    return result
+
+
+def get_tickers():
+    data = get_json(
+        f"{PIONEX}/market/tickers",
+        {"type": "SPOT"}
     )
 
-    with urllib.request.urlopen(
-        request,
-        timeout=20
-    ) as response:
+    if isinstance(data, dict):
+        tickers = data.get("tickers", [])
+    else:
+        tickers = data
 
-        result = response.read().decode()
-
-    if '"ok":true' not in result:
-        raise RuntimeError(
-            "Telegram refuse le message : "
-            + result
-        )
+    return tickers
 
 
-# =========================
-# ETAT
-# =========================
-
-def default_state():
-
-    return {
-        "balance": PAPER_START_BALANCE,
-        "realized_pnl": 0.0,
-        "wins": 0,
-        "losses": 0,
-        "trades": [],
-        "positions": {},
-        "last_alerted": {}
-    }
-
-
-def load_state():
-
-    if not os.path.exists(STATE_FILE):
-        return default_state()
-
-    try:
-
-        with open(
-            STATE_FILE,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            state = json.load(f)
-
-        base = default_state()
-        base.update(state)
-
-        return base
-
-    except Exception:
-
-        return default_state()
-
-
-def save_state(state):
-
-    temp = STATE_FILE + ".tmp"
-
-    with open(
-        temp,
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            state,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )
-
-    os.replace(
-        temp,
-        STATE_FILE
+def get_klines(symbol):
+    data = get_json(
+        f"{PIONEX}/market/klines",
+        {
+            "symbol": symbol,
+            "interval": "5M",
+            "limit": 50
+        }
     )
+
+    if isinstance(data, dict):
+        return data.get("klines", [])
+
+    return data
 
 
 # =========================
 # INDICATEURS
 # =========================
 
-def ema(values, period):
+def close_price(k):
+    if isinstance(k, dict):
+        return float(k["close"])
 
-    if len(values) < period:
-        return None
-
-    result = mean(
-        values[:period]
-    )
-
-    multiplier = 2 / (period + 1)
-
-    for value in values[period:]:
-
-        result = (
-            (value - result)
-            * multiplier
-            + result
-        )
-
-    return result
+    return float(k[4])
 
 
-def calculate_rsi(values, period=14):
+def volume(k):
+    if isinstance(k, dict):
+        return float(k.get("volume", 0))
 
-    if len(values) < period + 1:
-        return 50
-
-    gains = []
-    losses = []
-
-    for i in range(1, len(values)):
-
-        change = (
-            values[i] -
-            values[i - 1]
-        )
-
-        gains.append(
-            max(change, 0)
-        )
-
-        losses.append(
-            max(-change, 0)
-        )
-
-    avg_gain = mean(
-        gains[-period:]
-    )
-
-    avg_loss = mean(
-        losses[-period:]
-    )
-
-    if avg_loss == 0:
-        return 100
-
-    rs = avg_gain / avg_loss
-
-    return 100 - (
-        100 / (1 + rs)
-    )
+    return float(k[5])
 
 
-# =========================
-# ANALYSE
-# =========================
+def pct(a, b):
+    if b == 0:
+        return 0
+
+    return (a / b - 1) * 100
+
 
 def analyse(symbol):
+    candles = get_klines(symbol)
 
-    data = get_json(
-        "/api/v1/market/klines",
-        {
-            "symbol": symbol,
-            "interval": "5M",
-            "limit": 100
-        }
-    )
-
-    candles = data["klines"]
-
-    if len(candles) < 60:
+    if len(candles) < 20:
         return None
 
-    closes = [
-        float(x["close"])
-        for x in candles
-    ]
-
-    highs = [
-        float(x["high"])
-        for x in candles
-    ]
-
-    lows = [
-        float(x["low"])
-        for x in candles
-    ]
-
-    volumes = [
-        float(x["volume"])
-        for x in candles
-    ]
+    closes = [close_price(x) for x in candles]
+    volumes = [volume(x) for x in candles]
 
     price = closes[-1]
 
-    ema20 = ema(
-        closes,
-        20
-    )
+    # Mouvement 15 / 30 / 60 minutes
+    move_15 = pct(price, closes[-4])
+    move_30 = pct(price, closes[-7])
+    move_60 = pct(price, closes[-13])
 
-    ema50 = ema(
-        closes,
-        50
-    )
+    # Volume actuel contre moyenne
+    avg_volume = sum(volumes[-21:-1]) / max(len(volumes[-21:-1]), 1)
+    current_volume = volumes[-1]
 
-    rsi = calculate_rsi(
-        closes
-    )
+    if avg_volume > 0:
+        volume_ratio = current_volume / avg_volume
+    else:
+        volume_ratio = 0
 
-    # -------------------------
-    # VOLUME
-    # -------------------------
+    # Moyennes mobiles simples
+    sma10 = sum(closes[-10:]) / 10
+    sma20 = sum(closes[-20:]) / 20
 
-    previous_volumes = volumes[-21:-1]
+    bullish = sma10 > sma20
+    bearish = sma10 < sma20
 
-    average_volume = mean(
-        previous_volumes
-    )
+    # Score
+    score = 0
 
-    if average_volume <= 0:
-        return None
+    direction = None
 
-    volume_ratio = (
-        volumes[-1] /
-        average_volume
-    )
-
-    recent_avg = mean(
-        volumes[-3:]
-    )
-
-    older_avg = mean(
-        volumes[-20:-3]
-    )
-
-    volume_acceleration = (
-        recent_avg / older_avg
-        if older_avg > 0
-        else 1
-    )
-
-    # -------------------------
-    # NIVEAUX
-    # -------------------------
-
-    resistance = max(
-        highs[-21:-1]
-    )
-
-    support = min(
-        lows[-21:-1]
-    )
-
-    # -------------------------
-    # MOMENTUM
-    # -------------------------
-
-    momentum_5m = (
-        (price / closes[-2]) - 1
-    ) * 100
-
-    momentum_30m = (
-        (price / closes[-7]) - 1
-    ) * 100
-
-    momentum_60m = (
-        (price / closes[-13]) - 1
-    ) * 100
-
-    # -------------------------
-    # VOLATILITE
-    # -------------------------
-
-    ranges = []
-
-    for i in range(-20, 0):
-
-        if closes[i] != 0:
-
-            ranges.append(
-                (
-                    (highs[i] - lows[i])
-                    / closes[i]
-                ) * 100
-            )
-
-    volatility = (
-        mean(ranges)
-        if ranges
-        else 0
-    )
-
-    # =========================
-    # SCORE LONG
-    # =========================
-
-    long_score = 0
-    long_reasons = []
-
-    # Volume
-    if volume_ratio >= 2.5:
-
-        long_score += 3
-        long_reasons.append(
-            "🔥 volume x%.1f"
-            % volume_ratio
-        )
-
-    elif volume_ratio >= 1.5:
-
-        long_score += 2
-        long_reasons.append(
-            "volume x%.1f"
-            % volume_ratio
-        )
-
-    elif volume_ratio >= 1.0:
-
-        long_score += 1
-
-    # Acceleration
-    if volume_acceleration >= 1.5:
-
-        long_score += 2
-        long_reasons.append(
-            "volume en acceleration"
-        )
-
-    # EMA
-    if ema20 and ema50:
-
-        if ema20 > ema50:
-
-            long_score += 2
-            long_reasons.append(
-                "EMA20 > EMA50"
-            )
-
-    # RSI
-    if 52 <= rsi <= 68:
-
-        long_score += 1
-        long_reasons.append(
-            "RSI haussier"
-        )
-
-    # Momentum
-    if momentum_5m >= 0.25:
-
-        long_score += 1
-        long_reasons.append(
-            "momentum 5m"
-        )
-
-    if momentum_30m >= 0.6:
-
-        long_score += 1
-        long_reasons.append(
-            "momentum 30m"
-        )
-
-    if momentum_60m >= 1.0:
-
-        long_score += 1
-        long_reasons.append(
-            "impulsion 1h"
-        )
-
-    # Breakout
-    if price > resistance:
-
-        long_score += 3
-        long_reasons.append(
-            "🚀 BREAKOUT"
-        )
-
-    elif price >= resistance * 0.995:
-
-        long_score += 1
-        long_reasons.append(
-            "proche resistance"
-        )
-
-    # Volatilité
-    if volatility >= 0.8:
-
-        long_score += 1
-        long_reasons.append(
-            "volatilite"
-        )
-
-    # =========================
-    # SCORE SHORT
-    # =========================
-
-    short_score = 0
-    short_reasons = []
-
-    # Volume
-    if volume_ratio >= 2.5:
-
-        short_score += 3
-        short_reasons.append(
-            "🔥 volume x%.1f"
-            % volume_ratio
-        )
-
-    elif volume_ratio >= 1.5:
-
-        short_score += 2
-        short_reasons.append(
-            "volume x%.1f"
-            % volume_ratio
-        )
-
-    elif volume_ratio >= 1.0:
-
-        short_score += 1
-
-    # Acceleration
-    if volume_acceleration >= 1.5:
-
-        short_score += 2
-        short_reasons.append(
-            "volume en acceleration"
-        )
-
-    # EMA
-    if ema20 and ema50:
-
-        if ema20 < ema50:
-
-            short_score += 2
-            short_reasons.append(
-                "EMA20 < EMA50"
-            )
-
-    # RSI
-    if 32 <= rsi <= 48:
-
-        short_score += 1
-        short_reasons.append(
-            "RSI baissier"
-        )
-
-    # Momentum
-    if momentum_5m <= -0.25:
-
-        short_score += 1
-        short_reasons.append(
-            "momentum 5m"
-        )
-
-    if momentum_30m <= -0.6:
-
-        short_score += 1
-        short_reasons.append(
-            "momentum 30m"
-        )
-
-    if momentum_60m <= -1.0:
-
-        short_score += 1
-        short_reasons.append(
-            "impulsion 1h"
-        )
-
-    # Breakdown
-    if price < support:
-
-        short_score += 3
-        short_reasons.append(
-            "💥 BREAKDOWN"
-        )
-
-    elif price <= support * 1.005:
-
-        short_score += 1
-        short_reasons.append(
-            "proche support"
-        )
-
-    # Volatilité
-    if volatility >= 0.8:
-
-        short_score += 1
-        short_reasons.append(
-            "volatilite"
-        )
-
-    # =========================
-    # DIRECTION
-    # =========================
-
-    if long_score > short_score:
-
+    if move_30 >= 2:
         direction = "LONG"
-        score = long_score
-        reasons = long_reasons
-
-    elif short_score > long_score:
-
+        score += 3
+    elif move_30 <= -2:
         direction = "SHORT"
-        score = short_score
-        reasons = short_reasons
+        score += 3
 
-    else:
+    if abs(move_15) >= 1:
+        score += 2
 
+    if abs(move_60) >= 3:
+        score += 1
+
+    if volume_ratio >= 1.5:
+        score += 2
+
+    if direction == "LONG" and bullish:
+        score += 2
+
+    if direction == "SHORT" and bearish:
+        score += 2
+
+    if direction is None:
         return None
 
-    # =========================
-    # FILTRE VOLUME
-    # =========================
-
-    if volume_ratio < MIN_VOLUME_SIGNAL:
+    if volume_ratio < 1.0:
         return None
-
-    # =========================
-    # FILTRE SCORE
-    # =========================
-
-    if score < MIN_SIGNAL_SCORE:
-        return None
-
-    # =========================
-    # QUALITE
-    # =========================
-
-    if (
-        score >= 9
-        and volume_ratio >= 2.5
-    ):
-
-        quality = "A+"
-
-    elif (
-        score >= 8
-        and volume_ratio >= 1.5
-    ):
-
-        quality = "A"
-
-    elif score >= 7:
-
-        quality = "B"
-
-    else:
-
-        quality = "C"
 
     return {
         "symbol": symbol,
         "price": price,
-        "score": score,
-        "quality": quality,
-        "direction": direction,
-        "rsi": rsi,
+        "move_15": move_15,
+        "move_30": move_30,
+        "move_60": move_60,
         "volume_ratio": volume_ratio,
-        "volume_acceleration": volume_acceleration,
-        "momentum_5m": momentum_5m,
-        "momentum_30m": momentum_30m,
-        "momentum_60m": momentum_60m,
-        "volatility": volatility,
-        "reasons": reasons
+        "direction": direction,
+        "score": score,
     }
 
 
 # =========================
-# ENTREE PAPER
+# TELEGRAM
 # =========================
 
-def open_position(state, signal):
+def telegram(message):
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
 
-    symbol = signal["symbol"]
-
-    if symbol in state["positions"]:
-        return None
-
-    if len(state["positions"]) >= MAX_OPEN_POSITIONS:
-        return None
-
-    # Filtre d'entrée plus strict
-    if signal["score"] < MIN_ENTRY_SCORE:
-        return None
-
-    if signal["volume_ratio"] < MIN_VOLUME_ENTRY:
-        return None
-
-    entry = signal["price"]
-
-    risk_money = (
-        state["balance"]
-        * PAPER_RISK_PER_TRADE
+    response = requests.post(
+        url,
+        json={
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": message
+        },
+        timeout=15
     )
 
-    position_size = (
-        risk_money
-        / (entry * PAPER_STOP_LOSS)
-    )
-
-    if signal["direction"] == "LONG":
-
-        stop = (
-            entry *
-            (1 - PAPER_STOP_LOSS)
-        )
-
-        target = (
-            entry *
-            (1 + PAPER_TAKE_PROFIT)
-        )
-
-    else:
-
-        stop = (
-            entry *
-            (1 + PAPER_STOP_LOSS)
-        )
-
-        target = (
-            entry *
-            (1 - PAPER_TAKE_PROFIT)
-        )
-
-    position = {
-        "symbol": symbol,
-        "direction": signal["direction"],
-        "entry": entry,
-        "stop": stop,
-        "target": target,
-        "size": position_size,
-        "score": signal["score"],
-        "quality": signal["quality"],
-        "opened_at": int(time.time())
-    }
-
-    state["positions"][symbol] = position
-
-    return position
+    response.raise_for_status()
 
 
 # =========================
-# POSITIONS
-# =========================
-
-def update_positions(state, prices):
-
-    closed = []
-
-    for symbol, position in list(
-        state["positions"].items()
-    ):
-
-        price = prices.get(symbol)
-
-        if price is None:
-            continue
-
-        direction = position["direction"]
-        entry = position["entry"]
-
-        if direction == "LONG":
-
-            pnl_pct = (
-                price / entry - 1
-            ) * 100
-
-            hit_stop = (
-                price <= position["stop"]
-            )
-
-            hit_target = (
-                price >= position["target"]
-            )
-
-        else:
-
-            pnl_pct = (
-                entry / price - 1
-            ) * 100
-
-            hit_stop = (
-                price >= position["stop"]
-            )
-
-            hit_target = (
-                price <= position["target"]
-            )
-
-        if not hit_stop and not hit_target:
-            continue
-
-        if hit_target:
-
-            exit_price = position["target"]
-            reason = "TAKE PROFIT"
-
-        else:
-
-            exit_price = position["stop"]
-            reason = "STOP LOSS"
-
-        if direction == "LONG":
-
-            pnl = (
-                exit_price - entry
-            ) * position["size"]
-
-        else:
-
-            pnl = (
-                entry - exit_price
-            ) * position["size"]
-
-        state["balance"] += pnl
-        state["realized_pnl"] += pnl
-
-        if pnl >= 0:
-
-            state["wins"] += 1
-
-        else:
-
-            state["losses"] += 1
-
-        state["trades"].append({
-            "symbol": symbol,
-            "direction": direction,
-            "entry": entry,
-            "exit": exit_price,
-            "pnl": pnl,
-            "reason": reason,
-            "time": int(time.time())
-        })
-
-        closed.append({
-            "symbol": symbol,
-            "direction": direction,
-            "pnl": pnl,
-            "pnl_pct": pnl_pct,
-            "reason": reason
-        })
-
-        del state["positions"][symbol]
-
-    return closed
-
-
-# =========================
-# ALERTES NOUVEAUX SIGNAUX
-# =========================
-
-def new_signal_alerts(state, signals):
-
-    alerts = []
-
-    now = int(time.time())
-
-    for signal in signals:
-
-        if signal["score"] < MIN_ENTRY_SCORE:
-            continue
-
-        if signal["volume_ratio"] < MIN_VOLUME_ENTRY:
-            continue
-
-        symbol = signal["symbol"]
-
-        key = (
-            signal["direction"]
-            + "_"
-            + str(signal["score"])
-        )
-
-        last = state["last_alerted"].get(
-            symbol
-        )
-
-        # Pas de répétition pendant 30 min
-        if last:
-
-            if (
-                now - last["time"] < 1800
-                and last["key"] == key
-            ):
-                continue
-
-        emoji = (
-            "🟢"
-            if signal["direction"] == "LONG"
-            else "🔴"
-        )
-
-        message = (
-            "🚨 NOUVEAU MOUVEMENT\n\n"
-            "%s %s — %s\n\n"
-            "🔥 Score : %d\n"
-            "🏆 Qualité : %s\n"
-            "💰 Prix : %.8g\n"
-            "📊 Volume : x%.1f\n"
-            "📈 Momentum 5m : %+0.2f%%\n"
-            "📈 Momentum 30m : %+0.2f%%\n"
-            "📈 Momentum 1h : %+0.2f%%\n"
-            "RSI : %.1f\n\n"
-            "✅ %s\n\n"
-            "🧪 PAPER — aucun ordre réel."
-            % (
-                emoji,
-                signal["direction"],
-                symbol,
-                signal["score"],
-                signal["quality"],
-                signal["price"],
-                signal["volume_ratio"],
-                signal["momentum_5m"],
-                signal["momentum_30m"],
-                signal["momentum_60m"],
-                signal["rsi"],
-                "\n".join(
-                    "• " + x
-                    for x in signal["reasons"]
-                )
-            )
-        )
-
-        alerts.append(message)
-
-        state["last_alerted"][symbol] = {
-            "time": now,
-            "key": key
-        }
-
-    return alerts
-
-
-# =========================
-# DASHBOARD
-# =========================
-
-def dashboard(state, signals, prices):
-
-    total = (
-        state["wins"]
-        + state["losses"]
-    )
-
-    winrate = (
-        state["wins"]
-        / total
-        * 100
-        if total
-        else 0
-    )
-
-    unrealized = 0.0
-
-    message = (
-        "🤖 PIONEX BOT V4\n\n"
-        "💰 Capital paper : %.2f USDT\n"
-        "📈 P&L réalisé : %+0.2f USDT\n"
-        "🎯 Trades : %d | 🟢 %d | 🔴 %d\n"
-        "🏆 Winrate : %.1f%%\n"
-        "🔒 Positions : %d/%d\n\n"
-        "🔥 TOP 5 OPPORTUNITÉS\n"
-    ) % (
-        state["balance"],
-        state["realized_pnl"],
-        total,
-        state["wins"],
-        state["losses"],
-        winrate,
-        len(state["positions"]),
-        MAX_OPEN_POSITIONS
-    )
-
-    if not signals:
-
-        message += (
-            "\n⏳ Aucun signal suffisamment "
-            "confirmé actuellement.\n"
-        )
-
-    for signal in signals[:5]:
-
-        emoji = (
-            "🟢"
-            if signal["direction"] == "LONG"
-            else "🔴"
-        )
-
-        message += (
-            "\n%s %s %s — SCORE %d | %s\n"
-            "Prix %.8g | RSI %.1f | Vol x%.1f\n"
-            "Momentum 30m %+0.2f%%\n"
-            % (
-                emoji,
-                signal["direction"],
-                signal["symbol"],
-                signal["score"],
-                signal["quality"],
-                signal["price"],
-                signal["rsi"],
-                signal["volume_ratio"],
-                signal["momentum_30m"]
-            )
-        )
-
-    if state["positions"]:
-
-        message += (
-            "\n📌 POSITIONS PAPER\n"
-        )
-
-        for position in state["positions"].values():
-
-            price = prices.get(
-                position["symbol"],
-                position["entry"]
-            )
-
-            if position["direction"] == "LONG":
-
-                pnl_pct = (
-                    price
-                    / position["entry"]
-                    - 1
-                ) * 100
-
-                unrealized += (
-                    position["size"]
-                    * (
-                        price
-                        - position["entry"]
-                    )
-                )
-
-            else:
-
-                pnl_pct = (
-                    position["entry"]
-                    / price
-                    - 1
-                ) * 100
-
-                unrealized += (
-                    position["size"]
-                    * (
-                        position["entry"]
-                        - price
-                    )
-                )
-
-            message += (
-                "%s %s | %.8g | P&L %+0.2f%%\n"
-                "Entrée %.8g | SL %.8g | TP %.8g\n"
-                % (
-                    position["direction"],
-                    position["symbol"],
-                    price,
-                    pnl_pct,
-                    position["entry"],
-                    position["stop"],
-                    position["target"]
-                )
-            )
-
-    message += (
-        "\n📊 P&L latent : %+0.2f USDT\n"
-        "\n🧪 MODE PAPER — aucun ordre réel.\n"
-        "⏱️ Prochain scan : ~5 min."
-    ) % unrealized
-
-    return message
-
-
-# =========================
-# MAIN
+# SCANNER
 # =========================
 
 def main():
 
-    print(
-        "=============================="
-    )
+    print("Démarrage du scanner Pionex...")
 
-    print(
-        "PIONEX MOVEMENT BOT V4"
-    )
+    symbols = get_symbols()
 
-    print(
-        "=============================="
-    )
+    print(f"{len(symbols)} marchés USDT trouvés.")
 
-    state = load_state()
+    tickers = get_tickers()
 
-    # -------------------------
-    # SYMBOLS
-    # -------------------------
+    ticker_map = {}
 
-    symbols_data = get_json(
-        "/api/v1/common/symbols",
-        {"type": "SPOT"}
-    )
+    for t in tickers:
+        symbol = t.get("symbol")
 
-    usdt_symbols = {
-        s["symbol"]
-        for s in symbols_data["symbols"]
-        if s.get("enable")
-        and s.get("quoteCurrency")
-        == "USDT"
-    }
-
-    # -------------------------
-    # TICKERS
-    # -------------------------
-
-    ticker_data = get_json(
-        "/api/v1/market/tickers",
-        {"type": "SPOT"}
-    )
-
-    markets = []
-    prices = {}
-
-    for ticker in ticker_data["tickers"]:
-
-        symbol = ticker["symbol"]
-
-        if symbol not in usdt_symbols:
+        if not symbol:
             continue
 
         try:
-
-            amount = float(
-                ticker.get(
-                    "amount",
-                    0
-                )
+            volume_24h = float(
+                t.get("amount", 0)
+                or t.get("volume", 0)
             )
+        except:
+            volume_24h = 0
 
-            price = float(
-                ticker.get(
-                    "close",
-                    0
-                )
-            )
+        ticker_map[symbol] = volume_24h
 
-        except Exception:
+    candidates = []
 
+    for symbol in symbols:
+
+        # Filtre volume 24h
+        volume_24h = ticker_map.get(symbol, 0)
+
+        if volume_24h < MIN_VOLUME_24H:
             continue
-
-        if price <= 0:
-            continue
-
-        prices[symbol] = price
-
-        if amount >= MIN_24H_VOLUME:
-
-            markets.append({
-                "symbol": symbol,
-                "volume": amount,
-                "price": price
-            })
-
-    # -------------------------
-    # POSITIONS
-    # -------------------------
-
-    closed = update_positions(
-        state,
-        prices
-    )
-
-    # -------------------------
-    # SCAN
-    # -------------------------
-
-    signals = []
-
-    markets.sort(
-        key=lambda x: x["volume"],
-        reverse=True
-    )
-
-    for market in markets[
-        :DEEP_SCAN_COUNT
-    ]:
 
         try:
-
-            result = analyse(
-                market["symbol"]
-            )
+            result = analyse(symbol)
 
             if result:
+                candidates.append(result)
 
-                signals.append(result)
+        except Exception as e:
+            print(f"{symbol}: erreur {e}")
 
-        except Exception as error:
+        # Petite pause pour éviter de bombarder l'API
+        time.sleep(0.05)
 
-            print(
-                "Erreur",
-                market["symbol"],
-                str(error)
-            )
-
-        time.sleep(0.10)
-
-    # -------------------------
-    # TRI
-    # -------------------------
-
-    signals.sort(
-        key=lambda x: (
-            x["score"],
-            x["volume_ratio"]
-        ),
+    candidates.sort(
+        key=lambda x: x["score"],
         reverse=True
     )
 
-    # -------------------------
-    # ALERTES
-    # -------------------------
+    candidates = candidates[:SCAN_LIMIT]
 
-    alerts = new_signal_alerts(
-        state,
-        signals
+    print(f"{len(candidates)} signaux trouvés.")
+
+    # =========================
+    # MESSAGE TELEGRAM
+    # =========================
+
+    if not candidates:
+
+        message = (
+            "😴 SCANNER PIONEX\n\n"
+            "Aucun mouvement suffisamment fort "
+            "avec volume actuellement.\n\n"
+            "Le scanner continue de surveiller."
+        )
+
+        telegram(message)
+        return
+
+    lines = [
+        "🚨 SCANNER PIONEX",
+        "",
+        f"🔥 {len(candidates)} mouvements détectés",
+        ""
+    ]
+
+    for i, x in enumerate(candidates, 1):
+
+        if x["direction"] == "LONG":
+            emoji = "🟢"
+        else:
+            emoji = "🔴"
+
+        lines.append(
+            f"{emoji} {i}. {x['symbol']}"
+        )
+
+        lines.append(
+            f"   {x['direction']} possible"
+        )
+
+        lines.append(
+            f"   💰 Prix : {x['price']:.8g}"
+        )
+
+        lines.append(
+            f"   ⚡ 15m : {x['move_15']:+.2f}%"
+        )
+
+        lines.append(
+            f"   📊 30m : {x['move_30']:+.2f}%"
+        )
+
+        lines.append(
+            f"   📈 1h : {x['move_60']:+.2f}%"
+        )
+
+        lines.append(
+            f"   🔊 Volume : x{x['volume_ratio']:.1f}"
+        )
+
+        lines.append(
+            f"   ⭐ Force : {x['score']}/10"
+        )
+
+        # Zone indicative
+        if x["direction"] == "LONG":
+            entry_low = x["price"] * 0.995
+            entry_high = x["price"] * 1.002
+            stop = x["price"] * 0.985
+            tp1 = x["price"] * 1.025
+            tp2 = x["price"] * 1.04
+
+        else:
+            entry_low = x["price"] * 0.998
+            entry_high = x["price"] * 1.005
+            stop = x["price"] * 1.015
+            tp1 = x["price"] * 0.975
+            tp2 = x["price"] * 0.96
+
+        lines.append(
+            f"   📍 Zone : {entry_low:.8g} → {entry_high:.8g}"
+        )
+
+        lines.append(
+            f"   🛑 Stop indicatif : {stop:.8g}"
+        )
+
+        lines.append(
+            f"   🎯 TP1 : {tp1:.8g}"
+        )
+
+        lines.append(
+            f"   🎯 TP2 : {tp2:.8g}"
+        )
+
+        lines.append("")
+
+    lines.append(
+        "⚠️ Signal technique uniquement — "
+        "aucun ordre automatique."
     )
 
-    # -------------------------
-    # ENTREE PAPER
-    # -------------------------
+    message = "\n".join(lines)
 
-    if (
-        signals
-        and len(state["positions"])
-        < MAX_OPEN_POSITIONS
-    ):
+    # Telegram limite les messages longs
+    if len(message) > 4000:
+        message = message[:3950] + "\n..."
 
-        for signal in signals:
+    telegram(message)
 
-            if (
-                signal["symbol"]
-                in state["positions"]
-            ):
-                continue
-
-            position = open_position(
-                state,
-                signal
-            )
-
-            if position:
-
-                print(
-                    "PAPER ENTRY",
-                    position
-                )
-
-                entry_message = (
-                    "🎯 ENTRÉE PAPER\n\n"
-                    "%s %s\n"
-                    "Score : %d | Qualité : %s\n\n"
-                    "💰 Entrée : %.8g\n"
-                    "🛑 Stop : %.8g\n"
-                    "🎯 TP : %.8g\n\n"
-                    "📊 Volume x%.1f\n"
-                    "RSI %.1f\n"
-                    "Momentum 30m %+0.2f%%\n\n"
-                    "🧪 Aucun ordre réel."
-                    % (
-                        position["direction"],
-                        position["symbol"],
-                        position["score"],
-                        position["quality"],
-                        position["entry"],
-                        position["stop"],
-                        position["target"],
-                        signal["volume_ratio"],
-                        signal["rsi"],
-                        signal["momentum_30m"]
-                    )
-                )
-
-                alerts.append(
-                    entry_message
-                )
-
-                break
-
-    # -------------------------
-    # SAUVEGARDE
-    # -------------------------
-
-    save_state(state)
-
-    # -------------------------
-    # TELEGRAM
-    # -------------------------
-
-    if closed:
-
-        close_message = (
-            "📤 PAPER TRADE TERMINÉ\n\n"
-        )
-
-        for trade in closed:
-
-            emoji = (
-                "✅"
-                if trade["pnl"] >= 0
-                else "❌"
-            )
-
-            close_message += (
-                "%s %s %s\n"
-                "Résultat : %+0.2f USDT "
-                "(%+.2f%%)\n"
-                "%s\n\n"
-                % (
-                    emoji,
-                    trade["direction"],
-                    trade["symbol"],
-                    trade["pnl"],
-                    trade["pnl_pct"],
-                    trade["reason"]
-                )
-            )
-
-        send_telegram(
-            close_message
-        )
-
-    for alert in alerts:
-
-        send_telegram(
-            alert
-        )
-
-    send_telegram(
-        dashboard(
-            state,
-            signals,
-            prices
-        )
-    )
+    print("Message Telegram envoyé.")
 
 
 if __name__ == "__main__":
-
-    try:
-
-        main()
-
-    except Exception as error:
-
-        print(
-            "ERREUR GENERALE :",
-            str(error)
-        )
-
-        raise
+    main()
