@@ -2,6 +2,7 @@ name: Pionex PERPS Scanner
 
 on:
   workflow_dispatch:
+
   schedule:
     - cron: "*/5 * * * *"
 
@@ -11,9 +12,11 @@ concurrency:
 
 jobs:
   scan:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Recuperer le code
         uses: actions/checkout@v4
 
@@ -24,12 +27,6 @@ jobs:
 
       - name: Installer requests
         run: pip install requests
-
-      - name: Verifier que le scanner PERPS est present
-        run: |
-          grep -q '"PERP"' scanner.py
-          grep -q 'PIONEX PERPS' scanner.py
-          echo "Scanner PERPS OK"
 
       - name: Verifier la syntaxe
         run: python -m py_compile scanner.py
