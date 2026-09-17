@@ -1,8 +1,8 @@
 {
-  "balance": 642.0984940202917,
-  "realized_pnl": -357.90150597970836,
+  "balance": 635.6775090800888,
+  "realized_pnl": -364.3224909199112,
   "wins": 15,
-  "losses": 74,
+  "losses": 75,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -804,6 +804,15 @@
       "pnl": -6.4858433739423225,
       "reason": "STOP LOSS",
       "time": 1789607987
+    },
+    {
+      "symbol": "DEXE_USDT",
+      "direction": "SHORT",
+      "entry": 1.76,
+      "exit": 1.7863999999999998,
+      "pnl": -6.420984940202858,
+      "reason": "STOP LOSS",
+      "time": 1789609741
     }
   ],
   "positions": {
@@ -829,16 +838,16 @@
       "quality": "A",
       "opened_at": 1789608033
     },
-    "DEXE_USDT": {
-      "symbol": "DEXE_USDT",
+    "MANA_USDT": {
+      "symbol": "MANA_USDT",
       "direction": "SHORT",
-      "entry": 1.76,
-      "stop": 1.7863999999999998,
-      "target": 1.7072,
-      "size": 243.21912652283777,
-      "score": 9,
+      "entry": 0.0706,
+      "stop": 0.07165899999999999,
+      "target": 0.068482,
+      "size": 6002.6204823426715,
+      "score": 11,
       "quality": "A+",
-      "opened_at": 1789608916
+      "opened_at": 1789609783
     }
   },
   "last_alerted": {
@@ -895,8 +904,8 @@
       "key": "LONG_9"
     },
     "METIS_USDT": {
-      "time": 1789603308,
-      "key": "SHORT_8"
+      "time": 1789609783,
+      "key": "SHORT_11"
     },
     "DOGE_USDT": {
       "time": 1789603308,
@@ -947,8 +956,8 @@
       "key": "SHORT_9"
     },
     "CHR_USDT": {
-      "time": 1789577450,
-      "key": "LONG_8"
+      "time": 1789609783,
+      "key": "SHORT_8"
     },
     "QTUM_USDT": {
       "time": 1789420281,
@@ -987,8 +996,8 @@
       "key": "LONG_9"
     },
     "IMX_USDT": {
-      "time": 1789598493,
-      "key": "SHORT_8"
+      "time": 1789609783,
+      "key": "SHORT_10"
     },
     "DYM_USDT": {
       "time": 1789599208,
@@ -1203,8 +1212,8 @@
       "key": "LONG_8"
     },
     "MANA_USDT": {
-      "time": 1789597580,
-      "key": "SHORT_9"
+      "time": 1789609783,
+      "key": "SHORT_11"
     },
     "AXL_USDT": {
       "time": 1789604823,
@@ -1235,8 +1244,8 @@
       "key": "LONG_8"
     },
     "JTO_USDT": {
-      "time": 1789590217,
-      "key": "LONG_10"
+      "time": 1789609783,
+      "key": "SHORT_9"
     },
     "GLM_USDT": {
       "time": 1789580868,
