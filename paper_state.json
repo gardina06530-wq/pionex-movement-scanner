@@ -1,8 +1,8 @@
 {
-  "balance": 648.584337394234,
-  "realized_pnl": -351.41566260576604,
+  "balance": 642.0984940202917,
+  "realized_pnl": -357.90150597970836,
   "wins": 15,
-  "losses": 73,
+  "losses": 74,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -795,6 +795,15 @@
       "pnl": 12.717339948906536,
       "reason": "TAKE PROFIT",
       "time": 1789606856
+    },
+    {
+      "symbol": "NACHA_USDT",
+      "direction": "SHORT",
+      "entry": 0.131791,
+      "exit": 0.13376786499999999,
+      "pnl": -6.4858433739423225,
+      "reason": "STOP LOSS",
+      "time": 1789607987
     }
   ],
   "positions": {
@@ -809,16 +818,16 @@
       "quality": "A+",
       "opened_at": 1789595675
     },
-    "NACHA_USDT": {
-      "symbol": "NACHA_USDT",
+    "RIF_USDT": {
+      "symbol": "RIF_USDT",
       "direction": "SHORT",
-      "entry": 0.131791,
-      "stop": 0.13376786499999999,
-      "target": 0.12783726999999998,
-      "size": 3280.8731875683675,
-      "score": 13,
-      "quality": "A+",
-      "opened_at": 1789606894
+      "entry": 0.0805,
+      "stop": 0.08170749999999999,
+      "target": 0.078085,
+      "size": 5317.585871803658,
+      "score": 8,
+      "quality": "A",
+      "opened_at": 1789608033
     }
   },
   "last_alerted": {
@@ -899,7 +908,7 @@
       "key": "SHORT_10"
     },
     "USDC_USDT": {
-      "time": 1789601038,
+      "time": 1789608033,
       "key": "SHORT_8"
     },
     "SUSHI_USDT": {
@@ -1207,8 +1216,8 @@
       "key": "LONG_11"
     },
     "RIF_USDT": {
-      "time": 1789601913,
-      "key": "SHORT_11"
+      "time": 1789608033,
+      "key": "SHORT_8"
     },
     "ALT_USDT": {
       "time": 1789603308,
