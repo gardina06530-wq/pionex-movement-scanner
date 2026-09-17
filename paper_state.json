@@ -953,7 +953,7 @@
       "key": "LONG_8"
     },
     "DOGE_USDT": {
-      "time": 1789616303,
+      "time": 1789626303,
       "key": "SHORT_9"
     },
     "PENDLE_USDT": {
@@ -973,7 +973,7 @@
       "key": "SHORT_11"
     },
     "USDC_USDT": {
-      "time": 1789608033,
+      "time": 1789626303,
       "key": "SHORT_8"
     },
     "SUSHI_USDT": {
@@ -1021,7 +1021,7 @@
       "key": "SHORT_8"
     },
     "MBL_USDT": {
-      "time": 1789613440,
+      "time": 1789626303,
       "key": "SHORT_9"
     },
     "CKB_USDT": {
@@ -1045,8 +1045,8 @@
       "key": "SHORT_9"
     },
     "DYM_USDT": {
-      "time": 1789620217,
-      "key": "SHORT_9"
+      "time": 1789626303,
+      "key": "SHORT_11"
     },
     "STRAX_USDT": {
       "time": 1789624768,
@@ -1349,8 +1349,8 @@
       "key": "SHORT_8"
     },
     "ACM_USDT": {
-      "time": 1789613440,
-      "key": "SHORT_8"
+      "time": 1789626303,
+      "key": "SHORT_10"
     },
     "LPT_USDT": {
       "time": 1789621042,
@@ -1385,8 +1385,8 @@
       "key": "SHORT_11"
     },
     "LSK_USDT": {
-      "time": 1789617182,
-      "key": "LONG_8"
+      "time": 1789626303,
+      "key": "LONG_11"
     },
     "RLC_USDT": {
       "time": 1789620217,
@@ -1437,7 +1437,7 @@
       "key": "SHORT_11"
     },
     "TWT_USDT": {
-      "time": 1789619195,
+      "time": 1789626303,
       "key": "SHORT_9"
     },
     "ONE_USDT": {
@@ -1445,8 +1445,8 @@
       "key": "SHORT_8"
     },
     "KSM_USDT": {
-      "time": 1789618061,
-      "key": "SHORT_10"
+      "time": 1789626303,
+      "key": "SHORT_8"
     },
     "DGB_USDT": {
       "time": 1789621042,
@@ -1529,7 +1529,7 @@
       "key": "SHORT_8"
     },
     "BMNRX_USDT": {
-      "time": 1789618061,
+      "time": 1789626303,
       "key": "SHORT_10"
     },
     "STRK_USDT": {
@@ -1565,7 +1565,7 @@
       "key": "LONG_8"
     },
     "FET_USDT": {
-      "time": 1789603308,
+      "time": 1789626303,
       "key": "SHORT_8"
     },
     "TNSR_USDT": {
@@ -1589,11 +1589,11 @@
       "key": "SHORT_8"
     },
     "APE_USDT": {
-      "time": 1789617182,
+      "time": 1789626303,
       "key": "SHORT_9"
     },
     "TFUEL_USDT": {
-      "time": 1789622174,
+      "time": 1789626303,
       "key": "LONG_9"
     },
     "NEAR_USDT": {
@@ -1609,8 +1609,8 @@
       "key": "SHORT_8"
     },
     "ETHFI_USDT": {
-      "time": 1789621042,
-      "key": "SHORT_8"
+      "time": 1789626303,
+      "key": "SHORT_9"
     },
     "AMZNX_USDT": {
       "time": 1789616303,
