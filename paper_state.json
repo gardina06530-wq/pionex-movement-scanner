@@ -1,8 +1,8 @@
 {
-  "balance": 642.2898964094217,
-  "realized_pnl": -357.7101035905784,
+  "balance": 635.8669974453275,
+  "realized_pnl": -364.1330025546726,
   "wins": 14,
-  "losses": 72,
+  "losses": 73,
   "trades": [
     {
       "symbol": "RAY_USDT",
@@ -777,6 +777,15 @@
       "pnl": -6.4877767314083,
       "reason": "STOP LOSS",
       "time": 1789604790
+    },
+    {
+      "symbol": "ZEN_USDT",
+      "direction": "SHORT",
+      "entry": 6.484,
+      "exit": 6.581259999999999,
+      "pnl": -6.422898964094181,
+      "reason": "STOP LOSS",
+      "time": 1789606057
     }
   ],
   "positions": {
@@ -791,16 +800,16 @@
       "quality": "A+",
       "opened_at": 1789595675
     },
-    "ZEN_USDT": {
-      "symbol": "ZEN_USDT",
+    "SYN_USDT": {
+      "symbol": "SYN_USDT",
       "direction": "SHORT",
-      "entry": 6.484,
-      "stop": 6.581259999999999,
-      "target": 6.28948,
-      "size": 66.03844297855457,
-      "score": 11,
+      "entry": 0.1756,
+      "stop": 0.17823399999999998,
+      "target": 0.170332,
+      "size": 2414.0736425411064,
+      "score": 9,
       "quality": "A",
-      "opened_at": 1789604823
+      "opened_at": 1789606104
     }
   },
   "last_alerted": {
@@ -1089,8 +1098,8 @@
       "key": "SHORT_8"
     },
     "FTT_USDT": {
-      "time": 1789584866,
-      "key": "LONG_8"
+      "time": 1789606104,
+      "key": "SHORT_8"
     },
     "IOST_USDT": {
       "time": 1789601913,
@@ -1397,8 +1406,8 @@
       "key": "SHORT_8"
     },
     "SYN_USDT": {
-      "time": 1789601913,
-      "key": "LONG_10"
+      "time": 1789606104,
+      "key": "SHORT_9"
     },
     "RSR_USDT": {
       "time": 1789597580,
