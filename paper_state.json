@@ -897,8 +897,8 @@
   },
   "last_alerted": {
     "RAY_USDT": {
-      "time": 1789619195,
-      "key": "SHORT_9"
+      "time": 1789627565,
+      "key": "SHORT_8"
     },
     "CSPR_USDT": {
       "time": 1789623138,
@@ -929,7 +929,7 @@
       "key": "SHORT_8"
     },
     "USOX_USDT": {
-      "time": 1789620217,
+      "time": 1789627565,
       "key": "LONG_9"
     },
     "TRB_USDT": {
@@ -1017,8 +1017,8 @@
       "key": "SHORT_8"
     },
     "DUSK_USDT": {
-      "time": 1789619195,
-      "key": "SHORT_8"
+      "time": 1789627565,
+      "key": "SHORT_9"
     },
     "MBL_USDT": {
       "time": 1789626303,
@@ -1121,8 +1121,8 @@
       "key": "SHORT_9"
     },
     "NACHA_USDT": {
-      "time": 1789617182,
-      "key": "LONG_12"
+      "time": 1789627565,
+      "key": "SHORT_9"
     },
     "EGLD_USDT": {
       "time": 1789613440,
@@ -1269,16 +1269,16 @@
       "key": "LONG_8"
     },
     "BAR_USDT": {
-      "time": 1789624074,
-      "key": "LONG_8"
+      "time": 1789627565,
+      "key": "SHORT_8"
     },
     "ATOM_USDT": {
       "time": 1789621042,
       "key": "SHORT_9"
     },
     "CTSI_USDT": {
-      "time": 1789622174,
-      "key": "SHORT_9"
+      "time": 1789627565,
+      "key": "SHORT_8"
     },
     "RIF_USDT": {
       "time": 1789620217,
