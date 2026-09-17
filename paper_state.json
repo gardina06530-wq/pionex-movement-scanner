@@ -901,8 +901,8 @@
       "key": "SHORT_9"
     },
     "CSPR_USDT": {
-      "time": 1789621042,
-      "key": "LONG_9"
+      "time": 1789623138,
+      "key": "LONG_8"
     },
     "PROM_USDT": {
       "time": 1789621042,
@@ -1033,7 +1033,7 @@
       "key": "SHORT_11"
     },
     "AUDIO_USDT": {
-      "time": 1789620217,
+      "time": 1789623138,
       "key": "SHORT_8"
     },
     "METAX_USDT": {
@@ -1325,8 +1325,8 @@
       "key": "SHORT_8"
     },
     "CVC_USDT": {
-      "time": 1789621042,
-      "key": "SHORT_13"
+      "time": 1789623138,
+      "key": "SHORT_9"
     },
     "BCH_USDT": {
       "time": 1789611631,
@@ -1461,8 +1461,8 @@
       "key": "SHORT_8"
     },
     "DOT_USDT": {
-      "time": 1789619195,
-      "key": "LONG_8"
+      "time": 1789623138,
+      "key": "LONG_9"
     },
     "XAUT_USDT": {
       "time": 1789620217,
@@ -1549,12 +1549,12 @@
       "key": "SHORT_11"
     },
     "THETA_USDT": {
-      "time": 1789613440,
-      "key": "SHORT_11"
+      "time": 1789623138,
+      "key": "SHORT_8"
     },
     "DIA_USDT": {
-      "time": 1789613440,
-      "key": "SHORT_9"
+      "time": 1789623138,
+      "key": "SHORT_8"
     },
     "ACE_USDT": {
       "time": 1789615308,
@@ -1569,7 +1569,7 @@
       "key": "SHORT_8"
     },
     "TNSR_USDT": {
-      "time": 1789613440,
+      "time": 1789623138,
       "key": "SHORT_9"
     },
     "TIA_USDT": {
