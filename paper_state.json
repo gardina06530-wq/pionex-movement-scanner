@@ -945,8 +945,8 @@
       "key": "SHORT_9"
     },
     "NVDAX_USDT": {
-      "time": 1789615308,
-      "key": "SHORT_8"
+      "time": 1789624768,
+      "key": "SHORT_9"
     },
     "METIS_USDT": {
       "time": 1789624074,
@@ -993,12 +993,12 @@
       "key": "SHORT_8"
     },
     "IQ_USDT": {
-      "time": 1789613440,
-      "key": "SHORT_8"
+      "time": 1789624768,
+      "key": "LONG_8"
     },
     "BICO_USDT": {
-      "time": 1789618061,
-      "key": "SHORT_10"
+      "time": 1789624768,
+      "key": "SHORT_11"
     },
     "CHR_USDT": {
       "time": 1789615308,
@@ -1025,7 +1025,7 @@
       "key": "SHORT_9"
     },
     "CKB_USDT": {
-      "time": 1789621042,
+      "time": 1789624768,
       "key": "SHORT_8"
     },
     "ETC_USDT": {
@@ -1049,8 +1049,8 @@
       "key": "SHORT_9"
     },
     "STRAX_USDT": {
-      "time": 1789617182,
-      "key": "SHORT_10"
+      "time": 1789624768,
+      "key": "SHORT_8"
     },
     "FLUX_USDT": {
       "time": 1789527612,
@@ -1133,8 +1133,8 @@
       "key": "SHORT_9"
     },
     "EDU_USDT": {
-      "time": 1789619195,
-      "key": "SHORT_10"
+      "time": 1789624768,
+      "key": "SHORT_8"
     },
     "AEVO_USDT": {
       "time": 1789611631,
@@ -1181,8 +1181,8 @@
       "key": "SHORT_8"
     },
     "FTT_USDT": {
-      "time": 1789616303,
-      "key": "SHORT_8"
+      "time": 1789624768,
+      "key": "SHORT_9"
     },
     "IOST_USDT": {
       "time": 1789621042,
@@ -1193,8 +1193,8 @@
       "key": "SHORT_9"
     },
     "ALGO_USDT": {
-      "time": 1789620217,
-      "key": "SHORT_9"
+      "time": 1789624768,
+      "key": "SHORT_8"
     },
     "IO_USDT": {
       "time": 1789621042,
@@ -1365,8 +1365,8 @@
       "key": "SHORT_8"
     },
     "LRC_USDT": {
-      "time": 1789621042,
-      "key": "LONG_10"
+      "time": 1789624768,
+      "key": "SHORT_8"
     },
     "PORTO_USDT": {
       "time": 1789615308,
@@ -1401,8 +1401,8 @@
       "key": "SHORT_11"
     },
     "GOOGLX_USDT": {
-      "time": 1789617182,
-      "key": "SHORT_8"
+      "time": 1789624768,
+      "key": "SHORT_9"
     },
     "DODO_USDT": {
       "time": 1789622174,
@@ -1485,8 +1485,8 @@
       "key": "SHORT_8"
     },
     "AXS_USDT": {
-      "time": 1789622174,
-      "key": "SHORT_9"
+      "time": 1789624768,
+      "key": "SHORT_10"
     },
     "SYN_USDT": {
       "time": 1789619195,
