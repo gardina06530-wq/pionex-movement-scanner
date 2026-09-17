@@ -828,6 +828,17 @@
       "score": 8,
       "quality": "A",
       "opened_at": 1789608033
+    },
+    "DEXE_USDT": {
+      "symbol": "DEXE_USDT",
+      "direction": "SHORT",
+      "entry": 1.76,
+      "stop": 1.7863999999999998,
+      "target": 1.7072,
+      "size": 243.21912652283777,
+      "score": 9,
+      "quality": "A+",
+      "opened_at": 1789608916
     }
   },
   "last_alerted": {
@@ -968,8 +979,8 @@
       "key": "SHORT_9"
     },
     "AUDIO_USDT": {
-      "time": 1789593997,
-      "key": "SHORT_9"
+      "time": 1789608916,
+      "key": "LONG_8"
     },
     "METAX_USDT": {
       "time": 1789603308,
@@ -1204,8 +1215,8 @@
       "key": "SHORT_9"
     },
     "BAR_USDT": {
-      "time": 1789603308,
-      "key": "LONG_8"
+      "time": 1789608916,
+      "key": "SHORT_8"
     },
     "ATOM_USDT": {
       "time": 1789596611,
@@ -1320,8 +1331,8 @@
       "key": "SHORT_8"
     },
     "LSK_USDT": {
-      "time": 1789606894,
-      "key": "LONG_11"
+      "time": 1789608916,
+      "key": "LONG_8"
     },
     "RLC_USDT": {
       "time": 1789604823,
@@ -1348,8 +1359,8 @@
       "key": "SHORT_8"
     },
     "DEXE_USDT": {
-      "time": 1789602605,
-      "key": "SHORT_8"
+      "time": 1789608916,
+      "key": "SHORT_9"
     },
     "TAO_USDT": {
       "time": 1789603308,
