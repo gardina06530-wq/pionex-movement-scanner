@@ -1,9 +1,13 @@
-name: Pionex Movement Scanner
+name: Pionex PERPS Scanner
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
+
+concurrency:
+  group: pionex-perps-scanner
+  cancel-in-progress: true
 
 jobs:
   scan:
@@ -20,6 +24,12 @@ jobs:
 
       - name: Installer requests
         run: pip install requests
+
+      - name: Verifier que le scanner PERPS est present
+        run: |
+          grep -q '"PERP"' scanner.py
+          grep -q 'PIONEX PERPS' scanner.py
+          echo "Scanner PERPS OK"
 
       - name: Verifier la syntaxe
         run: python -m py_compile scanner.py
