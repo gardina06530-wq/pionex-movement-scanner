@@ -1,7 +1,7 @@
 {
-  "balance": 635.8669974453275,
-  "realized_pnl": -364.1330025546726,
-  "wins": 14,
+  "balance": 648.584337394234,
+  "realized_pnl": -351.41566260576604,
+  "wins": 15,
   "losses": 73,
   "trades": [
     {
@@ -786,6 +786,15 @@
       "pnl": -6.422898964094181,
       "reason": "STOP LOSS",
       "time": 1789606057
+    },
+    {
+      "symbol": "SYN_USDT",
+      "direction": "SHORT",
+      "entry": 0.1756,
+      "exit": 0.170332,
+      "pnl": 12.717339948906536,
+      "reason": "TAKE PROFIT",
+      "time": 1789606856
     }
   ],
   "positions": {
@@ -800,16 +809,16 @@
       "quality": "A+",
       "opened_at": 1789595675
     },
-    "SYN_USDT": {
-      "symbol": "SYN_USDT",
+    "NACHA_USDT": {
+      "symbol": "NACHA_USDT",
       "direction": "SHORT",
-      "entry": 0.1756,
-      "stop": 0.17823399999999998,
-      "target": 0.170332,
-      "size": 2414.0736425411064,
-      "score": 9,
-      "quality": "A",
-      "opened_at": 1789606104
+      "entry": 0.131791,
+      "stop": 0.13376786499999999,
+      "target": 0.12783726999999998,
+      "size": 3280.8731875683675,
+      "score": 13,
+      "quality": "A+",
+      "opened_at": 1789606894
     }
   },
   "last_alerted": {
@@ -846,8 +855,8 @@
       "key": "SHORT_8"
     },
     "USOX_USDT": {
-      "time": 1789603308,
-      "key": "SHORT_8"
+      "time": 1789606894,
+      "key": "LONG_8"
     },
     "TRB_USDT": {
       "time": 1789603308,
@@ -910,8 +919,8 @@
       "key": "SHORT_9"
     },
     "IQ_USDT": {
-      "time": 1789594963,
-      "key": "SHORT_10"
+      "time": 1789606894,
+      "key": "SHORT_8"
     },
     "BICO_USDT": {
       "time": 1789599208,
@@ -982,7 +991,7 @@
       "key": "SHORT_11"
     },
     "MTL_USDT": {
-      "time": 1789589106,
+      "time": 1789606894,
       "key": "LONG_10"
     },
     "FLOKI_USDT": {
@@ -1038,8 +1047,8 @@
       "key": "SHORT_9"
     },
     "NACHA_USDT": {
-      "time": 1789597580,
-      "key": "LONG_8"
+      "time": 1789606894,
+      "key": "SHORT_13"
     },
     "EGLD_USDT": {
       "time": 1789588304,
@@ -1070,8 +1079,8 @@
       "key": "SHORT_8"
     },
     "POWR_USDT": {
-      "time": 1789597580,
-      "key": "SHORT_9"
+      "time": 1789606894,
+      "key": "LONG_11"
     },
     "PEPE_USDT": {
       "time": 1789603308,
@@ -1302,8 +1311,8 @@
       "key": "SHORT_8"
     },
     "LSK_USDT": {
-      "time": 1789593997,
-      "key": "SHORT_9"
+      "time": 1789606894,
+      "key": "LONG_11"
     },
     "RLC_USDT": {
       "time": 1789604823,
