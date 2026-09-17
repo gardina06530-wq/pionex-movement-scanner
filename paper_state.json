@@ -969,11 +969,11 @@
       "key": "SHORT_10"
     },
     "CYBER_USDT": {
-      "time": 1789616303,
-      "key": "SHORT_11"
+      "time": 1789628468,
+      "key": "SHORT_9"
     },
     "USDC_USDT": {
-      "time": 1789626303,
+      "time": 1789628468,
       "key": "SHORT_8"
     },
     "SUSHI_USDT": {
@@ -1013,8 +1013,8 @@
       "key": "SHORT_9"
     },
     "NEO_USDT": {
-      "time": 1789613440,
-      "key": "SHORT_8"
+      "time": 1789628468,
+      "key": "SHORT_10"
     },
     "DUSK_USDT": {
       "time": 1789627565,
@@ -1337,11 +1337,11 @@
       "key": "LONG_8"
     },
     "NEXO_USDT": {
-      "time": 1789622174,
+      "time": 1789628468,
       "key": "SHORT_8"
     },
     "CVX_USDT": {
-      "time": 1789618061,
+      "time": 1789628468,
       "key": "SHORT_8"
     },
     "ZEC_USDT": {
@@ -1449,8 +1449,8 @@
       "key": "SHORT_8"
     },
     "DGB_USDT": {
-      "time": 1789621042,
-      "key": "SHORT_8"
+      "time": 1789628468,
+      "key": "LONG_10"
     },
     "AI_USDT": {
       "time": 1789610490,
